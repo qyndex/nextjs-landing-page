@@ -30,9 +30,27 @@ export function EmailSignup({ className }: { className?: string }) {
     setStatus("loading");
 
     try {
-      // Replace with your actual API endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setStatus("success");
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        return;
+      }
+
+      const data = (await res.json()) as { error?: string };
+
+      if (res.status === 409) {
+        // Already on waitlist — treat as success
+        setStatus("success");
+        return;
+      }
+
+      setStatus("error");
+      setError(data.error ?? "Something went wrong. Please try again.");
     } catch {
       setStatus("error");
       setError("Something went wrong. Please try again.");

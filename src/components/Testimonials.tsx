@@ -1,61 +1,24 @@
 import { Star } from "lucide-react";
+import type { Testimonial } from "@/types/database";
 
-const testimonials = [
-  {
-    name: "Sarah Chen",
-    role: "CTO",
-    company: "TechCorp",
-    avatar: "SC",
-    avatarGradient: "from-violet-400 to-purple-600",
-    rating: 5,
-    text: "This platform cut our development time in half. We went from idea to production in two weeks — something that would have taken months before.",
-  },
-  {
-    name: "Marcus Johnson",
-    role: "Founder",
-    company: "StartupXYZ",
-    avatar: "MJ",
-    avatarGradient: "from-sky-400 to-blue-600",
-    rating: 5,
-    text: "The best investment we made this year. The built-in analytics alone saved us four months of engineering. Our investors were blown away by our velocity.",
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Engineering Lead",
-    company: "ScaleUp",
-    avatar: "ER",
-    avatarGradient: "from-emerald-400 to-teal-600",
-    rating: 5,
-    text: "Incredible developer experience. The codebase is clean, the docs are thorough, and our team was productive from day one. Nothing else comes close.",
-  },
-  {
-    name: "David Park",
-    role: "Product Manager",
-    company: "Momentum",
-    avatar: "DP",
-    avatarGradient: "from-rose-400 to-pink-600",
-    rating: 5,
-    text: "We evaluated 5 alternatives. This was the only one that didn't feel like a hack. Solid TypeScript, great test coverage, and a team that actually responds.",
-  },
-  {
-    name: "Priya Kapoor",
-    role: "Solo Founder",
-    company: "IndieHack",
-    avatar: "PK",
-    avatarGradient: "from-amber-400 to-orange-600",
-    rating: 5,
-    text: "As a solo founder I can't afford to waste time on boilerplate. This gave me a 6-month head start. Launched in 3 weeks and already profitable.",
-  },
-  {
-    name: "Tom Nakamura",
-    role: "Head of Engineering",
-    company: "Velocity AI",
-    avatar: "TN",
-    avatarGradient: "from-cyan-400 to-sky-600",
-    rating: 5,
-    text: "We migrated our legacy system using this as the new foundation. The migration guide was thorough and our team completed it in a single sprint.",
-  },
+/** Map author initials to a gradient for the avatar fallback */
+const AVATAR_GRADIENTS = [
+  "from-violet-400 to-purple-600",
+  "from-sky-400 to-blue-600",
+  "from-emerald-400 to-teal-600",
+  "from-rose-400 to-pink-600",
+  "from-amber-400 to-orange-600",
+  "from-cyan-400 to-sky-600",
 ];
+
+function getInitials(name: string): string {
+  return name
+    .split(" ")
+    .map((n) => n[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
 
 function StarRating({ count }: { count: number }) {
   return (
@@ -67,7 +30,11 @@ function StarRating({ count }: { count: number }) {
   );
 }
 
-export function Testimonials() {
+interface TestimonialsProps {
+  testimonials: Testimonial[];
+}
+
+export function Testimonials({ testimonials }: TestimonialsProps) {
   return (
     <section id="testimonials" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -86,25 +53,34 @@ export function Testimonials() {
 
         {/* Testimonial grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-          {testimonials.map((t) => (
+          {testimonials.map((t, idx) => (
             <div
-              key={t.name}
+              key={t.id}
               className="break-inside-avoid rounded-2xl border border-border/60 bg-background p-6 shadow-sm hover:shadow-md transition-shadow duration-200"
             >
               <StarRating count={t.rating} />
               <p className="mt-3 text-sm text-foreground/80 leading-relaxed">
-                &ldquo;{t.text}&rdquo;
+                &ldquo;{t.content}&rdquo;
               </p>
               <div className="mt-5 flex items-center gap-3">
-                <div
-                  className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.avatarGradient} text-white text-xs font-bold`}
-                >
-                  {t.avatar}
-                </div>
+                {t.author_avatar_url ? (
+                  <img
+                    src={t.author_avatar_url}
+                    alt={t.author_name}
+                    className="h-9 w-9 rounded-full object-cover"
+                  />
+                ) : (
+                  <div
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${AVATAR_GRADIENTS[idx % AVATAR_GRADIENTS.length]} text-white text-xs font-bold`}
+                  >
+                    {getInitials(t.author_name)}
+                  </div>
+                )}
                 <div>
-                  <p className="font-semibold text-sm">{t.name}</p>
+                  <p className="font-semibold text-sm">{t.author_name}</p>
                   <p className="text-xs text-muted-foreground">
-                    {t.role} at {t.company}
+                    {t.author_role}
+                    {t.author_company ? ` at ${t.author_company}` : ""}
                   </p>
                 </div>
               </div>
