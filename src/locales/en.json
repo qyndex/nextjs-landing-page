@@ -1,0 +1,11 @@
+{
+  "app.title": "My Application",
+  "app.description": "Built with Qyngent",
+  "common.loading": "Loading...",
+  "common.error": "Something went wrong",
+  "common.save": "Save",
+  "common.cancel": "Cancel",
+  "common.delete": "Delete",
+  "common.search": "Search...",
+  "common.noResults": "No results found"
+}
