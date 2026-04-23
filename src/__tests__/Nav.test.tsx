@@ -31,10 +31,11 @@ describe("Nav", () => {
 
   it("renders all desktop nav links", () => {
     render(<Nav />);
-    expect(screen.getByRole("link", { name: /features/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /pricing/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /testimonials/i })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: /blog/i })).toBeInTheDocument();
+    // Links appear in both desktop and mobile menus, so use getAllByRole
+    expect(screen.getAllByRole("link", { name: /features/i }).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByRole("link", { name: /pricing/i }).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByRole("link", { name: /testimonials/i }).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByRole("link", { name: /blog/i }).length).toBeGreaterThanOrEqual(1);
   });
 
   it("renders Log in and Get Started CTA links", () => {

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Landing Page — Modern marketing landing page with animated hero, feature grid, pricing tables, testimonials, newsletter signup, and responsive nav/footer. Built with Next.js 14 (App Router), React 18, TypeScript 5.9, and Tailwind CSS. Uses `{{BRAND_NAME}}`, `{{TAGLINE}}`, `{{DESCRIPTION}}`, `{{CTA_TEXT}}`, `{{PRIMARY_COLOR}}` template placeholders for customisation.
+Landing Page — Production-quality marketing landing page with animated hero, feature grid, pricing tables, DB-driven testimonials and FAQs, waitlist signup (Supabase), and responsive nav/footer. Built with Next.js 14 (App Router), React 18, TypeScript 5.9, Tailwind CSS, and Supabase (PostgreSQL).
 
 ## Stack
 
@@ -14,6 +14,7 @@ Landing Page — Modern marketing landing page with animated hero, feature grid,
 | UI runtime | React | 18.3.1 |
 | Language | TypeScript (strict) | 5.9.3 |
 | Styling | Tailwind CSS | 3.4.19 |
+| Database | Supabase (PostgreSQL) | 2.49.1 |
 | Icon set | lucide-react | 0.577.0 |
 | Primitives | @radix-ui/react-slot | 1.2.4 |
 | Unit tests | Vitest + jsdom | 2.1.8 |
@@ -38,6 +39,10 @@ npm run test:coverage    # Vitest with v8 coverage report
 # E2E tests (requires dev server or builds the app automatically)
 npm run test:e2e         # Playwright — all specs in e2e/
 npm run test:e2e:ui      # Playwright interactive UI mode
+
+# Database
+npx supabase start       # Start local Supabase
+npx supabase db reset    # Reset DB and run migrations + seed
 ```
 
 ## Architecture
@@ -45,34 +50,58 @@ npm run test:e2e:ui      # Playwright interactive UI mode
 ```
 src/
   app/
-    layout.tsx          — Root layout: Inter font, OpenGraph metadata, html/body shell
-    page.tsx            — Landing page composition: Nav > Hero > LogoBar > Features > Pricing > Testimonials > CTA > Footer
-    globals.css         — CSS variables for brand colours (--brand-primary, --brand-secondary, --brand-accent)
-                          and Tailwind base reset
+    layout.tsx          -- Root layout: Inter font, OpenGraph metadata, html/body shell
+    page.tsx            -- Async Server Component: fetches testimonials + FAQs from DB, composes page
+    globals.css         -- CSS variables for brand colours + Tailwind base reset
+    api/
+      waitlist/
+        route.ts        -- POST /api/waitlist: validates email, inserts into Supabase waitlist table
   components/
-    Nav.tsx             — Fixed top nav with desktop links + mobile hamburger (client component, useState)
-    Hero.tsx            — Full-bleed hero: gradient blobs, social proof badge, headline, EmailSignup, product screenshot placeholder
-    EmailSignup.tsx     — Controlled email form with idle/loading/success/error states (client component)
-    LogoBar.tsx         — Trust-building logo strip with placeholder initials
-    Features.tsx        — 6-card feature grid (server component, static data)
-    Pricing.tsx         — 3-tier pricing cards with popular badge (server component, static data)
-    Testimonials.tsx    — Testimonial cards (server component, static data)
-    CTA.tsx             — Bottom conversion section with EmailSignup (server component)
-    Footer.tsx          — Multi-column footer with social links (server component)
+    Nav.tsx             -- Fixed top nav with desktop links + mobile hamburger (client component)
+    Hero.tsx            -- Full-bleed hero: gradient blobs, social proof badge, headline, EmailSignup
+    EmailSignup.tsx     -- Waitlist signup form: POSTs to /api/waitlist with validation + toast feedback (client component)
+    LogoBar.tsx         -- Trust-building logo strip with placeholder initials
+    Features.tsx        -- 6-card feature grid (server component, static data)
+    Pricing.tsx         -- 3-tier pricing cards with popular badge (server component, static data)
+    Testimonials.tsx    -- DB-driven testimonial cards with avatar fallbacks (server component, props from page)
+    FAQ.tsx             -- DB-driven accordion FAQ section (client component for expand/collapse)
+    CTA.tsx             -- Bottom conversion section with EmailSignup
+    Footer.tsx          -- Multi-column footer with social links
     ui/
-      button.tsx        — CVA-based Button with variant + size props (default/outline/ghost/link/destructive/secondary)
+      button.tsx        -- CVA-based Button primitive
   lib/
-    utils.ts            — cn() helper (clsx + tailwind-merge)
+    supabase.ts         -- Supabase client singleton (client-side)
+    queries.ts          -- Server-side data fetching: getTestimonials(), getFAQs() with fallbacks
+    utils.ts            -- cn() helper (clsx + tailwind-merge)
+  types/
+    database.ts         -- Supabase database types: Testimonial, FAQ, WaitlistEntry
   test/
-    setup.ts            — Vitest global setup: imports @testing-library/jest-dom/vitest matchers
+    setup.ts            -- Vitest global setup
   __tests__/
-    EmailSignup.test.tsx — Unit tests: validation states, aria attributes, loading/success lifecycle
-    Nav.test.tsx         — Unit tests: link rendering, mobile menu open/close, aria-expanded
-    Features.test.tsx    — Unit tests: all 6 cards rendered, section id, headings
+    EmailSignup.test.tsx -- Unit tests: validation, aria, loading/success, API integration
+    Nav.test.tsx         -- Unit tests: links, mobile menu, aria-expanded
+    Features.test.tsx    -- Unit tests: feature cards
+    FAQ.test.tsx         -- Unit tests: FAQ accordion expand/collapse
+    Testimonials.test.tsx -- Unit tests: testimonial rendering with DB data shape
+    waitlist-route.test.ts -- Unit tests: API route validation, insert, duplicate handling
 e2e/
-  home.spec.ts          — Playwright E2E: page load, hero/features/pricing visible, nav, form flows, mobile menu
-public/                 — Static assets (favicons, OG images)
+  home.spec.ts          -- Playwright E2E: full page flows including FAQ section
+supabase/
+  migrations/
+    20240101000000_initial_schema.sql -- Tables: waitlist, testimonials, faqs with RLS
+  seed.sql              -- 6 testimonials, 8 FAQs, 3 sample waitlist entries
+public/                 -- Static assets (favicons, OG images)
 ```
+
+## Database Schema
+
+Three tables with RLS policies:
+
+- **waitlist** (id uuid PK, email UNIQUE, name, referral_source, created_at) -- INSERT by anyone, SELECT by authenticated
+- **testimonials** (id uuid PK, author_name, author_role, author_company, author_avatar_url, content, rating 1-5, featured, sort_order, created_at) -- SELECT by anyone
+- **faqs** (id uuid PK, question, answer, category, sort_order, created_at) -- SELECT by anyone
+
+Graceful fallback: when Supabase is not configured, hardcoded data is used so the template works out-of-the-box.
 
 ## Brand Customisation
 
@@ -98,16 +127,22 @@ cp .env.example .env.local
 
 | Variable | Purpose |
 |---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL (auth / data) |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon key (public, safe to expose) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Optional server-side key for waitlist API route |
 
 ## Rules
 
-- TypeScript strict mode — no `any` types; all props typed as interfaces
+- TypeScript strict mode -- no `any` types; all props typed as interfaces
 - All components must have proper TypeScript interfaces
-- Use Tailwind utility classes — no custom CSS files
+- Use Tailwind utility classes -- no custom CSS files
 - ARIA labels on all interactive elements (`aria-label`, `aria-expanded`, `aria-invalid`, `aria-describedby`)
 - Error + loading states on all data-fetching components
 - Use `next/image` for all images, `next/link` for navigation
 - Mock `next/link` and `next/image` in Vitest tests (they require the Next.js router)
-- E2E specs live in `e2e/` — Playwright auto-starts the dev server via `webServer` config
+- E2E specs live in `e2e/` -- Playwright auto-starts the dev server via `webServer` config
+- Database types in `src/types/database.ts` must stay in sync with `supabase/migrations/`
+- API routes validate input server-side; never trust client data
+- Supabase queries use the typed client from `src/lib/supabase.ts`
+- All DB-driven components accept data via props (fetched in page.tsx Server Component)
+- Fallback data in `src/lib/queries.ts` ensures the app works without a database connection

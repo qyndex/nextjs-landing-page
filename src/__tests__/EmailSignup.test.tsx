@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { EmailSignup } from "@/components/EmailSignup";
@@ -9,6 +9,19 @@ vi.mock("next/link", () => ({
     <a href={href}>{children}</a>
   ),
 }));
+
+// Mock global fetch for API calls
+const mockFetch = vi.fn();
+
+beforeEach(() => {
+  vi.clearAllMocks();
+  global.fetch = mockFetch;
+  mockFetch.mockResolvedValue({
+    ok: true,
+    status: 201,
+    json: async () => ({ message: "Successfully joined the waitlist!" }),
+  });
+});
 
 describe("EmailSignup", () => {
   it("renders email input and submit button", () => {
@@ -28,6 +41,8 @@ describe("EmailSignup", () => {
     await waitFor(() => {
       expect(screen.getByRole("alert")).toHaveTextContent(/email address is required/i);
     });
+    // Should NOT call the API for validation errors
+    expect(mockFetch).not.toHaveBeenCalled();
   });
 
   it("shows validation error for malformed email", async () => {
@@ -38,6 +53,7 @@ describe("EmailSignup", () => {
     await waitFor(() => {
       expect(screen.getByRole("alert")).toHaveTextContent(/valid email address/i);
     });
+    expect(mockFetch).not.toHaveBeenCalled();
   });
 
   it("marks the input as aria-invalid when there is a validation error", async () => {
@@ -54,12 +70,14 @@ describe("EmailSignup", () => {
     // Trigger error
     fireEvent.submit(screen.getByRole("button").closest("form")!);
     await waitFor(() => expect(screen.getByRole("alert")).toBeInTheDocument());
-    // Start typing — error should clear
+    // Start typing -- error should clear
     await user.type(screen.getByLabelText(/email address/i), "a");
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
   });
 
   it("disables input and button while loading", async () => {
+    // Make fetch hang so we can observe loading state
+    mockFetch.mockReturnValue(new Promise(() => {}));
     const user = userEvent.setup();
     render(<EmailSignup />);
     await user.type(screen.getByLabelText(/email address/i), "user@example.com");
@@ -80,5 +98,60 @@ describe("EmailSignup", () => {
     );
     // Form is no longer rendered in success state
     expect(screen.queryByRole("form")).not.toBeInTheDocument();
+  });
+
+  it("calls /api/waitlist with the email", async () => {
+    const user = userEvent.setup();
+    render(<EmailSignup />);
+    await user.type(screen.getByLabelText(/email address/i), "user@example.com");
+    fireEvent.submit(screen.getByRole("button").closest("form")!);
+    await waitFor(() => {
+      expect(mockFetch).toHaveBeenCalledWith("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: "user@example.com" }),
+      });
+    });
+  });
+
+  it("treats 409 (already on waitlist) as success", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: false,
+      status: 409,
+      json: async () => ({ error: "Already on the waitlist" }),
+    });
+    const user = userEvent.setup();
+    render(<EmailSignup />);
+    await user.type(screen.getByLabelText(/email address/i), "dup@example.com");
+    fireEvent.submit(screen.getByRole("button").closest("form")!);
+    await waitFor(() => {
+      expect(screen.getByText(/you're on the list/i)).toBeInTheDocument();
+    });
+  });
+
+  it("shows error message on API failure", async () => {
+    mockFetch.mockResolvedValueOnce({
+      ok: false,
+      status: 500,
+      json: async () => ({ error: "Server error" }),
+    });
+    const user = userEvent.setup();
+    render(<EmailSignup />);
+    await user.type(screen.getByLabelText(/email address/i), "user@example.com");
+    fireEvent.submit(screen.getByRole("button").closest("form")!);
+    await waitFor(() => {
+      expect(screen.getByRole("alert")).toHaveTextContent(/server error/i);
+    });
+  });
+
+  it("shows generic error when fetch throws", async () => {
+    mockFetch.mockRejectedValueOnce(new Error("Network error"));
+    const user = userEvent.setup();
+    render(<EmailSignup />);
+    await user.type(screen.getByLabelText(/email address/i), "user@example.com");
+    fireEvent.submit(screen.getByRole("button").closest("form")!);
+    await waitFor(() => {
+      expect(screen.getByRole("alert")).toHaveTextContent(/something went wrong/i);
+    });
   });
 });

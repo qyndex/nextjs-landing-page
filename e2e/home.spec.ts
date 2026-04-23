@@ -52,6 +52,30 @@ test.describe("Landing page", () => {
     await expect(page.getByRole("heading", { name: /enterprise/i, level: 3 })).toBeVisible();
   });
 
+  test("testimonials section displays testimonial content", async ({ page }) => {
+    const section = page.locator("section#testimonials");
+    await expect(section).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: /loved by builders worldwide/i })
+    ).toBeVisible();
+    // At least one testimonial name should be visible
+    await expect(page.getByText("Sarah Chen")).toBeVisible();
+  });
+
+  test("FAQ section is visible and interactive", async ({ page }) => {
+    const faqSection = page.locator("section#faq");
+    await expect(faqSection).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: /frequently asked questions/i })
+    ).toBeVisible();
+
+    // Click first FAQ to expand it
+    const firstQuestion = faqSection.getByRole("button").first();
+    await expect(firstQuestion).toHaveAttribute("aria-expanded", "false");
+    await firstQuestion.click();
+    await expect(firstQuestion).toHaveAttribute("aria-expanded", "true");
+  });
+
   test("navigation links are present and functional", async ({ page }) => {
     const nav = page.getByRole("navigation");
     await expect(nav.getByRole("link", { name: /features/i })).toHaveAttribute(
@@ -81,12 +105,6 @@ test.describe("Landing page", () => {
     const footer = page.getByRole("contentinfo");
     await expect(footer).toBeVisible();
     await expect(footer).toContainText(/acme/i);
-  });
-
-  test("email signup shows success state after valid submission", async ({ page }) => {
-    await page.getByLabel(/email address/i).fill("test@example.com");
-    await page.getByRole("button", { name: /get early access/i }).click();
-    await expect(page.getByText(/you're on the list/i)).toBeVisible({ timeout: 5000 });
   });
 
   test("email signup shows validation error for empty submit", async ({ page }) => {

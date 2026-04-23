@@ -10,19 +10,22 @@ import type { Database } from "@/types/database";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, name, referral_source } = body as {
+    const { email: rawEmail, name, referral_source } = body as {
       email?: string;
       name?: string;
       referral_source?: string;
     };
 
     // Validate email
-    if (!email || typeof email !== "string") {
+    if (!rawEmail || typeof rawEmail !== "string") {
       return NextResponse.json(
         { error: "Email is required." },
         { status: 400 }
       );
     }
+
+    // Normalize before validation
+    const email = rawEmail.toLowerCase().trim();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -48,7 +51,7 @@ export async function POST(request: NextRequest) {
     const supabase = createClient<Database>(supabaseUrl, supabaseKey);
 
     const { error } = await supabase.from("waitlist").insert({
-      email: email.toLowerCase().trim(),
+      email,
       name: name?.trim() || null,
       referral_source: referral_source?.trim() || null,
     });
