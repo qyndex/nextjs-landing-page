@@ -9,6 +9,9 @@ import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { getTestimonials, getFAQs } from "@/lib/queries";
 
+// Render at request time, not build (build farm can't reach the tenant DB).
+export const dynamic = "force-dynamic";
+
 export default async function LandingPage() {
   const [testimonials, faqs] = await Promise.all([
     getTestimonials(),
