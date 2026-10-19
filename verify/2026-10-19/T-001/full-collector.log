@@ -1,0 +1,11 @@
+→ Collecting evidence for spec 001 (001-dependency-and-ci-remediation)
+  ⚠ No playwright.evidence.config.ts or e2e/001/ — run: bash .claude/scripts/rig-bootstrap.sh (web apps) or rely on the stack-runner AC proof below
+  Running stack AC proof: vitest → verify/2026-10-19-001-dependency-and-ci-remediation/attempt-sx1dsvRq/results.json
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:22:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+JSON report written to /private/tmp/factory-least-privilege-nextjs-20261019/verify/2026-10-19-001-dependency-and-ci-remediation/attempt-sx1dsvRq/results.json
+
+✓ Evidence bundle: verify/2026-10-19-001-dependency-and-ci-remediation/
+  Verdict: FAIL | ACs: 0/8 proven | smoke exit: 0
+  PR body: verify/2026-10-19-001-dependency-and-ci-remediation/pr-body.md

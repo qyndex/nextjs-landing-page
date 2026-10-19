@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
-Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `0c59db3`
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `9535026`
 
-Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-WnOTe174/results.json](verify/2026-10-19-001-dependency-and-ci-remediation/attempt-WnOTe174/results.json)
+Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-sx1dsvRq/results.json](verify/2026-10-19-001-dependency-and-ci-remediation/attempt-sx1dsvRq/results.json)
 
 ### Acceptance criteria (0/8 proven)
 | AC | Proven by | Result |
@@ -17,7 +17,7 @@ Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-W
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-19T22:10:02+11:00
+# Smoke test — 2026-10-19T23:07:29+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
