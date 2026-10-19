@@ -1,0 +1,67 @@
+name: Adopter readiness baseline
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: adopter-baseline-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  process-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Validate installed process files
+        shell: bash
+        run: |
+          set -euo pipefail
+          bash .claude/scripts/validate.sh --json | tee "$RUNNER_TEMP/process-validation.json"
+  application-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        check: [lint, typecheck, unit, build, browser, audit]
+    env:
+      CI: 'true'
+      NEXT_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24.13.1'
+          cache: npm
+      - name: Install the existing lockfile without lifecycle hooks
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Run noninteractive lint
+        if: matrix.check == 'lint'
+        run: npm run lint
+      - name: Run strict TypeScript checking
+        if: matrix.check == 'typecheck'
+        run: npm run typecheck
+      - name: Run existing unit and component tests
+        if: matrix.check == 'unit'
+        run: npm test
+      - name: Build the real application
+        if: matrix.check == 'build'
+        run: npm run build
+      - name: Install the locked browser runner's Chromium
+        if: matrix.check == 'browser'
+        run: node_modules/.bin/playwright install --with-deps chromium
+      - name: Run the existing desktop and mobile journeys
+        if: matrix.check == 'browser'
+        run: npm run test:e2e -- --workers=1 --retries=0 --reporter=line
+      - name: Check the complete dependency graph
+        if: matrix.check == 'audit'
+        run: npm audit --audit-level=high
