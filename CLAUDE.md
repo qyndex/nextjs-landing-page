@@ -154,4 +154,4 @@ The shared process constitution is `.claude/CLAUDE.md`. Preserve this applicatio
 
 ## Factory credential boundaries
 
-Adopter reporting is App-only: require the App writer before entering the reporting environment, reject effective environment overrides away from that route, and keep ordinary source metadata credentials read-only. Shadow retains Checks-write for eligibility but uses Contents/PR-read; a forbidden merge must stop before write-token mint. See docs/FACTORY-CREDENTIAL-BOUNDARIES.md for the local/native verification distinction.
+Adopter reporting is App-only: require the App writer before entering the reporting environment, reject effective environment overrides away from that route, and keep ordinary source metadata credentials read-only. Shadow conservatively retains Checks-write while using Contents/PR-read (its current coordinator does not publish checks in shadow); a forbidden merge must stop before write-token mint. See docs/FACTORY-CREDENTIAL-BOUNDARIES.md for the local/native verification distinction.
