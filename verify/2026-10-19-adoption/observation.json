@@ -37,5 +37,7 @@
   "production_activation": false,
   "note": "No source-pilot delivery or receipt credit inherited. No real application/native operational acceptance claimed.",
   "initial_harness_sha": "6e89cc6f3d8e368fd078f5652c928225bec10f03",
-  "actual_upgrade": "passed with exact known custom files reconciled and reapplied"
+  "actual_upgrade": "passed with exact known custom files reconciled and reapplied",
+  "mcp_servers_enabled": [],
+  "optional_server_catalog": "preserved disabled; repository-specific review required"
 }
