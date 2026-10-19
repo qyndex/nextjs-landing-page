@@ -1,5 +1,15 @@
 # qyndex/nextjs-landing-page factory adoption readiness
 
+## Current bounded readiness — 2026-10-19
+
+The earlier sections below are retained historical observations. The current harness distribution pin is `69574d23988d1a98c2c6f6f27c08815449a59351`. Eight disabled workflow definitions and an unregistered disabled policy are included. A reviewed selective overlay updates managed source while preserving custom instructions/MCP/settings; it is **not** a successful automatic installer upgrade. True distribution hashes remain in the ownership manifest, so future automatic upgrades still stop on retained customizations.
+
+No credentials, repository variables, protected environments, remote policy, state, authority or production configuration were changed by this source overlay. The operator has selected shared existing Apps and Slack destination with independent repository state. Repository-specific workflow IDs, profiles, signed shadow/negative tests and protected credentials remain pending. The separate main-only `factory-review` environment proposal contains only subscription OAuth capacity. Evidence: `verify/2026-10-19/adopter-disabled-bootstrap/`.
+
+The approved migration has58unit tests,97.94%line/94%branch coverage,25applicablebrowser journeys and actual isolated local database checks. Previous ordinary native checks passed the earlier draft head; new bootstrap source requires fresh CI. Audit retains2low findings with no moderate/high/critical result and no suppression. The full collector remains FAIL0/8 with passing smoke checks. Hosted database/deployment and authenticated factory activation remain unproven.
+
+## Historical installation and baseline observations
+
 Status: local installation proposal; activation is disabled. Application readiness and autonomous readiness are separate gates.
 
 Repository baseline: `930c7e80fe530323c7b5284f0fd53da20d4147b7`. Harness source: [`a76b258353c0c692a80c0e40ae0ccf4d2cb4c246`](https://github.com/qyndex/claude-init/tree/a76b258353c0c692a80c0e40ae0ccf4d2cb4c246). The final source checkout was clean and immutable. Initial installation used the previously merged source; the separately recorded exact upgrade preserves the original observation. The exact installation observation is [recorded here](adoption/installation-observation.json).
