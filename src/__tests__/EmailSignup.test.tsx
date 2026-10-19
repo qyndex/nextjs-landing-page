@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { EmailSignup } from "@/components/EmailSignup";
 
@@ -28,6 +28,22 @@ describe("EmailSignup", () => {
     render(<EmailSignup />);
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /get early access/i })).toBeInTheDocument();
+  });
+
+  it("keeps labels and validation errors isolated across two forms", async () => {
+    const { container } = render(<><EmailSignup /><EmailSignup /></>);
+    const forms = [...container.querySelectorAll("form")];
+    const inputs = forms.map(form => within(form).getByLabelText(/email address/i));
+    expect(inputs[0].id).not.toBe(inputs[1].id);
+    for (const form of forms) fireEvent.submit(form);
+    await waitFor(() => expect(screen.getAllByRole("alert")).toHaveLength(2));
+    const errors = forms.map(form => within(form).getByRole("alert"));
+    expect(errors[0].id).not.toBe(errors[1].id);
+    inputs.forEach((input, index) => {
+      expect(input).toHaveAttribute("aria-describedby", errors[index].id);
+      expect(document.getElementById(input.id)).toBe(input);
+    });
+    expect(mockFetch).not.toHaveBeenCalled();
   });
 
   it("applies optional className prop to the form wrapper", () => {

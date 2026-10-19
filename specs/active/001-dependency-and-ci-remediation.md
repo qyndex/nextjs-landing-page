@@ -1,7 +1,9 @@
 ---
 id: 001
 slug: dependency-and-ci-remediation
-status: draft
+status: review
+scope_approved: 2026-10-19
+implementation_approval: exact-migration-approved-2026-10-19
 owner: "@codex"
 human_owner: "@qyndex"
 created: 2026-10-19
@@ -16,7 +18,7 @@ service_tier: T2
 
 The existing landing page passes 46 unit/component tests and its TypeScript check, but has no noninteractive ESLint configuration or CI workflows. Its locked dependency audit reports 28 findings: four critical, sixteen high, five moderate and three low. Npm proposes a major Next.js upgrade for some findings. These are registry dependency findings; exploitability and residual risk require analysis rather than treating the count as proof of reachable exploits.
 
-This draft is authorized for preparation only. Do not change application dependencies, contracts or deployment until the operator approves the scope and migration decision. Preserve the harness adoption change separately from remediation.
+The operator approved the exact nine-file migration and browser-baseline repairs on 2026-10-19, accepting the stated Tailwind4 browser support floor. Preserve the recorded migration hashes and before/after evidence. Merging, activation, database changes and deployment remain gated.
 
 ## Goals
 
@@ -45,3 +47,11 @@ The registry suggested Next.js 16.4.2 in the initial observation; this is an aud
 ## Sequence and rollback
 
 Approve the migration proposal; establish reproducible red checks; update the smallest dependency/tooling set; verify unit/type/lint/build/browser behavior; obtain independent review; merge through the adopter's own protected process. Revert the migration commit/lockfile through a reviewed PR if needed; do not roll back database data or reporting state. Production remains disabled until a separate target-specific health/rollback contract is proven.
+
+## Scope decision — 2026-10-19
+
+The operator approved remediation scope and preparation of the exact migration proposal. This does not approve a major framework upgrade. The existing dependency and application baseline remains unchanged until that separately reviewed proposal is approved. Factory activation remains blocked.
+
+## Exact migration approval — 2026-10-19
+
+Operator approved patch SHA256 e9a3bc9f336c5afb3e8326f5613a6a560e11ab91d8598eecc4980f16a629b66d and browser-baseline repairs. Browser floor: Safari16.4+, Chrome111+, Firefox128+. This supersedes preparation-only dependency restrictions above; it does not approve merging, activation, database changes or production.

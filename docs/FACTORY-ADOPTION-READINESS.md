@@ -32,3 +32,9 @@ Use the pinned source [adopter setup](https://github.com/qyndex/claude-init/blob
 ## Native baseline CI
 
 The new `adopter-baseline.yml` workflow uses only a read-only GitHub token, pinned checkout/runtime actions and no secrets or protected environments. It records process validation separately from application readiness. It grants no merge authority. The matrix exposes existing lint, audit and browser failures alongside the actual typecheck, unit and build results.
+
+## Approved remediation update — 2026-10-19
+
+The operator separately approved the exact nine-file major/toolchain migration and browser-baseline repairs. The original application baseline above is historical. The current candidate upgrades the approved dependencies/configs, fixes per-instance signup label/error IDs and repairs ambiguous hero/pricing selectors and actual mobile menu interaction. No database/schema/policy or waitlist API contract changes are included.
+
+Local lint, strict typecheck,47unit tests and production build pass. Browser:25passed0failed1existing desktop-inapplicable mobile test skip. Audit:2low,0moderate/high/critical; no suppression. Coverage remains58.9%lines/58%branches, below90/85, and is not represented as passing. See verify/2026-10-19/T-B001-remediation for failed-first regression, before/after browser evidence, logs, screenshots and source hashes. Real database integration, complete AC proof, native exact-head independent review and factory producer/bootstrap gates remain pending. Authority/reporting/production remain disabled and this candidate remains draft.

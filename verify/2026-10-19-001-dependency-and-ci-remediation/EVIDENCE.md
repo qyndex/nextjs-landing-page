@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
-Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `4405168`
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `3a37731`
 
-Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-rZrXYU8k/results.json](verify/2026-10-19-001-dependency-and-ci-remediation/attempt-rZrXYU8k/results.json)
+Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-QSlXAqLV/results.json](verify/2026-10-19-001-dependency-and-ci-remediation/attempt-QSlXAqLV/results.json)
 
 ### Acceptance criteria (0/8 proven)
 | AC | Proven by | Result |
@@ -17,13 +17,13 @@ Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-r
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-19T13:17:49+11:00
+# Smoke test — 2026-10-19T13:59:50+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
   ✓ changed API/DB files have integration tests
 
-verify: FAIL (2 check(s) failed)
+verify: FAIL (1 check(s) failed)
 exit: 1
 ---
 ```
@@ -45,5 +45,6 @@ line ?% · branch ?% (gate: line≥90 branch≥85)
 - verify/2026-10-19-001-dependency-and-ci-remediation/pr-body.md
 - verify/2026-10-19-001-dependency-and-ci-remediation/EVIDENCE.md
 - verify/2026-10-19-001-dependency-and-ci-remediation/results.json
+- verify/2026-10-19-001-dependency-and-ci-remediation/attempt-QSlXAqLV/results.json
 - verify/2026-10-19-001-dependency-and-ci-remediation/smoke.log
 - verify/2026-10-19-001-dependency-and-ci-remediation/attempt-rZrXYU8k/results.json
