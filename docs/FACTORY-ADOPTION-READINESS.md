@@ -38,3 +38,9 @@ The new `adopter-baseline.yml` workflow uses only a read-only GitHub token, pinn
 The operator separately approved the exact nine-file major/toolchain migration and browser-baseline repairs. The original application baseline above is historical. The current candidate upgrades the approved dependencies/configs, fixes per-instance signup label/error IDs and repairs ambiguous hero/pricing selectors and actual mobile menu interaction. No database/schema/policy or waitlist API contract changes are included.
 
 Local lint, strict typecheck,47unit tests and production build pass. Browser:25passed0failed1existing desktop-inapplicable mobile test skip. Audit:2low,0moderate/high/critical; no suppression. Coverage remains58.9%lines/58%branches, below90/85, and is not represented as passing. See verify/2026-10-19/T-B001-remediation for failed-first regression, before/after browser evidence, logs, screenshots and source hashes. Real database integration, complete AC proof, native exact-head independent review and factory producer/bootstrap gates remain pending. Authority/reporting/production remain disabled and this candidate remains draft.
+
+## Coverage and signup follow-up
+
+A whole-page regression exposed the missing signup anchor; the CTA section now supplies the existing link target and the actual browser journey follows it. Additional content/document/locale tests exercise no-config and placeholder fallbacks, remote success/error/null/empty behavior through a mocked SDK, and standalone-client configuration denial. No real database calls, schema or identity changes are included.
+
+Local coverage is now97.94%lines/94%branches, above90/85. The existing native unit job now runs coverage with enforced thresholds and a JSON summary. Original58.9%/58% evidence remains historical. Full spec acceptance and authenticated factory/native review gates remain distinct; this is not live database or production certification.

@@ -1,0 +1,18 @@
+[
+  {
+    "check": "lint",
+    "exit": 0
+  },
+  {
+    "check": "typecheck",
+    "exit": 0
+  },
+  {
+    "check": "coverage",
+    "exit": 0
+  },
+  {
+    "check": "workflow-lint",
+    "exit": 0
+  }
+]

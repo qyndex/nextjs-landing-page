@@ -114,6 +114,9 @@ test.describe("Landing page", () => {
       els.map((el) => el.getAttribute("href"))
     );
     expect(hrefs).toContain("#signup");
+    await hero(page).getByRole("link", { name: /get started/i }).click();
+    await expect(page).toHaveURL(/#signup$/);
+    await expect(page.locator("section#signup")).toBeInViewport();
   });
 
   test("footer is visible and contains brand name", async ({ page }) => {

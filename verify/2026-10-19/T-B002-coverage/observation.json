@@ -1,0 +1,69 @@
+{
+  "scope": "Local coverage and signup-anchor follow-up; mocked SDK boundary, no live database",
+  "coverage": {
+    "lines": {
+      "total": 146,
+      "covered": 143,
+      "skipped": 0,
+      "pct": 97.94
+    },
+    "statements": {
+      "total": 151,
+      "covered": 148,
+      "skipped": 0,
+      "pct": 98.01
+    },
+    "functions": {
+      "total": 43,
+      "covered": 42,
+      "skipped": 0,
+      "pct": 97.67
+    },
+    "branches": {
+      "total": 100,
+      "covered": 94,
+      "skipped": 0,
+      "pct": 94
+    },
+    "branchesTrue": {
+      "total": 0,
+      "covered": 0,
+      "skipped": 0,
+      "pct": 100
+    }
+  },
+  "checks": [
+    {
+      "check": "lint",
+      "exit": 0
+    },
+    {
+      "check": "typecheck",
+      "exit": 0
+    },
+    {
+      "check": "coverage",
+      "exit": 0
+    },
+    {
+      "check": "workflow-lint",
+      "exit": 0
+    }
+  ],
+  "browser": {
+    "passed": 25,
+    "failed": 0,
+    "existing_skipped": 1
+  },
+  "source_files": {
+    "src/components/CTA.tsx": "166b5cddede3e36dcf300f09d0abc8277af7a2c9d322983aa380119c11c09a0d",
+    "src/__tests__/ContentAndPage.test.tsx": "fb5f7c6817e93dfde1336e963a10d281fc8a5f11f3159021be7db33143ba24e3",
+    "src/__tests__/DocumentAndLocale.test.tsx": "4efd8b867e624127484bd5ced492e9a46d7e9236de5de8066184ce490b6da024",
+    "e2e/home.spec.ts": "cca8e10a6706a13612e2e7781396a7f5aef442ade1bd23a12e64e2ac5591791b",
+    "vitest.config.mts": "ea5576ad7e7743493f2c2f3121383f823779c5a8620ded774d22424c6ce81118",
+    ".github/workflows/adopter-baseline.yml": "e7329b621be6cda9ce037186976642ba2be53955b3234f4b7331c4bfe727fa5f"
+  },
+  "native_current_head": "pending",
+  "full_spec_acceptance": "pending",
+  "database_or_policy_changes": false
+}

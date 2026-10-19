@@ -50,9 +50,9 @@ jobs:
       - name: Run strict TypeScript checking
         if: matrix.check == 'typecheck'
         run: npm run typecheck
-      - name: Run existing unit and component tests
+      - name: Enforce unit and component coverage
         if: matrix.check == 'unit'
-        run: npm test
+        run: npm run test:coverage
       - name: Build the real application
         if: matrix.check == 'build'
         run: npm run build

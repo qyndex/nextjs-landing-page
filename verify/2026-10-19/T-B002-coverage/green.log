@@ -1,0 +1,38 @@
+
+> landing-page@0.1.0 test:coverage
+> vitest run --coverage
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:21:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.5 /private/tmp/factory-brownfield-nextjs-20261019
+      Coverage enabled with v8
+
+
+ Test Files  8 passed (8)
+      Tests  58 passed (58)
+   Start at  14:51:10
+   Duration  858ms (environment 40%, tests 28%, import 15%, setup 10%, transform 4%, worker 3%)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   98.01 |       94 |   97.67 |   97.94 |                   
+ app/api/waitlist  |   95.45 |       95 |     100 |   95.45 |                   
+  route.ts         |   95.45 |       95 |     100 |   95.45 | 45                
+ components        |   98.71 |    95.65 |   96.87 |   98.68 |                   
+  EmailSignup.tsx  |     100 |    95.83 |     100 |     100 | 56                
+  Nav.tsx          |    87.5 |      100 |      80 |    87.5 | 80                
+  Testimonials.tsx |     100 |       75 |     100 |     100 | 83                
+ lib               |    97.5 |    90.32 |     100 |   97.29 |                   
+  i18n.ts          |    90.9 |     62.5 |     100 |      90 | 19                
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.01% ( 148/151 )
+Branches     : 94% ( 94/100 )
+Functions    : 97.67% ( 42/43 )
+Lines        : 97.94% ( 143/146 )
+================================================================================

@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
-Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `3a37731`
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `9ca4d98`
 
-Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-QSlXAqLV/results.json](verify/2026-10-19-001-dependency-and-ci-remediation/attempt-QSlXAqLV/results.json)
+Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-vATWQz4b/results.json](verify/2026-10-19-001-dependency-and-ci-remediation/attempt-vATWQz4b/results.json)
 
 ### Acceptance criteria (0/8 proven)
 | AC | Proven by | Result |
@@ -17,14 +17,14 @@ Retained results: [verify/2026-10-19-001-dependency-and-ci-remediation/attempt-Q
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-19T13:59:50+11:00
+# Smoke test — 2026-10-19T14:52:13+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
   ✓ changed API/DB files have integration tests
 
-verify: FAIL (1 check(s) failed)
-exit: 1
+verify: PASS
+exit: 0
 ---
 ```
 
@@ -35,7 +35,7 @@ exit: 1
 0 API trace file(s) under `verify/2026-10-19-001-dependency-and-ci-remediation/traces/`; full HAR at `verify/2026-10-19-001-dependency-and-ci-remediation/network.har`.
 
 ### Coverage
-line ?% · branch ?% (gate: line≥90 branch≥85)
+line 97.94% · branch 94% (gate: line≥90 branch≥85)
 
 ### Verdict: **FAIL**
 
@@ -48,3 +48,4 @@ line ?% · branch ?% (gate: line≥90 branch≥85)
 - verify/2026-10-19-001-dependency-and-ci-remediation/attempt-QSlXAqLV/results.json
 - verify/2026-10-19-001-dependency-and-ci-remediation/smoke.log
 - verify/2026-10-19-001-dependency-and-ci-remediation/attempt-rZrXYU8k/results.json
+- verify/2026-10-19-001-dependency-and-ci-remediation/attempt-vATWQz4b/results.json
