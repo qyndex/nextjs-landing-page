@@ -8,10 +8,13 @@ beforeEach(() => vi.resetModules());
 describe("Document and translation availability", () => {
   it("renders an English document containing the supplied page and usable metadata", async () => {
     const { default: Layout, metadata } = await import("@/app/layout");
-    const document = renderToStaticMarkup(<Layout><main>Fixture page content</main></Layout>);
-    expect(document).toContain('<html lang="en"');
-    expect(document).toContain('<main>Fixture page content</main>');
-    expect(document).toContain('class="font-sans antialiased bg-background text-foreground"');
+    const html = renderToStaticMarkup(<Layout><main>Fixture page content</main></Layout>);
+    expect(html).toContain('<html lang="en"');
+    expect(html).toContain('<main>Fixture page content</main>');
+    const parsed = new DOMParser().parseFromString(html, "text/html");
+    for (const name of ["font-sans", "antialiased", "bg-background", "text-foreground"]) {
+      expect(parsed.body.classList.contains(name)).toBe(true);
+    }
     expect(metadata.title).toMatch(/acme/i);
     expect(metadata.description).toBeTruthy();
   });

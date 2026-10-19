@@ -7,7 +7,7 @@ vi.mock("next/link", () => ({ default: ({ href, children }: { href: string; chil
 
 beforeEach(() => {
   vi.resetModules();
-  vi.clearAllMocks();
+  vi.resetAllMocks();
   vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "");
   vi.stubEnv("NEXT_PUBLIC_SUPABASE_ANON_KEY", "");
   boundary.create.mockReturnValue({ from: boundary.from });
@@ -24,6 +24,7 @@ describe("Content availability without a live database", () => {
     for (const id of ["features", "pricing", "testimonials", "faq", "signup"]) {
       expect(document.getElementById(id)).toBeInTheDocument();
     }
+    expect(document.querySelectorAll("#signup")).toHaveLength(1);
     expect(screen.getByText("Sarah Chen")).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /what is included in the free trial/i })).toBeInTheDocument();
     expect(screen.getByRole("contentinfo")).toHaveTextContent("Acme");
