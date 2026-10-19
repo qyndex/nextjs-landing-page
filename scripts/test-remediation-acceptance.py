@@ -120,7 +120,7 @@ class AcceptanceContract(unittest.TestCase):
                  'pricing section is visible with three plans', 'FAQ section is visible and interactive',
                  'email signup shows validation error for empty submit']
         self.value['criteria']['AC-5'] = {
-            'browser': {'argv': ['npm', 'run', 'test:e2e', '--', '--workers=1', '--retries=0'],
+            'browser': {'argv': ['npm', 'run', 'test:e2e', '--', '--workers=1', '--retries=0', '--reporter=line'],
                         'exit': 0, 'scope': 'historical-source-equivalent', 'observed_commit': self.commit, 'source_sha256': self.source,
                         'log': self.artifact('browser.log', '[chromium] [Mobile Chrome] 25 passed 1 skipped\n' + '\n'.join(names))},
             'database_source_sha256': self.source,
@@ -195,6 +195,13 @@ class AcceptanceContract(unittest.TestCase):
             data['collector'] = self.artifact('inconsistent.json', json.dumps(counts))
             self.value['criteria']['AC-8'] = data
             self.assertEqual(self.result()['AC-8']['status'], 'failed')
+
+    def test_native_styled_unit_output_is_read_without_modifying_artifact(self):
+        text = '^[[2m      Tests ^[[22m ^[[1m^[[32m58 passed^[[39m^[[22m^[[90m (58)^[[39m\n'
+        reference = self.artifact('styled-unit.log', text)
+        self.value['criteria']['AC-3']['records']['unit']['log'] = reference
+        self.assertEqual(self.result()['AC-3']['status'], 'passed')
+        self.assertEqual((self.root / reference['path']).read_text(), text)
 
     def test_results_emit_real_failed_assertions_without_skip_credit(self):
         result = MODULE.jest_results(self.result(), self.value)

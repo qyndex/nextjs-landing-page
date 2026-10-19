@@ -94,7 +94,9 @@ def record(root, data, source, argv, *, exit_code=0):
     require(source_manifest(root, data.get('observed_commit'), 'application') == source, 'observed command commit differs from current application')
     require(data.get('argv') == argv and type(data.get('exit')) is int and data['exit'] == exit_code,
             'missing/failed complete command observation')
-    return artifact(root, data.get('log'))
+    # Ignore only display SGR decorations while preserving/hash-checking raw bytes.
+    raw = artifact(root, data.get('log'))
+    return re.sub(r'(?:\x1b|\^\[)\[[0-9;]*m', '', raw)
 
 
 def preserved_tests(root, baseline):
@@ -200,7 +202,7 @@ def criterion(root, ac, data, source, value):
         build = record(root, data.get('build'), source, ['npm', 'run', 'build'])
         require('Compiled successfully' in build and 'Next.js 16.' in build, 'current-major production build output missing')
     elif ac == 'AC-5':
-        browser = record(root, data.get('browser'), source, ['npm', 'run', 'test:e2e', '--', '--workers=1', '--retries=0'])
+        browser = record(root, data.get('browser'), source, ['npm', 'run', 'test:e2e', '--', '--workers=1', '--retries=0', '--reporter=line'])
         count = re.search(r'\b(\d+) passed\b', browser)
         require(count is not None and int(count[1]) >= 25 and '1 skipped' in browser and not re.search(r'\b[1-9]\d* failed\b', browser), 'complete applicable browser run not successful')
         for title in ('hero section is visible with main headline', 'navigation links are present and functional',
