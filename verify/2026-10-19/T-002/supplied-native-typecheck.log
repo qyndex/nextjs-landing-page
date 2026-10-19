@@ -1,0 +1,231 @@
+application-baseline (typecheck)	Set up job	﻿2026-10-19T12:56:17.5806602Z Current runner version: '2.337.0'
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5833744Z ##[group]Runner Image Provisioner
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5834657Z Hosted Compute Agent
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5835273Z Version: 20261012.601
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5835945Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5836734Z Build Date: 2026-10-12T17:48:21Z
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5837516Z Worker ID: {3386d167-cd7b-474f-a737-48ce4a524d60}
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5838254Z Region: eastus
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5838835Z Cloud: Azure
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5839403Z ##[endgroup]
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5840921Z ##[group]Operating System
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5841590Z Ubuntu
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5842510Z 24.04.5
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5843139Z LTS
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5843688Z ##[endgroup]
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5844281Z ##[group]Runner Image
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5844943Z Image: ubuntu-24.04
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5845500Z Version: 20261012.334.1
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5846657Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5848489Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5849463Z ##[endgroup]
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5850570Z ##[group]GITHUB_TOKEN Permissions
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5853047Z Contents: read
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5853759Z Metadata: read
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5854353Z ##[endgroup]
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5856401Z Secret source: Actions
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5857512Z Cache mode: write
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.5858206Z Prepare workflow directory
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.6247465Z Prepare all required actions
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.6295647Z Getting action download info
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.8616996Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:17.9671516Z Download action repository 'actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+application-baseline (typecheck)	Set up job	2026-10-19T12:56:18.2573765Z Complete job name: application-baseline (typecheck)
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T12:56:18.3368016Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3369103Z with:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3369574Z   persist-credentials: false
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3370127Z   repository: qyndex/nextjs-landing-page
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3374384Z   token: ***
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3374835Z   ssh-strict: true
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3375279Z   ssh-user: git
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3375700Z   clean: true
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3376160Z   sparse-checkout-cone-mode: true
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3376694Z   fetch-depth: 1
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3377118Z   fetch-tags: false
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3377566Z   show-progress: true
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3378007Z   lfs: false
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3378420Z   submodules: false
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3378870Z   set-safe-directory: true
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3379386Z   allow-unsafe-pr-checkout: false
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3380146Z env:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3380554Z   CI: true
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3380983Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.3381487Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4406294Z Syncing repository: qyndex/nextjs-landing-page
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4409214Z ##[group]Getting Git version info
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4410879Z Working directory is '/home/runner/work/nextjs-landing-page/nextjs-landing-page'
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4413294Z [command]/usr/bin/git version
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4514546Z git version 2.55.0
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4535743Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4547474Z Temporarily overriding HOME='/home/runner/work/_temp/ab0b884a-3596-44b2-a350-db3241081818' before making global git config changes
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4549934Z Adding repository directory to the temporary git global config as a safe directory
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4554933Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nextjs-landing-page/nextjs-landing-page
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4605086Z Deleting the contents of '/home/runner/work/nextjs-landing-page/nextjs-landing-page'
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4608442Z ##[group]Determining repository object format
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4610186Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4611406Z ##[group]Initializing the repository
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4614461Z [command]/usr/bin/git init /home/runner/work/nextjs-landing-page/nextjs-landing-page
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4736599Z hint: Using 'master' as the name for the initial branch. This default branch name
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4738311Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4740510Z hint: to use in all of your new repositories, which will suppress this warning,
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4742635Z hint: call:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4743690Z hint:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4744576Z hint: 	git config --global init.defaultBranch <name>
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4745219Z hint:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4745810Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4746743Z hint: 'development'. The just-created branch can be renamed via this command:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4747489Z hint:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4747928Z hint: 	git branch -m <name>
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4748420Z hint:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4749054Z hint: Disable this message with "git config set advice.defaultBranchName false"
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4750766Z Initialized empty Git repository in /home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4755303Z [command]/usr/bin/git remote add origin https://github.com/qyndex/nextjs-landing-page
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4806796Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4808134Z ##[group]Disabling automatic garbage collection
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4810576Z [command]/usr/bin/git config --local gc.auto 0
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4840653Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4841694Z ##[group]Setting up auth
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4842939Z Removing SSH command configuration
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4846583Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.4876977Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5251214Z Removing HTTP extra header
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5256217Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5288408Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5517897Z Removing includeIf entries pointing to credentials config files
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5519986Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5548935Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5770341Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5809207Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path /home/runner/work/_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5840831Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5875767Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5909616Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5939485Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5940521Z ##[group]Fetching the repository
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.5947698Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +416b4fc9c2297d624fc7a0b7202a0628f5d6dbd2:refs/remotes/pull/2/merge
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9319093Z From https://github.com/qyndex/nextjs-landing-page
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9321105Z  * [new ref]         416b4fc9c2297d624fc7a0b7202a0628f5d6dbd2 -> pull/2/merge
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9325333Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9327090Z ##[group]Determining the checkout info
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9329032Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9332032Z [command]/usr/bin/git sparse-checkout disable
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9387927Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9417822Z ##[group]Checking out the ref
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9422724Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0046068Z Note: switching to 'refs/remotes/pull/2/merge'.
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0047330Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0048123Z You are in 'detached HEAD' state. You can look around, make experimental
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0049941Z changes and commit them, and you can discard any commits you make in this
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0051981Z state without impacting any branches by switching back to a branch.
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0053693Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0054614Z If you want to create a new branch to retain commits you create, you may
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0056546Z do so (now or later) by using -c with the switch command. Example:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0057426Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0057820Z   git switch -c <new-branch-name>
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0058441Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0058824Z Or undo this operation with:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0059384Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0059723Z   git switch -
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0060222Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0061150Z Turn off this advice by setting config variable advice.detachedHead to false
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0062496Z 
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0063771Z HEAD is now at 416b4fc Merge b408a374f04533f3efe9bda0634277a381573206 into 849c9523ac44f347c787bb50db0aac85dc87f6a8
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0067982Z ##[endgroup]
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0104328Z [command]/usr/bin/git log -1 --format=%H
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0129429Z 416b4fc9c2297d624fc7a0b7202a0628f5d6dbd2
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0140018Z ##[group]Removing auth
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0141621Z Removing SSH command configuration
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0144811Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0178489Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0395219Z Removing HTTP extra header
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0398425Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0432353Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0649135Z Removing includeIf entries pointing to credentials config files
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0652792Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0680412Z includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0685266Z includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0688916Z includeif.gitdir:/github/workspace/.git.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0690850Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0696267Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0711666Z /home/runner/work/_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0726530Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-287d34b7\-5bf7\-4358\-b514\-051f0a934d16\.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0760415Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0780850Z /home/runner/work/_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0790344Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-287d34b7\-5bf7\-4358\-b514\-051f0a934d16\.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0879301Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0884081Z /github/runner_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0892576Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-287d34b7\-5bf7\-4358\-b514\-051f0a934d16\.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0898541Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0914476Z /github/runner_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0965479Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-287d34b7\-5bf7\-4358\-b514\-051f0a934d16\.config
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.1013268Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.1228019Z Removing credentials config '/home/runner/work/_temp/git-credentials-287d34b7-5bf7-4358-b514-051f0a934d16.config'
+application-baseline (typecheck)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.1236263Z ##[endgroup]
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	﻿2026-10-19T12:56:19.1660122Z ##[group]Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1662005Z with:
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1662888Z   node-version: 24.13.1
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1663883Z   cache: npm
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1664787Z   check-latest: false
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1675160Z   token: ***
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1676134Z   package-manager-cache: true
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1677232Z env:
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1678057Z   CI: true
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1678961Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.1680040Z ##[endgroup]
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.3079346Z Attempting to download 24.13.1...
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:19.6811168Z Acquiring 24.13.1 - x64 from https://github.com/actions/node-versions/releases/download/24.13.1-21889660756/node-24.13.1-linux-x64.tar.gz
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.1025518Z Extracting ...
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.1150411Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/dd7cd7d3-daad-48cf-9637-9499f257109e -f /home/runner/work/_temp/38a7a2b1-dada-47d7-92d1-66d05349b173
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:21.3241392Z Adding to the cache ...
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.7126068Z ##[group]Environment details
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.9416482Z node: v24.13.1
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.9417133Z npm: 11.8.0
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.9417479Z yarn: 1.22.22
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.9418160Z ##[endgroup]
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.9441627Z [command]/opt/hostedtoolcache/node/24.13.1/x64/bin/npm config get cache
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:24.0351527Z /home/runner/.npm
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:24.1051146Z Cache hit for: node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.0145052Z Received 200740995 of 200740995 (100.0%), 225.0 MBs/sec
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.0146202Z Cache Size: ~191 MB (200740995 B)
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.0260247Z [command]/usr/bin/tar -xf /home/runner/work/_temp/abe1029c-783e-40cf-83ae-1d7a4a0df4ee/cache.tzst -P -C /home/runner/work/nextjs-landing-page/nextjs-landing-page --use-compress-program unzstd
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.3494202Z Cache restored successfully
+application-baseline (typecheck)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.3587413Z Cache restored from key: node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	﻿2026-10-19T12:56:25.3778751Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:25.3779267Z ^[[36;1mnpm ci --ignore-scripts --no-audit --no-fund^[[0m
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:25.4069784Z shell: /usr/bin/bash -e {0}
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:25.4070133Z env:
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:25.4070367Z   CI: true
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:25.4070612Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:25.4070919Z ##[endgroup]
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:29.1629840Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:31.4637766Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:37.0073723Z 
+application-baseline (typecheck)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:37.0074532Z added 430 packages in 12s
+application-baseline (typecheck)	Run strict TypeScript checking	﻿2026-10-19T12:56:37.1174331Z ##[group]Run npm run typecheck
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.1174868Z ^[[36;1mnpm run typecheck^[[0m
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.1260581Z shell: /usr/bin/bash -e {0}
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.1261058Z env:
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.1261375Z   CI: true
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.1261905Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.1262327Z ##[endgroup]
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.2291528Z 
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.2292636Z > landing-page@0.1.0 typecheck
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.2293282Z > tsc --noEmit
+application-baseline (typecheck)	Run strict TypeScript checking	2026-10-19T12:56:37.2293544Z 
+application-baseline (typecheck)	Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	﻿2026-10-19T12:56:40.3942530Z Post job cleanup.
+application-baseline (typecheck)	Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:40.5121072Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a, not saving cache.
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T12:56:40.5272080Z Post job cleanup.
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6103849Z [command]/usr/bin/git version
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6140186Z git version 2.55.0
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6176116Z Temporarily overriding HOME='/home/runner/work/_temp/9d8fc9f3-b03e-4907-b71b-b7519c438519' before making global git config changes
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6177945Z Adding repository directory to the temporary git global config as a safe directory
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6180092Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nextjs-landing-page/nextjs-landing-page
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6209613Z Removing SSH command configuration
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6215831Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6248563Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6463639Z Removing HTTP extra header
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6469746Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6502212Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6716409Z Removing includeIf entries pointing to credentials config files
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6722334Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+application-baseline (typecheck)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:40.6754031Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+application-baseline (typecheck)	Complete job	﻿2026-10-19T12:56:40.7145515Z Cleaning up orphan processes

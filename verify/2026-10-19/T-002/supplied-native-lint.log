@@ -1,0 +1,232 @@
+application-baseline (lint)	Set up job	﻿2026-10-19T12:56:18.1489125Z Current runner version: '2.337.0'
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1514380Z ##[group]Runner Image Provisioner
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1515244Z Hosted Compute Agent
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1515830Z Version: 20261012.601
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1516613Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1517390Z Build Date: 2026-10-12T17:48:21Z
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1518146Z Worker ID: {ae508a9c-39a0-4cb9-beae-39b2c98c7ccf}
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1518881Z Region: westcentralus
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1519450Z Cloud: Azure
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1520321Z ##[endgroup]
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1521801Z ##[group]Operating System
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1522506Z Ubuntu
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1523043Z 24.04.5
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1523554Z LTS
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1524148Z ##[endgroup]
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1524733Z ##[group]Runner Image
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1525365Z Image: ubuntu-24.04
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1525945Z Version: 20261012.334.1
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1527034Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1528865Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1530135Z ##[endgroup]
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1531258Z ##[group]GITHUB_TOKEN Permissions
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1533216Z Contents: read
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1533894Z Metadata: read
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1534448Z ##[endgroup]
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1536883Z Secret source: Actions
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1537876Z Cache mode: write
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1538684Z Prepare workflow directory
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.1984668Z Prepare all required actions
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.2031833Z Getting action download info
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.5117544Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.6037024Z Download action repository 'actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+application-baseline (lint)	Set up job	2026-10-19T12:56:18.7805815Z Complete job name: application-baseline (lint)
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T12:56:18.8604563Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8605677Z with:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8606143Z   persist-credentials: false
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8606713Z   repository: qyndex/nextjs-landing-page
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8610598Z   token: ***
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8611039Z   ssh-strict: true
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8611489Z   ssh-user: git
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8611913Z   clean: true
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8612379Z   sparse-checkout-cone-mode: true
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8612913Z   fetch-depth: 1
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8613338Z   fetch-tags: false
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8613782Z   show-progress: true
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8614237Z   lfs: false
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8614660Z   submodules: false
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8615113Z   set-safe-directory: true
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8615626Z   allow-unsafe-pr-checkout: false
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8616388Z env:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8616800Z   CI: true
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8617222Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.8617738Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9638636Z Syncing repository: qyndex/nextjs-landing-page
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9640907Z ##[group]Getting Git version info
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9641828Z Working directory is '/home/runner/work/nextjs-landing-page/nextjs-landing-page'
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9642980Z [command]/usr/bin/git version
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9698832Z git version 2.55.0
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9719824Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9731703Z Temporarily overriding HOME='/home/runner/work/_temp/26514d42-140d-4871-923f-e0da97e98046' before making global git config changes
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9734137Z Adding repository directory to the temporary git global config as a safe directory
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9738726Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nextjs-landing-page/nextjs-landing-page
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9786303Z Deleting the contents of '/home/runner/work/nextjs-landing-page/nextjs-landing-page'
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9789867Z ##[group]Determining repository object format
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9791469Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9792321Z ##[group]Initializing the repository
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9795815Z [command]/usr/bin/git init /home/runner/work/nextjs-landing-page/nextjs-landing-page
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9900675Z hint: Using 'master' as the name for the initial branch. This default branch name
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9903090Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9905208Z hint: to use in all of your new repositories, which will suppress this warning,
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9906491Z hint: call:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9906980Z hint:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9907569Z hint: 	git config --global init.defaultBranch <name>
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9908265Z hint:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9908917Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9910532Z hint: 'development'. The just-created branch can be renamed via this command:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9911691Z hint:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9912180Z hint: 	git branch -m <name>
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9912724Z hint:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9913433Z hint: Disable this message with "git config set advice.defaultBranchName false"
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9914960Z Initialized empty Git repository in /home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9917341Z [command]/usr/bin/git remote add origin https://github.com/qyndex/nextjs-landing-page
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9964337Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9965148Z ##[group]Disabling automatic garbage collection
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9967761Z [command]/usr/bin/git config --local gc.auto 0
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:18.9998216Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0000129Z ##[group]Setting up auth
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0001095Z Removing SSH command configuration
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0005765Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0036434Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0361789Z Removing HTTP extra header
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0366438Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0396903Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0611092Z Removing includeIf entries pointing to credentials config files
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0615328Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0646011Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0865496Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0901269Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path /home/runner/work/_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0931487Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0965596Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.0997089Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.1023999Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.1025043Z ##[group]Fetching the repository
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:19.1030650Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +416b4fc9c2297d624fc7a0b7202a0628f5d6dbd2:refs/remotes/pull/2/merge
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0051240Z From https://github.com/qyndex/nextjs-landing-page
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0053511Z  * [new ref]         416b4fc9c2297d624fc7a0b7202a0628f5d6dbd2 -> pull/2/merge
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0059342Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0060947Z ##[group]Determining the checkout info
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0061892Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0072101Z [command]/usr/bin/git sparse-checkout disable
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0126403Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0158773Z ##[group]Checking out the ref
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0162825Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0793040Z Note: switching to 'refs/remotes/pull/2/merge'.
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0794617Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0795657Z You are in 'detached HEAD' state. You can look around, make experimental
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0797865Z changes and commit them, and you can discard any commits you make in this
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0799931Z state without impacting any branches by switching back to a branch.
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0800734Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0801345Z If you want to create a new branch to retain commits you create, you may
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0802562Z do so (now or later) by using -c with the switch command. Example:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0803747Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0804225Z   git switch -c <new-branch-name>
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0804816Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0805177Z Or undo this operation with:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0805699Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0806007Z   git switch -
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0806434Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0807179Z Turn off this advice by setting config variable advice.detachedHead to false
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0808128Z 
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0809218Z HEAD is now at 416b4fc Merge b408a374f04533f3efe9bda0634277a381573206 into 849c9523ac44f347c787bb50db0aac85dc87f6a8
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0813348Z ##[endgroup]
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0851822Z [command]/usr/bin/git log -1 --format=%H
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0877423Z 416b4fc9c2297d624fc7a0b7202a0628f5d6dbd2
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0887610Z ##[group]Removing auth
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0888614Z Removing SSH command configuration
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0893265Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.0926029Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1150524Z Removing HTTP extra header
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1153575Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1188947Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1414258Z Removing includeIf entries pointing to credentials config files
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1419188Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1444817Z includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1449330Z includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1453313Z includeif.gitdir:/github/workspace/.git.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1455678Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1460725Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1479277Z /home/runner/work/_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1491003Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-27f0777e\-0ecb\-49d5\-81b7\-e832fe7c868f\.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1527205Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1548545Z /home/runner/work/_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1640071Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-27f0777e\-0ecb\-49d5\-81b7\-e832fe7c868f\.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1646232Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1648842Z /github/runner_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1656167Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-27f0777e\-0ecb\-49d5\-81b7\-e832fe7c868f\.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1664458Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1686306Z /github/runner_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1701604Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-27f0777e\-0ecb\-49d5\-81b7\-e832fe7c868f\.config
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1731552Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1944921Z Removing credentials config '/home/runner/work/_temp/git-credentials-27f0777e-0ecb-49d5-81b7-e832fe7c868f.config'
+application-baseline (lint)	Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:20.1954089Z ##[endgroup]
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	﻿2026-10-19T12:56:20.2356405Z ##[group]Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2357949Z with:
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2358803Z   node-version: 24.13.1
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2359990Z   cache: npm
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2360889Z   check-latest: false
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2368636Z   token: ***
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2369753Z   package-manager-cache: true
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2370804Z env:
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2371606Z   CI: true
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2372492Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.2373510Z ##[endgroup]
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:20.3766476Z Attempting to download 24.13.1...
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:21.3358330Z Acquiring 24.13.1 - x64 from https://github.com/actions/node-versions/releases/download/24.13.1-21889660756/node-24.13.1-linux-x64.tar.gz
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:22.0562453Z Extracting ...
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:22.0681031Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/2e35cdbb-2233-421f-94ff-e5e2d1577255 -f /home/runner/work/_temp/f4dbb975-7384-48cf-b761-ab3fb8f9a1cf
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:23.2781467Z Adding to the cache ...
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.2394083Z ##[group]Environment details
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.4989062Z node: v24.13.1
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.4989803Z npm: 11.8.0
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.4990082Z yarn: 1.22.22
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.4990629Z ##[endgroup]
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.5015033Z [command]/opt/hostedtoolcache/node/24.13.1/x64/bin/npm config get cache
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.5937980Z /home/runner/.npm
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:25.7971015Z Cache hit for: node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:27.0146503Z Received 41943040 of 200740995 (20.9%), 40.0 MBs/sec
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:27.8496771Z Received 200740995 of 200740995 (100.0%), 104.3 MBs/sec
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:27.8497593Z Cache Size: ~191 MB (200740995 B)
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:27.8624761Z [command]/usr/bin/tar -xf /home/runner/work/_temp/0b2941de-660b-401e-80fd-7cc3e0c60ece/cache.tzst -P -C /home/runner/work/nextjs-landing-page/nextjs-landing-page --use-compress-program unzstd
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:28.1650513Z Cache restored successfully
+application-baseline (lint)	Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:28.1745743Z Cache restored from key: node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	﻿2026-10-19T12:56:28.1935558Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:28.1936088Z ^[[36;1mnpm ci --ignore-scripts --no-audit --no-fund^[[0m
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:28.2218852Z shell: /usr/bin/bash -e {0}
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:28.2219280Z env:
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:28.2219889Z   CI: true
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:28.2220227Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:28.2220621Z ##[endgroup]
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:31.9387347Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:33.9964167Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:39.3528608Z 
+application-baseline (lint)	Install the existing lockfile without lifecycle hooks	2026-10-19T12:56:39.3529875Z added 430 packages in 11s
+application-baseline (lint)	Run noninteractive lint	﻿2026-10-19T12:56:39.4605215Z ##[group]Run npm run lint
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.4605613Z ^[[36;1mnpm run lint^[[0m
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.4678434Z shell: /usr/bin/bash -e {0}
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.4678809Z env:
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.4679072Z   CI: true
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.4679363Z   NEXT_TELEMETRY_DISABLED: 1
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.4679998Z ##[endgroup]
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.5703396Z 
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.5704267Z > landing-page@0.1.0 lint
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.5704857Z > eslint src e2e
+application-baseline (lint)	Run noninteractive lint	2026-10-19T12:56:39.5705087Z 
+application-baseline (lint)	Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	﻿2026-10-19T12:56:42.0508074Z Post job cleanup.
+application-baseline (lint)	Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38	2026-10-19T12:56:42.1814637Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a, not saving cache.
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	﻿2026-10-19T12:56:42.3098203Z Post job cleanup.
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4023507Z [command]/usr/bin/git version
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4060809Z git version 2.55.0
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4096669Z Temporarily overriding HOME='/home/runner/work/_temp/191bf8a1-313a-4a69-8f4e-57823f04cb94' before making global git config changes
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4098119Z Adding repository directory to the temporary git global config as a safe directory
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4102520Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nextjs-landing-page/nextjs-landing-page
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4451635Z Removing SSH command configuration
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4458896Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4494295Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4718074Z Removing HTTP extra header
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4725160Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.4762411Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.5002159Z Removing includeIf entries pointing to credentials config files
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.5010821Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+application-baseline (lint)	Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1	2026-10-19T12:56:42.5043514Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+application-baseline (lint)	Complete job	﻿2026-10-19T12:56:42.6664915Z Cleaning up orphan processes

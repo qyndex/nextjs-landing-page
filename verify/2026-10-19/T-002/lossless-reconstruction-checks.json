@@ -1,0 +1,17 @@
+[
+  {
+    "presentation": "first-observations-public.json",
+    "raw_sha256": "cedd242a4d8da4e4bd3ebaab83a2008946b01455c35db492ce963749d764a1e4",
+    "exact_bytes_equal": true
+  },
+  {
+    "presentation": "second-observations-public.json",
+    "raw_sha256": "6d22279ffe9eb6b40d00cfc17fe60da6ee4140fd9bfd0c5b4c831ea63f1e0987",
+    "exact_bytes_equal": true
+  },
+  {
+    "presentation": "observations-public.json",
+    "raw_sha256": "0daead4c06aec88b64b16e15797b330cdbe0e925ffe6f886d6bcce44ba221c42",
+    "exact_bytes_equal": true
+  }
+]

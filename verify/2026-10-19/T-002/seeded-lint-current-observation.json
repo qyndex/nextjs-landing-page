@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "npm",
+    "run",
+    "lint"
+  ],
+  "exit": 1,
+  "base_candidate": "56fbe3fe521c564e32751f64ebebca5e487ed206",
+  "intentional_seed": {
+    "path": "src/__factory_acceptance_lint_probe__.ts",
+    "sha256": "a08d6e051ff5402a67f10042c8a225f813d6bc08b98a4f0567185f701981e9e2"
+  },
+  "scope": "Actual local seeded lint negative control on current candidate plus exactly one declared temporary fixture; removed afterward; no native review credit."
+}

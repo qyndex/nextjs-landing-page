@@ -1,0 +1,38 @@
+{
+  "source_commit": "a0f2bf641f940616d264a95526a4850f3d5f2fa6",
+  "required_full_collector": {
+    "verdict": "FAIL",
+    "ac_proven": 0,
+    "ac_total": 8,
+    "smoke_exit": 0
+  },
+  "supplemental_history": [
+    {
+      "ac_proven": 2,
+      "ac_total": 8
+    },
+    {
+      "ac_proven": 5,
+      "ac_total": 8
+    },
+    {
+      "ac_proven": 6,
+      "ac_total": 8,
+      "exit": 1
+    }
+  ],
+  "remaining": [
+    "AC-1",
+    "AC-6"
+  ],
+  "authority": "untrusted local observations only",
+  "raw_inputs_selected": false,
+  "lossless_reconstruction_verified": true,
+  "native_job_observed_head": "b408a374f04533f3efe9bda0634277a381573206",
+  "native_current_source_execution_claim": false,
+  "new_source_scanner": {
+    "semgrep_findings": 0,
+    "semgrep_errors": 0
+  },
+  "raw_scanner_false_positives_retained": 6
+}
