@@ -5,7 +5,7 @@ import { EmailSignup } from "@/components/EmailSignup";
 
 export function CTA() {
   return (
-    <section className="py-24 sm:py-32 relative overflow-hidden">
+    <section id="signup" className="py-24 sm:py-32 relative overflow-hidden">
       {/* Gradient background */}
       <div
         className="absolute inset-0 -z-10"

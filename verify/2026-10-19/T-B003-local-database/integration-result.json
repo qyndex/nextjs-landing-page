@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "synthetic_email": "factory-679adaa40ff2441fb2c566fc99bfb9aa@example.test",
+  "checks": [
+    "invalid-input-400",
+    "actual-api-insert-201",
+    "normalized-duplicate-409",
+    "independent-sql-single-normalized-row",
+    "anonymous-read-no-disclosure",
+    "anonymous-patch-no-mutation",
+    "anonymous-delete-no-mutation"
+  ],
+  "scope": "Actual local HTTP API and anonymous RLS with independent disposable-local SQL inspection; no hosted/deployment acceptance."
+}

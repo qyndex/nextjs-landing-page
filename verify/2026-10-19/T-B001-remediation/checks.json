@@ -1,0 +1,14 @@
+[
+  {
+    "check": "lint",
+    "exit": 0
+  },
+  {
+    "check": "typecheck",
+    "exit": 0
+  },
+  {
+    "check": "unit",
+    "exit": 0
+  }
+]

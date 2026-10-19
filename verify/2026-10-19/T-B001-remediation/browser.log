@@ -1,0 +1,68 @@
+[WebServer] (node:82413) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+
+
+Running 26 tests using 2 workers
+
+(node:82418) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:82419) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:82418) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/26] [chromium] › e2e/home.spec.ts:21:7 › Landing page › page loads and has correct title
+(node:82419) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/26] [chromium] › e2e/home.spec.ts:25:7 › Landing page › hero section is visible with main headline
+[3/26] [chromium] › e2e/home.spec.ts:30:7 › Landing page › hero email signup form is present
+[4/26] [chromium] › e2e/home.spec.ts:36:7 › Landing page › features section is visible
+[5/26] [chromium] › e2e/home.spec.ts:46:7 › Landing page › all 6 feature cards are rendered
+[6/26] [chromium] › e2e/home.spec.ts:60:7 › Landing page › pricing section is visible with three plans
+[7/26] [chromium] › e2e/home.spec.ts:70:7 › Landing page › testimonials section displays testimonial content
+[8/26] [chromium] › e2e/home.spec.ts:80:7 › Landing page › FAQ section is visible and interactive
+[9/26] [chromium] › e2e/home.spec.ts:94:7 › Landing page › navigation links are present and functional
+[10/26] [chromium] › e2e/home.spec.ts:110:7 › Landing page › Get Started CTA button links to signup
+[11/26] [chromium] › e2e/home.spec.ts:119:7 › Landing page › footer is visible and contains brand name
+[12/26] [chromium] › e2e/home.spec.ts:125:7 › Landing page › email signup shows validation error for empty submit
+[13/26] [chromium] › e2e/home.spec.ts:130:7 › Landing page › mobile hamburger menu opens on small screen
+(node:82454) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:82454) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[14/26] [Mobile Chrome] › e2e/home.spec.ts:21:7 › Landing page › page loads and has correct title
+(node:82455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:82455) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[15/26] [Mobile Chrome] › e2e/home.spec.ts:25:7 › Landing page › hero section is visible with main headline
+[16/26] [Mobile Chrome] › e2e/home.spec.ts:30:7 › Landing page › hero email signup form is present
+[17/26] [Mobile Chrome] › e2e/home.spec.ts:36:7 › Landing page › features section is visible
+[18/26] [Mobile Chrome] › e2e/home.spec.ts:46:7 › Landing page › all 6 feature cards are rendered
+[19/26] [Mobile Chrome] › e2e/home.spec.ts:60:7 › Landing page › pricing section is visible with three plans
+[20/26] [Mobile Chrome] › e2e/home.spec.ts:70:7 › Landing page › testimonials section displays testimonial content
+[21/26] [Mobile Chrome] › e2e/home.spec.ts:80:7 › Landing page › FAQ section is visible and interactive
+[22/26] [Mobile Chrome] › e2e/home.spec.ts:94:7 › Landing page › navigation links are present and functional
+[23/26] [Mobile Chrome] › e2e/home.spec.ts:110:7 › Landing page › Get Started CTA button links to signup
+[24/26] [Mobile Chrome] › e2e/home.spec.ts:119:7 › Landing page › footer is visible and contains brand name
+[25/26] [Mobile Chrome] › e2e/home.spec.ts:125:7 › Landing page › email signup shows validation error for empty submit
+[26/26] [Mobile Chrome] › e2e/home.spec.ts:130:7 › Landing page › mobile hamburger menu opens on small screen
+  1 skipped
+  25 passed (5.5s)

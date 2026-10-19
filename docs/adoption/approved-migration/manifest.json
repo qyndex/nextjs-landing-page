@@ -1,0 +1,38 @@
+{
+  "package.json": {
+    "base_sha256": "30b57d9f6f583b8dc13689254b5d720a8a02f7e95f4dc6cac527d1f328c6c5e4",
+    "proposed_sha256": "de9469c0af3778fefd0a3ae3eb1c5091d2f23f5697b54b87499f5d111c83c15f"
+  },
+  "package-lock.json": {
+    "base_sha256": "706374fed551d231f6fe27ff5bbdb4fce718b1e1dffffae7eb46996ac9a5dc5d",
+    "proposed_sha256": "af2077c414a9ddf0df825af418e7bf92b33404eb7a7128291c83e542ec5fda5e"
+  },
+  "postcss.config.js": {
+    "base_sha256": "fa650b380adfabb151a0b352f7135e107e6352345f899060f1c5c231228f94bf",
+    "proposed_sha256": "27647d47033ea345f68ed36cf5e822df6219cd6c75e75b67d346a86798bf1c6a"
+  },
+  "tailwind.config.ts": {
+    "base_sha256": "a5f6a72d0b31ea8a44be181ab3d8faef03a04ce000fd81951fe42eac9edd8906",
+    "proposed_sha256": "f7ee89e25ea1b6e105f60847fb07d9b0dc49d3f4ab7f5293a86c28079d0ef497"
+  },
+  "src/app/globals.css": {
+    "base_sha256": "d009e06e815159b207af9aea0f02af87915671f352533f2bc2c04d3994781521",
+    "proposed_sha256": "0d8868f7cab377145203b8e9e0d185253b9e2b129687683a94cce9e80006c3c8"
+  },
+  "tsconfig.json": {
+    "base_sha256": "fba836a6bbb0f89540703db1818ab717e8f188e77b6b36864b64d73a7669bb02",
+    "proposed_sha256": "55134881a23efd2a1f9266d2d0752731ff9c40d0e867136cd8863ea679560a09"
+  },
+  "vitest.config.ts": {
+    "base_sha256": "23a2c0ad0786486b7850dfe044240b5e4b390b05710511ebc35bb76089207276",
+    "proposed_sha256": null
+  },
+  "vitest.config.mts": {
+    "base_sha256": null,
+    "proposed_sha256": "23a2c0ad0786486b7850dfe044240b5e4b390b05710511ebc35bb76089207276"
+  },
+  "eslint.config.mjs": {
+    "base_sha256": null,
+    "proposed_sha256": "5bef9431e8a8dac3c7bbf2abc23dadf3e7f6410ec7ef9932db3f75f2f85771a1"
+  }
+}

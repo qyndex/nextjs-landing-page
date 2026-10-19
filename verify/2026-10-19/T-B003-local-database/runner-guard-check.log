@@ -1,0 +1,1 @@
+PASS: loopback origin accepted; five nonconforming origins rejected. No HTTP requests or database operations executed.

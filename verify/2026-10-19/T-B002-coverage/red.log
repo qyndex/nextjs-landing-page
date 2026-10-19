@@ -1,0 +1,39 @@
+
+> landing-page@0.1.0 test:coverage
+> vitest run --coverage
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:21:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.5 /private/tmp/factory-brownfield-nextjs-20261019
+      Coverage enabled with v8
+
+ ❯ src/__tests__/ContentAndPage.test.tsx (9 tests | 1 failed) 227ms
+   ❯ Content availability without a live database (9)
+     × renders the complete landing page using usable fallback content with no credentials 181ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/ContentAndPage.test.tsx > Content availability without a live database > renders the complete landing page using usable fallback content with no credentials
+Error: expect(received).toBeInTheDocument()
+
+received value must be an HTMLElement or an SVGElement.
+Received has type:  Null
+Received has value: null
+ ❯ src/__tests__/ContentAndPage.test.tsx:25:43
+     23|     expect(screen.getByRole("heading", { level: 1 })).toHaveTextConten…
+     24|     for (const id of ["features", "pricing", "testimonials", "faq", "s…
+     25|       expect(document.getElementById(id)).toBeInTheDocument();
+       |                                           ^
+     26|     }
+     27|     expect(screen.getByText("Sarah Chen")).toBeInTheDocument();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 6 passed (7)
+      Tests  1 failed | 55 passed (56)
+   Start at  14:50:13
+   Duration  1.15s (environment 51%, tests 19%, import 13%, setup 12%, transform 3%, worker 2%)
+

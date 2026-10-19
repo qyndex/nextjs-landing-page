@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useId, type FormEvent } from "react";
 import { ArrowRight, Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -8,6 +8,9 @@ import { cn } from "@/lib/utils";
 type Status = "idle" | "loading" | "success" | "error";
 
 export function EmailSignup({ className }: { className?: string }) {
+  const id = useId();
+  const emailId = `${id}-email`;
+  const errorId = `${id}-error`;
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -70,11 +73,11 @@ export function EmailSignup({ className }: { className?: string }) {
     <form onSubmit={handleSubmit} className={cn("w-full", className)} noValidate>
       <div className="flex flex-col sm:flex-row gap-2">
         <div className="flex-1">
-          <label htmlFor="hero-email" className="sr-only">
+          <label htmlFor={emailId} className="sr-only">
             Email address
           </label>
           <input
-            id="hero-email"
+            id={emailId}
             type="email"
             value={email}
             onChange={(e) => {
@@ -90,7 +93,7 @@ export function EmailSignup({ className }: { className?: string }) {
               error ? "border-red-500 ring-1 ring-red-500" : "border-border"
             )}
             disabled={status === "loading"}
-            aria-describedby={error ? "email-error" : undefined}
+            aria-describedby={error ? errorId : undefined}
             aria-invalid={!!error}
           />
         </div>
@@ -109,7 +112,7 @@ export function EmailSignup({ className }: { className?: string }) {
         </Button>
       </div>
       {error && (
-        <p id="email-error" role="alert" className="mt-1.5 text-xs text-red-500 text-left">
+        <p id={errorId} role="alert" className="mt-1.5 text-xs text-red-500 text-left">
           {error}
         </p>
       )}

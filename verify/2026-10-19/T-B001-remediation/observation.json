@@ -1,0 +1,46 @@
+{
+  "scope": "Local exact migration and browser-baseline verification; not native acceptance or factory authority",
+  "lint_exit": 0,
+  "seeded_lint_rejected": true,
+  "typecheck_exit": 0,
+  "unit_tests": 47,
+  "unit_exit": 0,
+  "production_build_exit": 0,
+  "browser": {
+    "passed": 25,
+    "failed": 0,
+    "existing_skipped": 1,
+    "skip_reason": "Mobile-only hamburger journey is inapplicable in desktop project"
+  },
+  "coverage": {
+    "lines": 58.9,
+    "branches": 58,
+    "required_lines": 90,
+    "required_branches": 85,
+    "gate_met": false
+  },
+  "audit": {
+    "info": 0,
+    "low": 2,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 2
+  },
+  "real_database_integration": false,
+  "native_ci": "pending",
+  "authenticated_independent_receipts": "pending",
+  "files": {
+    "package.json": "de9469c0af3778fefd0a3ae3eb1c5091d2f23f5697b54b87499f5d111c83c15f",
+    "package-lock.json": "af2077c414a9ddf0df825af418e7bf92b33404eb7a7128291c83e542ec5fda5e",
+    "eslint.config.mjs": "5bef9431e8a8dac3c7bbf2abc23dadf3e7f6410ec7ef9932db3f75f2f85771a1",
+    "vitest.config.mts": "23a2c0ad0786486b7850dfe044240b5e4b390b05710511ebc35bb76089207276",
+    "src/components/EmailSignup.tsx": "1691986c3ac4fc31d3e1046381ee956dbbd081219c90ddd80675378b70939a13",
+    "src/__tests__/EmailSignup.test.tsx": "3c416434cb01e420a2992293955ae60b3b011c2bcc3e6c91d73c095374d90089",
+    "e2e/home.spec.ts": "442ce281c0b10dc214b4141a94b6f25018de308ac366d50b527886d5fa52eeae"
+  },
+  "screenshots": {
+    "desktop-hero.png": "f387a031a6c2570f514f3ebacb4da01b8bf065473194380bcb0958ba1b41b660",
+    "mobile-menu.png": "f50a726a0f6e1ceced68f086416287345f41c5a42eb8299e4602277fc13ad8f8"
+  }
+}

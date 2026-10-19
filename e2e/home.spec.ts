@@ -1,4 +1,17 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
+
+async function navigation(page: Page, isMobile: boolean) {
+  if (isMobile) {
+    await page.getByRole("button", { name: /open menu/i }).click();
+    await expect(page.getByRole("button", { name: /close menu/i })).toBeVisible();
+    await expect(page.locator("header > div")).toHaveCSS("opacity", "1");
+  }
+  return page.locator(isMobile ? "header > div" : "header nav");
+}
+
+function hero(page: Page) {
+  return page.locator("section").filter({ has: page.getByRole("heading", { level: 1 }) });
+}
 
 test.describe("Landing page", () => {
   test.beforeEach(async ({ page }) => {
@@ -15,13 +28,14 @@ test.describe("Landing page", () => {
   });
 
   test("hero email signup form is present", async ({ page }) => {
-    const emailInput = page.getByLabel(/email address/i);
+    const emailInput = hero(page).getByLabel(/email address/i);
     await expect(emailInput).toBeVisible();
-    await expect(page.getByRole("button", { name: /get early access/i })).toBeVisible();
+    await expect(hero(page).getByRole("button", { name: /get early access/i })).toBeVisible();
   });
 
-  test("features section is visible", async ({ page }) => {
-    await page.getByRole("link", { name: /features/i }).first().click();
+  test("features section is visible", async ({ page, isMobile }) => {
+    const nav = await navigation(page, isMobile);
+    await nav.getByRole("link", { name: /features/i }).click();
     const featuresSection = page.locator("section#features");
     await expect(featuresSection).toBeVisible();
     await expect(
@@ -43,12 +57,13 @@ test.describe("Landing page", () => {
     }
   });
 
-  test("pricing section is visible with three plans", async ({ page }) => {
-    await page.getByRole("link", { name: /pricing/i }).first().click();
+  test("pricing section is visible with three plans", async ({ page, isMobile }) => {
+    const nav = await navigation(page, isMobile);
+    await nav.getByRole("link", { name: /pricing/i }).click();
     const pricingSection = page.locator("section#pricing");
     await expect(pricingSection).toBeVisible();
     await expect(page.getByRole("heading", { name: /starter/i, level: 3 })).toBeVisible();
-    await expect(page.getByRole("heading", { name: /pro/i, level: 3 })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Pro", exact: true, level: 3 })).toBeVisible();
     await expect(page.getByRole("heading", { name: /enterprise/i, level: 3 })).toBeVisible();
   });
 
@@ -76,8 +91,8 @@ test.describe("Landing page", () => {
     await expect(firstQuestion).toHaveAttribute("aria-expanded", "true");
   });
 
-  test("navigation links are present and functional", async ({ page }) => {
-    const nav = page.getByRole("navigation");
+  test("navigation links are present and functional", async ({ page, isMobile }) => {
+    const nav = await navigation(page, isMobile);
     await expect(nav.getByRole("link", { name: /features/i })).toHaveAttribute(
       "href",
       "#features"
@@ -99,6 +114,9 @@ test.describe("Landing page", () => {
       els.map((el) => el.getAttribute("href"))
     );
     expect(hrefs).toContain("#signup");
+    await hero(page).getByRole("link", { name: /get started/i }).click();
+    await expect(page).toHaveURL(/#signup$/);
+    await expect(page.locator("section#signup")).toBeInViewport();
   });
 
   test("footer is visible and contains brand name", async ({ page }) => {
@@ -108,8 +126,8 @@ test.describe("Landing page", () => {
   });
 
   test("email signup shows validation error for empty submit", async ({ page }) => {
-    await page.getByRole("button", { name: /get early access/i }).click();
-    await expect(page.getByRole("alert")).toContainText(/email address is required/i);
+    await hero(page).getByRole("button", { name: /get early access/i }).click();
+    await expect(hero(page).getByRole("alert")).toContainText(/email address is required/i);
   });
 
   test("mobile hamburger menu opens on small screen", async ({ page, isMobile }) => {
@@ -118,5 +136,6 @@ test.describe("Landing page", () => {
     await expect(toggleButton).toBeVisible();
     await toggleButton.click();
     await expect(page.getByRole("button", { name: /close menu/i })).toBeVisible();
+    await expect(page.locator("header > div")).toHaveCSS("opacity", "1");
   });
 });

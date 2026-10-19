@@ -1,0 +1,149 @@
+[WebServer] (node:79394) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+[WebServer] ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+
+
+Running 26 tests using 2 workers
+
+(node:79395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:79396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:79395) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:79396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/26] [chromium] › e2e/home.spec.ts:24:7 › Landing page › hero section is visible with main headline
+[2/26] [chromium] › e2e/home.spec.ts:20:7 › Landing page › page loads and has correct title
+[3/26] [chromium] › e2e/home.spec.ts:29:7 › Landing page › hero email signup form is present
+[4/26] [chromium] › e2e/home.spec.ts:35:7 › Landing page › features section is visible
+[5/26] [chromium] › e2e/home.spec.ts:45:7 › Landing page › all 6 feature cards are rendered
+[6/26] [chromium] › e2e/home.spec.ts:59:7 › Landing page › pricing section is visible with three plans
+[7/26] [chromium] › e2e/home.spec.ts:69:7 › Landing page › testimonials section displays testimonial content
+[8/26] [chromium] › e2e/home.spec.ts:79:7 › Landing page › FAQ section is visible and interactive
+[9/26] [chromium] › e2e/home.spec.ts:93:7 › Landing page › navigation links are present and functional
+[10/26] [chromium] › e2e/home.spec.ts:109:7 › Landing page › Get Started CTA button links to signup
+[11/26] [chromium] › e2e/home.spec.ts:118:7 › Landing page › footer is visible and contains brand name
+[12/26] [chromium] › e2e/home.spec.ts:124:7 › Landing page › email signup shows validation error for empty submit
+[13/26] [chromium] › e2e/home.spec.ts:129:7 › Landing page › mobile hamburger menu opens on small screen
+  1) [chromium] › e2e/home.spec.ts:124:7 › Landing page › email signup shows validation error for empty submit 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected pattern: /email address is required/i
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" id="_R_1n6avb_-error" class="mt-1.5 text-xs text-red-500 text-left">Email address is required.</p> aka getByText('Email address is required.')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 5000ms
+      - waiting for getByRole('alert')
+
+
+      124 |   test("email signup shows validation error for empty submit", async ({ page }) => {
+      125 |     await hero(page).getByRole("button", { name: /get early access/i }).click();
+    > 126 |     await expect(page.getByRole("alert")).toContainText(/email address is required/i);
+          |                                           ^
+      127 |   });
+      128 |
+      129 |   test("mobile hamburger menu opens on small screen", async ({ page, isMobile }) => {
+        at /private/tmp/factory-brownfield-nextjs-20261019/e2e/home.spec.ts:126:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-chromium/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:79416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:79416) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[14/26] [Mobile Chrome] › e2e/home.spec.ts:20:7 › Landing page › page loads and has correct title
+(node:79417) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:79417) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[15/26] [Mobile Chrome] › e2e/home.spec.ts:24:7 › Landing page › hero section is visible with main headline
+[16/26] [Mobile Chrome] › e2e/home.spec.ts:29:7 › Landing page › hero email signup form is present
+[17/26] [Mobile Chrome] › e2e/home.spec.ts:35:7 › Landing page › features section is visible
+[18/26] [Mobile Chrome] › e2e/home.spec.ts:45:7 › Landing page › all 6 feature cards are rendered
+[19/26] [Mobile Chrome] › e2e/home.spec.ts:59:7 › Landing page › pricing section is visible with three plans
+[20/26] [Mobile Chrome] › e2e/home.spec.ts:69:7 › Landing page › testimonials section displays testimonial content
+[21/26] [Mobile Chrome] › e2e/home.spec.ts:79:7 › Landing page › FAQ section is visible and interactive
+[22/26] [Mobile Chrome] › e2e/home.spec.ts:93:7 › Landing page › navigation links are present and functional
+[23/26] [Mobile Chrome] › e2e/home.spec.ts:109:7 › Landing page › Get Started CTA button links to signup
+[24/26] [Mobile Chrome] › e2e/home.spec.ts:118:7 › Landing page › footer is visible and contains brand name
+[25/26] [Mobile Chrome] › e2e/home.spec.ts:124:7 › Landing page › email signup shows validation error for empty submit
+[26/26] [Mobile Chrome] › e2e/home.spec.ts:129:7 › Landing page › mobile hamburger menu opens on small screen
+  2) [Mobile Chrome] › e2e/home.spec.ts:124:7 › Landing page › email signup shows validation error for empty submit 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected pattern: /email address is required/i
+    Error: strict mode violation: getByRole('alert') resolved to 2 elements:
+        1) <p role="alert" id="_R_1n6avb_-error" class="mt-1.5 text-xs text-red-500 text-left">Email address is required.</p> aka getByText('Email address is required.')
+        2) <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div> aka locator('[id="__next-route-announcer__"]')
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 5000ms
+      - waiting for getByRole('alert')
+
+
+      124 |   test("email signup shows validation error for empty submit", async ({ page }) => {
+      125 |     await hero(page).getByRole("button", { name: /get early access/i }).click();
+    > 126 |     await expect(page.getByRole("alert")).toContainText(/email address is required/i);
+          |                                           ^
+      127 |   });
+      128 |
+      129 |   test("mobile hamburger menu opens on small screen", async ({ page, isMobile }) => {
+        at /private/tmp/factory-brownfield-nextjs-20261019/e2e/home.spec.ts:126:43
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-Mobile-Chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-Mobile-Chrome/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-Mobile-Chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/home-Landing-page-email-si-18f12-tion-error-for-empty-submit-Mobile-Chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  2 failed
+    [chromium] › e2e/home.spec.ts:124:7 › Landing page › email signup shows validation error for empty submit 
+    [Mobile Chrome] › e2e/home.spec.ts:124:7 › Landing page › email signup shows validation error for empty submit 
+  1 skipped
+  23 passed (5.0s)

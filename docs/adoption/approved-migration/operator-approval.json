@@ -1,0 +1,5 @@
+{
+  "decision": "A",
+  "patch_sha256": "e9a3bc9f336c5afb3e8326f5613a6a560e11ab91d8598eecc4980f16a629b66d",
+  "authorization": "Explicit user approval of exact migration and browser-baseline repairs, including stated browser floor; merge and activation blocked, 2026-10-19"
+}

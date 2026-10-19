@@ -1,0 +1,27 @@
+{
+  "base": "930c7e80fe530323c7b5284f0fd53da20d4147b7",
+  "disposable_only": true,
+  "lint": 0,
+  "typecheck": 0,
+  "unit": {
+    "passed": 46,
+    "files": 6
+  },
+  "build_exit": 0,
+  "unchanged_browser": {
+    "passed": 17,
+    "failed": 8,
+    "skipped": 1
+  },
+  "audit": {
+    "info": 0,
+    "low": 2,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 2
+  },
+  "adopter_dependencies_changed": false,
+  "source_application_logic_changed": false,
+  "patch_sha256": "e9a3bc9f336c5afb3e8326f5613a6a560e11ab91d8598eecc4980f16a629b66d"
+}

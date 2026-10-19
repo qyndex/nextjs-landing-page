@@ -1,0 +1,99 @@
+{
+  "repository": "qyndex/nextjs-landing-page",
+  "kind": "brownfield",
+  "baseline_sha": "930c7e80fe530323c7b5284f0fd53da20d4147b7",
+  "harness_sha": "6e89cc6f3d8e368fd078f5652c928225bec10f03",
+  "dry_run": {
+    "source_sha": "6e89cc6f3d8e368fd078f5652c928225bec10f03",
+    "changed_files": 637,
+    "dry_run": true,
+    "activation_enabled": false
+  },
+  "first_install": {
+    "source_sha": "6e89cc6f3d8e368fd078f5652c928225bec10f03",
+    "changed_files": 637,
+    "journal": "61b7bdc16f154b9da5bb4d1e1eb0afae",
+    "activation_enabled": false
+  },
+  "repeat_install": {
+    "source_sha": "6e89cc6f3d8e368fd078f5652c928225bec10f03",
+    "changed_files": 0,
+    "dry_run": false,
+    "activation_enabled": false
+  },
+  "revert_then_reinstall": {
+    "source_sha": "6e89cc6f3d8e368fd078f5652c928225bec10f03",
+    "changed_files": 637,
+    "journal": "4d044c8e67c147329f6a793cc737c2de",
+    "activation_enabled": false
+  },
+  "unchanged_baseline_files": [
+    ".env.example",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "docker-compose.yml",
+    "e2e/home.spec.ts",
+    "next.config.js",
+    "package-lock.json",
+    "package.json",
+    "playwright.config.ts",
+    "postcss.config.js",
+    "public/.gitkeep",
+    "src/__tests__/EmailSignup.test.tsx",
+    "src/__tests__/FAQ.test.tsx",
+    "src/__tests__/Features.test.tsx",
+    "src/__tests__/Nav.test.tsx",
+    "src/__tests__/Testimonials.test.tsx",
+    "src/__tests__/waitlist-route.test.ts",
+    "src/app/api/waitlist/route.ts",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "src/app/page.tsx",
+    "src/components/CTA.tsx",
+    "src/components/EmailSignup.tsx",
+    "src/components/FAQ.tsx",
+    "src/components/Features.tsx",
+    "src/components/Footer.tsx",
+    "src/components/Hero.tsx",
+    "src/components/LogoBar.tsx",
+    "src/components/Nav.tsx",
+    "src/components/Pricing.tsx",
+    "src/components/Testimonials.tsx",
+    "src/components/ui/button.tsx",
+    "src/lib/i18n.ts",
+    "src/lib/queries.ts",
+    "src/lib/supabase.ts",
+    "src/lib/utils.ts",
+    "src/locales/en.json",
+    "src/test/setup.ts",
+    "src/types/database.ts",
+    "supabase/migrations/20240101000000_initial_schema.sql",
+    "supabase/seed.sql",
+    "tailwind.config.ts",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "deliberately_customized_files": [
+    ".claude/settings.json",
+    "CLAUDE.md"
+  ],
+  "originals_preserved": {
+    "CLAUDE.md": "643ec50d8f960b4d2aaa29e30cfcd7a10607ccb8d8ec47b21ad77f40497e6206",
+    ".claude/settings.json": "0cb3b5d522bc303c76d5a3fa0156b144f6f6d0d05c4d92caa16dc0e9687cad15"
+  },
+  "customization_upgrade_guard": "rejected as designed; explicit three-way reconciliation required before upgrade",
+  "pilot_authority_and_state_excluded": true,
+  "activation_enabled": false,
+  "reporting_decision": {
+    "channel": "qyndex-alerts",
+    "channel_id": "C0C7T1Y29K5",
+    "team_id": "T0B2VADDUG4",
+    "operator_id": "U0B3L0TRCTA",
+    "separate_repository_state": true,
+    "enabled": false
+  },
+  "scope": "local adoption and reversible exact-file proof; not application, reporting, autonomous-merge or production acceptance"
+}
