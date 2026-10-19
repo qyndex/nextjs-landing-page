@@ -1,0 +1,2 @@
+✓ T-001: red+green ledger present and content-valid
+tdd-ledger: 0 fail(s), 0 warn(s), 0 legacy-incomplete (pre-T-111, not enforced)

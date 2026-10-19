@@ -1,0 +1,27 @@
+{
+  "base": "849c9523ac44f347c787bb50db0aac85dc87f6a8",
+  "branch": "codex/factory-least-privilege",
+  "staged_files": 26,
+  "staged_gitleaks_exit": 0,
+  "new_dependency_packages": 0,
+  "application_files_changed": false,
+  "live_effects": 0,
+  "all_flags_or_policy_changed": false,
+  "full_collector_run": false,
+  "native_permission_proof": "pending",
+  "file_sha256": {
+    ".github/workflows/adopter-baseline.yml": "e2da5a054388ac2de22511fe58ad8cd3e0b746bd97be5e3a6d68beb5bf8bc361",
+    ".github/workflows/factory-hosted-digest.yml": "f35b40a48810a17c066b622e1438a7dd62ab657ebc6fff0e5844b33428575ddb",
+    ".github/workflows/factory-hosted-feedback.yml": "bb4396c4aafe551c085e79e0355483824e2bc893b7c2bca271bd768c8e5f4bc2",
+    ".github/workflows/factory-merge.yml": "fc85c75f6de636bf8dfaf8bc8584ce0a3de505d42d6739e524b64fea7705808f",
+    ".github/workflows/factory-reporting-alerts.yml": "f6bbae61083aec446cb3fe75150162b0ece0ae8c3a743ce4709873b4c8b80f48",
+    ".github/workflows/factory-reporting-queue.yml": "0ddc43e357677553dc8539d432e682e6eaad9a39cdaaa1fb020a6de2d8e85757",
+    "CLAUDE.md": "cf5517a8824d4aeb4cefcfc1a56a15d37c7ac8db63a71ce781ca60ff1bb8a7dc",
+    "docs/FACTORY-CREDENTIAL-BOUNDARIES.md": "2cfb88e95f58b000128a0a5bd7c0fe681e2d8f116fa23177e32e8d1d10296724",
+    "plans/active/001-dependency-and-ci-remediation.md": "85eacca839c105a03925601b0cf6063289a6407020ebaa3022e31a1653b6fa43",
+    "scripts/test-factory-least-privilege.py": "0fe31b38724f12f7e435476444b87e3b745b796bb708fb583d1d52f671696b7c",
+    "scripts/verify-factory-least-privilege.sh": "547c793c1f5688ff501a908ef31c47aef3607c55fbda5081198ba1ff1d71281f",
+    "tasks/TASKS.md": "6cce27d2d87eb025d0ac83c08fb5a52b0fed6a27f4e6e380fd1833fb5bdc3645"
+  },
+  "proof_log_inclusion": "Explicit intended test logs force-added because application .gitignore ignores *.log; no detector/exception change"
+}
