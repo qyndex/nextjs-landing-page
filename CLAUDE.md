@@ -146,3 +146,8 @@ cp .env.example .env.local
 - Supabase queries use the typed client from `src/lib/supabase.ts`
 - All DB-driven components accept data via props (fetched in page.tsx Server Component)
 - Fallback data in `src/lib/queries.ts` ensures the app works without a database connection
+
+
+## Factory harness adoption
+
+The shared process constitution is `.claude/CLAUDE.md`. Preserve this application architecture and conventions. See `docs/FACTORY-ADOPTION-READINESS.md` for the pinned source, baseline limitations and disabled activation gates.

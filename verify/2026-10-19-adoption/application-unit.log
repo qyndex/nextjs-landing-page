@@ -1,0 +1,22 @@
+
+> landing-page@0.1.0 test
+> vitest run
+
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.8 <ADOPTER_CHECKOUT>
+
+stderr | src/__tests__/waitlist-route.test.ts > POST /api/waitlist > returns 500 for other database errors
+Waitlist insert error: { code: '42P01', message: 'relation not found' }
+
+ ✓ src/__tests__/waitlist-route.test.ts (8 tests) 8ms
+ ✓ src/__tests__/Testimonials.test.tsx (7 tests) 50ms
+ ✓ src/__tests__/Features.test.tsx (6 tests) 62ms
+ ✓ src/__tests__/FAQ.test.tsx (7 tests) 83ms
+ ✓ src/__tests__/Nav.test.tsx (6 tests) 102ms
+ ✓ src/__tests__/EmailSignup.test.tsx (12 tests) 344ms
+
+ Test Files  6 passed (6)
+      Tests  46 passed (46)
+   Start at  13:13:08
+   Duration  1.06s (transform 156ms, setup 452ms, collect 658ms, tests 648ms, environment 1.86s, prepare 180ms)
