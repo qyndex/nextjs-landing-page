@@ -1,0 +1,42 @@
+{
+  "status": "integration-passed-cleanup-complete",
+  "candidate": "d356cc1a9a42f9c7a1e7732859d892949a6e265a",
+  "cli_version": "2.22.6",
+  "migration_sha256": {
+    "20240101000000_initial_schema.sql": "7a3e7820c5c72982d090589abb5afd252d68af6f8ab6e60256850d79fd48dbbb"
+  },
+  "seed_enabled": false,
+  "project_id": "factory-db-20261019",
+  "containers_created": true,
+  "database_results": {
+    "status": "pass",
+    "synthetic_email": "factory-679adaa40ff2441fb2c566fc99bfb9aa@example.test",
+    "checks": [
+      "invalid-input-400",
+      "actual-api-insert-201",
+      "normalized-duplicate-409",
+      "independent-sql-single-normalized-row",
+      "anonymous-read-no-disclosure",
+      "anonymous-patch-no-mutation",
+      "anonymous-delete-no-mutation"
+    ],
+    "scope": "Actual local HTTP API and anonymous RLS with independent disposable-local SQL inspection; no hosted/deployment acceptance."
+  },
+  "operator_approval": "Option A: disposable local Supabase; existing migration unchanged; synthetic data only",
+  "blocker": null,
+  "required_before_start": [
+    "Verify Docker daemon availability",
+    "Verify no existing project namespace/resource collision",
+    "Establish and verify loopback-only port binding for installed CLI; do not start publicly bound services",
+    "Check selected unused ports",
+    "Run under sanitized environment without hosted Supabase or service-role credentials"
+  ],
+  "credentials": "Generated disposable local anon key only; service-role absent from application/test process",
+  "binding_note": "Network-default binding ignored by runtime; initial empty stack removed, explicit per-port loopback enforcement verified before data tests",
+  "cleanup": {
+    "test_containers_remaining": 0,
+    "test_volumes_remaining": 0,
+    "test_network_removed": true,
+    "app_api_database_ports_released": true
+  }
+}

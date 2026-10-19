@@ -1,0 +1,6 @@
+{
+  "test_containers_remaining": 0,
+  "test_volumes_remaining": 0,
+  "test_network_removed": true,
+  "app_api_database_ports_released": true
+}

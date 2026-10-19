@@ -1,0 +1,40 @@
+[
+  {
+    "name": "/supabase_rest_factory-db-20261019",
+    "id": "cdbd5294953ad6cbd754243abc42037ea1cf3b5994b4170d6e066906ecabd802",
+    "image": "public.ecr.aws/supabase/postgrest:v12.2.11",
+    "ports": [],
+    "health": null
+  },
+  {
+    "name": "/supabase_auth_factory-db-20261019",
+    "id": "14017b615aee0a9d3ddc4486545e554b0aa2abc293b7ca4941903d89a04e9ef9",
+    "image": "public.ecr.aws/supabase/gotrue:v2.171.0",
+    "ports": [],
+    "health": "healthy"
+  },
+  {
+    "name": "/supabase_kong_factory-db-20261019",
+    "id": "6796c3986dbc512dcc264b17cf3e3219172979c09232acb7439e87365a177a9b",
+    "image": "public.ecr.aws/supabase/kong:2.8.1",
+    "ports": [
+      {
+        "HostIp": "127.0.0.1",
+        "HostPort": "56321"
+      }
+    ],
+    "health": "healthy"
+  },
+  {
+    "name": "/supabase_db_factory-db-20261019",
+    "id": "7cc146947cf7418d226f97e3226ccb7b6e984b337bfeaf6624cded7b579f0dce",
+    "image": "public.ecr.aws/supabase/postgres:15.8.1.069",
+    "ports": [
+      {
+        "HostIp": "127.0.0.1",
+        "HostPort": "56322"
+      }
+    ],
+    "health": "healthy"
+  }
+]
