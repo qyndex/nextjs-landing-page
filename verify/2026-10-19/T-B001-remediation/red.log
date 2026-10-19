@@ -1,0 +1,94 @@
+
+> landing-page@0.1.0 test
+> vitest run src/__tests__/EmailSignup.test.tsx
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:21:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.5 /private/tmp/factory-brownfield-nextjs-20261019
+
+ ❯ src/__tests__/EmailSignup.test.tsx (13 tests | 1 failed) 343ms
+   ❯ EmailSignup (13)
+     × keeps labels and validation errors isolated across two forms 6ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/__tests__/EmailSignup.test.tsx > EmailSignup > keeps labels and validation errors isolated across two forms
+TestingLibraryElementError: Found a label with the text of: /email address/i, however the element associated with this label (<input />) is non-labellable [https://html.spec.whatwg.org/multipage/forms.html#category-label]. If you really need to label a <input />, you can use aria-label or aria-labelledby instead.
+
+Ignored nodes: comments, script, style
+[36m<form[39m
+  [33mclass[39m=[32m"w-full"[39m
+  [33mnovalidate[39m=[32m""[39m
+[36m>[39m
+  [36m<div[39m
+    [33mclass[39m=[32m"flex flex-col sm:flex-row gap-2"[39m
+  [36m>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"flex-1"[39m
+    [36m>[39m
+      [36m<label[39m
+        [33mclass[39m=[32m"sr-only"[39m
+        [33mfor[39m=[32m"hero-email"[39m
+      [36m>[39m
+        [0mEmail address[0m
+      [36m</label>[39m
+      [36m<input[39m
+        [33maria-invalid[39m=[32m"false"[39m
+        [33mclass[39m=[32m"w-full h-10 rounded-md border bg-background px-4 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)]/60 focus:border-transparent transition-shadow duration-200 border-border"[39m
+        [33mid[39m=[32m"hero-email"[39m
+        [33mplaceholder[39m=[32m"Enter your email"[39m
+        [33mtype[39m=[32m"email"[39m
+        [33mvalue[39m=[32m""[39m
+      [36m/>[39m
+    [36m</div>[39m
+    [36m<button[39m
+      [33mclass[39m=[32m"inline-flex items-center justify-center rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none disabled:opacity-50 shadow hover:bg-primary/90 py-2 h-10 px-5 bg-gradient-to-r from-[var(--brand-primary)] to-[var(--brand-secondary)] text-white border-0 hover:opacity-90 transition-opacity whitespace-nowrap"[39m
+      [33mtype[39m=[32m"submit"[39m
+    [36m>[39m
+      [0mGet early access [0m
+      [36m<svg[39m
+        [33maria-hidden[39m=[32m"true"[39m
+        [33mclass[39m=[32m"lucide lucide-arrow-right ml-1.5 h-4 w-4"[39m
+        [33mfill[39m=[32m"none"[39m
+        [33mheight[39m=[32m"24"[39m
+        [33mstroke[39m=[32m"currentColor"[39m
+        [33mstroke-linecap[39m=[32m"round"[39m
+        [33mstroke-linejoin[39m=[32m"round"[39m
+        [33mstroke-width[39m=[32m"2"[39m
+        [33mviewBox[39m=[32m"0 0 24 24"[39m
+        [33mwidth[39m=[32m"24"[39m
+        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
+      [36m>[39m
+        [36m<path[39m
+          [33md[39m=[32m"M5 12h14"[39m
+        [36m/>[39m
+        [36m<path[39m
+          [33md[39m=[32m"m12 5 7 7-7 7"[39m
+        [36m/>[39m
+      [36m</svg>[39m
+    [36m</button>[39m
+  [36m</div>[39m
+[36m</form>[39m
+ ❯ Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:106:40
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ src/__tests__/EmailSignup.test.tsx:36:51
+     34|     const { container } = render(<><EmailSignup /><EmailSignup /></>);
+     35|     const forms = [...container.querySelectorAll("form")];
+     36|     const inputs = forms.map(form => within(form).getByLabelText(/emai…
+       |                                                   ^
+     37|     expect(inputs[0].id).not.toBe(inputs[1].id);
+     38|     for (const form of forms) fireEvent.submit(form);
+ ❯ src/__tests__/EmailSignup.test.tsx:36:26
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 12 passed (13)
+   Start at  13:57:09
+   Duration  796ms (tests 52%, environment 24%, import 12%, transform 6%, setup 5%, worker 1%)
+

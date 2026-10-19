@@ -1,0 +1,48 @@
+
+> landing-page@0.1.0 test:coverage
+> vitest run --coverage
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:21:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.5 /private/tmp/factory-brownfield-nextjs-20261019
+      Coverage enabled with v8
+
+
+ Test Files  6 passed (6)
+      Tests  47 passed (47)
+   Start at  13:59:11
+   Duration  836ms (environment 37%, tests 27%, import 16%, setup 8%, transform 8%, worker 3%)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   58.27 |       58 |   53.48 |    58.9 |                   
+ app               |       0 |      100 |       0 |       0 |                   
+  layout.tsx       |       0 |      100 |       0 |       0 | 5-21              
+  page.tsx         |       0 |      100 |       0 |       0 | 13-21             
+ app/api/waitlist  |   95.45 |       95 |     100 |   95.45 |                   
+  route.ts         |   95.45 |       95 |     100 |   95.45 | 45                
+ components        |    78.2 |    78.26 |    62.5 |   77.63 |                   
+  CTA.tsx          |       0 |      100 |       0 |       0 | 7                 
+  EmailSignup.tsx  |     100 |    95.83 |     100 |     100 | 56                
+  Footer.tsx       |       0 |      100 |       0 |       0 | 4-81              
+  Hero.tsx         |       0 |      100 |       0 |       0 | 7                 
+  LogoBar.tsx      |       0 |      100 |       0 |       0 | 3-20              
+  Nav.tsx          |    87.5 |      100 |      80 |    87.5 | 80                
+  Pricing.tsx      |       0 |        0 |       0 |       0 | 6-107             
+  Testimonials.tsx |     100 |       75 |     100 |     100 | 83                
+ lib               |     2.5 |        0 |   14.28 |     2.7 |                   
+  i18n.ts          |       0 |        0 |       0 |       0 | 2-24              
+  queries.ts       |       0 |        0 |       0 |       0 | 12-215            
+  supabase.ts      |       0 |        0 |     100 |       0 | 4-14              
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 58.27% ( 88/151 )
+Branches     : 58% ( 58/100 )
+Functions    : 53.48% ( 23/43 )
+Lines        : 58.9% ( 86/146 )
+================================================================================
