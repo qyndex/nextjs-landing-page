@@ -1,0 +1,53 @@
+{
+  "scope": "Repository-only complete-criterion supplied-observation validator. Results are untrusted local evidence, not independent/native authority.",
+  "red": {
+    "methods": 10,
+    "assertion_failures": 7,
+    "errors": 0
+  },
+  "green": {
+    "methods": 20,
+    "exit": 0
+  },
+  "file_bindings": [
+    {
+      "path": "scripts/remediation-acceptance.py",
+      "sha256": "bf5a61a0d4b9d297527cc96ccf42c4d89a9e640ad5163cf198d957955c418b6f"
+    },
+    {
+      "path": "scripts/test-remediation-acceptance.py",
+      "sha256": "138633fb1f06caf42e81fc70cfb72899ba7aaf28a641f876e2cff41a94d91db9"
+    },
+    {
+      "path": "docs/REMEDIATION-ACCEPTANCE.md",
+      "sha256": "5b15c940d3046b0485914857633ef57b0cef0c70c96a1e8feb444db751d4705f"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "d7267aeac52ffb83a32af9ed6ab9cb8e2bd839c8132ca23b8d317351652dce61"
+    },
+    {
+      "path": "plans/active/001-dependency-and-ci-remediation.md",
+      "sha256": "492e3592ff4e689b5633766750ffbb5f9604d1049434f8579b566f9c625bec90"
+    },
+    {
+      "path": "tasks/TASKS.md",
+      "sha256": "e5bc7521eb92bcfed62c750fac302875ec7a36166802bf7753a5bda0cec0fe4f"
+    },
+    {
+      "path": "verify/2026-10-19/T-002/red.log",
+      "sha256": "cbbe4bb596ae5c4e04d22907c7a274c996bd500eec11bb6a8c07cf822138c33e"
+    },
+    {
+      "path": "verify/2026-10-19/T-002/green.log",
+      "sha256": "54022fb21ff6885e86f654d3dffedd812f70443c50d2d5f3d667974fcf6202cc"
+    }
+  ],
+  "gitleaks_exit": 0,
+  "full_collector": "not rerun here; parent will run required unskipped collector after source commit",
+  "actual_supplied_observation_run": "not performed; fixtures are synthetic and give no application acceptance counts",
+  "supplemental_collector": "not performed; original full FAIL0/8smoke0 bundle untouched",
+  "native_ac6": "always failed pending separately reviewed authenticated adapter",
+  "residual_ac1": "pending; no risk approval adapter",
+  "workflow_config_keys_remote_changes": false
+}
