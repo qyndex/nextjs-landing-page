@@ -22,6 +22,7 @@ class AcceptanceContract(unittest.TestCase):
         self.addCleanup(self.folder.cleanup)
         self.root = Path(self.folder.name)
         for name, content in {'src/original.test.ts': 'expect(actual).toBe(expected);\n',
+                              'e2e/original.spec.ts': 'await expect(page).toBeVisible();\n',
                               'package.json': '{}\n', 'package-lock.json': '{}\n',
                               'scripts/helper.py': 'print(1)\n',
                               '.github/workflows/adopter-baseline.yml': 'permissions:\n  contents: read\n',
@@ -210,6 +211,31 @@ class AcceptanceContract(unittest.TestCase):
         self.assertFalse(result['success'])
         self.assertEqual({r['status'] for r in assertions}, {'passed', 'failed'})
         self.assertNotIn('pending', {r['status'] for r in assertions})
+
+    def test_original_src_and_e2e_assertions_cannot_be_deleted_commented_or_disabled(self):
+        for name in ('src/original.test.ts', 'e2e/original.spec.ts'):
+            original = (self.root / name).read_text()
+            for changed in ('', '// ' + original, '/*\n' + original + '*/\n', 'test.skip("disabled", () => {\n' + original + '});\n'):
+                with self.subTest(path=name, changed=changed):
+                    (self.root / name).write_text(changed)
+                    with self.assertRaises(MODULE.Incomplete):
+                        MODULE.preserved_tests(self.root, self.commit)
+            (self.root / name).write_text(original)
+
+    def test_nonobject_observations_emit_eight_failed_results_and_replace_stale_output(self):
+        for value in ([], {'unexpected': True}):
+            path = self.root / 'observations.json'; path.write_text(json.dumps(value))
+            output = self.root / 'results.json'; output.write_text('{"success":true,"stale":true}')
+            result = subprocess.run([sys.executable, str(Path(MODULE.__file__)), '--root', str(self.root), '--observations', str(path), '--output', str(output)], capture_output=True, text=True)
+            self.assertEqual(result.returncode, 1)
+            current = json.loads(output.read_text()); self.assertFalse(current['success'])
+            self.assertEqual(current['numFailedTests'], 8)
+            self.assertNotIn('stale', current)
+
+    def test_malformed_nested_records_fail_without_losing_eight_assertions(self):
+        value = copy.deepcopy(self.value);value['criteria']['AC-3']['records'] = []
+        outcomes = MODULE.evaluate(self.root, value)
+        self.assertEqual(len(outcomes), 8);self.assertEqual(outcomes['AC-3']['status'], 'failed')
 
 
 if __name__ == '__main__':

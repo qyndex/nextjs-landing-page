@@ -18,7 +18,7 @@ REPORTS = ['factory-hosted-digest', 'factory-hosted-feedback',
 
 
 def read_workflow(name):
-    return (WORKFLOWS / (name + '.yml')).read_text()
+    return (ROOT / '.github/workflows' / (name + '.yml')).read_text()
 
 
 def block(text, name):
@@ -312,14 +312,17 @@ class ShadowAuthorization(unittest.TestCase):
         self.assertLess(request, mint)
         self.assertLess(mint, evaluate)
 
-    def test_source_order_contract_allows_a_later_approved_policy(self):
-        with tempfile.TemporaryDirectory(prefix='future-policy-test-') as folder:
-            root = Path(folder);(root / 'factory').mkdir()
-            (root / 'factory/policy.json').write_text(json.dumps({
-                'enabled': True, 'merge_enabled': True, 'specs': {'future-approved': {}}}))
+    def test_order_contract_reads_selected_workflow_fixture_and_rejects_reordering(self):
+        text = read_workflow('factory-merge')
+        with tempfile.TemporaryDirectory(prefix='workflow-order-test-') as folder:
+            root = Path(folder);workflows = root / '.github/workflows';workflows.mkdir(parents=True)
+            path = workflows / 'factory-merge.yml';path.write_text(text)
             selected = ShadowAuthorization('test_policy_preflight_and_validated_request_precede_token_mint')
             with patch.dict(globals(), {'ROOT': root}):
                 selected.test_policy_preflight_and_validated_request_precede_token_mint()
+                path.write_text(text.replace('- name: Activation preflight', '- name: TEMP').replace('- name: Mint repository-scoped factory token', '- name: Activation preflight').replace('- name: TEMP', '- name: Mint repository-scoped factory token'))
+                with self.assertRaises(AssertionError):
+                    selected.test_policy_preflight_and_validated_request_precede_token_mint()
 
     def test_expression_string_equality_matches_github_ascii_case_rules(self):
         self.assertTrue(expression("${{ 'MERGE' == 'merge' }}", {}))

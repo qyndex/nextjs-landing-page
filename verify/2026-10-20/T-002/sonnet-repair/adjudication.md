@@ -1,0 +1,9 @@
+# Actual Sonnet5.5 review follow-up
+
+The successful review found three low issues. The assertion-preservation claim is narrowed to a documented lexical tripwire: baseline src/ and e2e/ test files retain at least their original line-leading expect-call count after comments are stripped, and cannot add skip/focus controls. This is not an AST or semantic proof. Meaningful fixture deletions, line/block comments and disabled tests now reject; actual app suites and human/model review remain necessary.
+
+The selected-workflow fixture now reads dynamic ROOT and its actual copied workflow; swapping preflight/token names triggers failure. The previous future-approved-policy claim is withdrawn rather than presented as tested. Separate real inline request resolver tests retain merge_enabled true/false controls.
+
+Malformed top-level or nested manifest shapes yield fresh eight-failed results; the CLI atomically replaces any old output with an incomplete result before input parsing and replaces it with its evaluated result. Actual stale-success/nonobject CLI controls and malformed nested records are retained. Acceptance fixture suite24 passes; authorization suite15 passes. These small stdlib tests do not run product suites or confer native acceptance.
+
+The direct human approval accepts the two retained low Supabase findings only for DISABLED LOCAL qualification. The original raw audit and exact decision are retained here. No scanner suppression, protected residual-risk adapter, AC1 approval receipt, AC6 independent-review proof, production acceptance or activation is issued by this record. Existing prior6/8 observations remain historical after these source changes; refreshed current mapping and native source closure require separate verification.

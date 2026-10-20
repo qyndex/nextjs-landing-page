@@ -6,6 +6,8 @@ AC6 stays failed until a separately reviewed authenticated native-review adapter
 exists. No caller boolean or successful baseline JSON can confer that credit.
 """
 import argparse
+from collections import Counter
+import tempfile
 import hashlib
 from functools import lru_cache
 import json
@@ -72,6 +74,7 @@ def artifact(root, reference, *, parse=False):
 
 
 def source_check(root, value):
+    require(isinstance(value, dict), 'observation manifest must be an object')
     require(value.get('schema_version') == 1, 'unsupported observation contract')
     expected = source_manifest(root, value.get('candidate_sha'), 'complete')
     require(expected == value.get('source_sha256'), 'candidate source manifest mismatch')
@@ -99,16 +102,26 @@ def record(root, data, source, argv, *, exit_code=0):
     return re.sub(r'(?:\x1b|\^\[)\[[0-9;]*m', '', raw)
 
 
+def test_lexical_controls(text):
+    # Deliberately bounded lexical tripwires, not a TypeScript AST or semantic proof.
+    code = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
+    code = re.sub(r'^[ \t]*//.*$', '', code, flags=re.M)
+    assertions = len(re.findall(r'^[ \t]*(?:await[ \t]+)?expect[ \t]*\(', code, re.M))
+    disabled = Counter(re.findall(r'\b(?:test|it|describe)\s*\.\s*(?:skip|only)\b|\b(?:xit|xdescribe|xtest|fit|fdescribe)\s*\(', code))
+    return assertions, disabled
+
+
 def preserved_tests(root, baseline):
     require(baseline == APPROVED_BASELINE, 'baseline differs from approved original application')
     original = source_manifest(root, baseline, 'application')
     for name in original:
-        if name.startswith('src/') and ('.test.' in name or '.spec.' in name):
+        if name.startswith(('src/', 'e2e/')) and ('.test.' in name or '.spec.' in name):
             before = git(root, 'show', baseline + ':' + name).decode()
             after = (root / name).read_text()
-            for line in before.splitlines():
-                if 'expect(' in line:
-                    require(line.strip() in after, 'original assertion removed: ' + name)
+            prior_count, prior_disabled = test_lexical_controls(before)
+            current_count, current_disabled = test_lexical_controls(after)
+            require(current_count >= prior_count, 'original assertion count reduced: ' + name)
+            require(not (current_disabled - prior_disabled), 'new disabled/focused test control: ' + name)
     require(json.loads((root / 'tsconfig.json').read_text())['compilerOptions']['strict'] is True,
             'TypeScript strictness weakened')
 
@@ -266,14 +279,14 @@ def evaluate(root, value):
     outcomes = {}
     try:
         source = source_check(root, value)
-    except (Incomplete, KeyError, OSError, subprocess.CalledProcessError, TypeError, json.JSONDecodeError) as error:
+    except (Incomplete, KeyError, OSError, subprocess.CalledProcessError, TypeError, AttributeError, json.JSONDecodeError) as error:
         return {f'AC-{n}': {'status': 'failed', 'reason': 'source binding: ' + str(error)} for n in range(1, 9)}
     for n in range(1, 9):
         ac = f'AC-{n}'
         try:
             criterion(root, ac, value.get('criteria', {}).get(ac), source, value)
             outcomes[ac] = {'status': 'passed', 'reason': 'complete local observation contract; not independent acceptance'}
-        except (Incomplete, KeyError, OSError, TypeError, ValueError, subprocess.CalledProcessError) as error:
+        except (Incomplete, KeyError, OSError, TypeError, ValueError, AttributeError, subprocess.CalledProcessError) as error:
             outcomes[ac] = {'status': 'failed', 'reason': str(error)}
     return outcomes
 
@@ -286,7 +299,7 @@ def jest_results(outcomes, value):
             'numPassedTests': sum(row['status'] == 'passed' for row in assertions),
             'numFailedTests': sum(row['status'] == 'failed' for row in assertions), 'numPendingTests': 0,
             'testResults': [{'name': 'repository remediation acceptance', 'assertionResults': assertions}],
-            'observation_contract': {'candidate_sha': value.get('candidate_sha'), 'authority': 'untrusted-local-observations-only',
+            'observation_contract': {'candidate_sha': value.get('candidate_sha') if isinstance(value, dict) else None, 'authority': 'untrusted-local-observations-only',
                                      'native_ac6_adapter': 'unavailable; fail closed'}}
 
 
@@ -296,9 +309,25 @@ def main():
     parser.add_argument('--observations', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     args = parser.parse_args()
-    value = json.loads(args.observations.read_text())
-    results = jest_results(evaluate(args.root.resolve(), value), value)
-    args.output.write_text(json.dumps(results, indent=2) + '\n')
+    def save(results):
+        with tempfile.NamedTemporaryFile('w', dir=args.output.parent, prefix='.' + args.output.name + '.', delete=False) as stream:
+            temporary = Path(stream.name)
+            try:
+                stream.write(json.dumps(results, indent=2) + '\n');stream.flush()
+            except BaseException:
+                temporary.unlink(missing_ok=True);raise
+        try:
+            temporary.replace(args.output)
+        finally:
+            temporary.unlink(missing_ok=True)
+    failed = {f'AC-{n}': {'status': 'failed', 'reason': 'observation validation not completed'} for n in range(1, 9)}
+    save(jest_results(failed, {}))
+    try:
+        value = json.loads(args.observations.read_text())
+        results = jest_results(evaluate(args.root.resolve(), value), value)
+    except (OSError, ValueError, TypeError, AttributeError) as error:
+        results = jest_results({ac: {'status': 'failed', 'reason': 'manifest validation: ' + str(error)} for ac in failed}, {})
+    save(results)
     for row in results['testResults'][0]['assertionResults']:
         print(row['title'] + ': ' + row['status'] + (' — ' + '; '.join(row['failureMessages']) if row['failureMessages'] else ''))
     return 0 if results['success'] else 1
