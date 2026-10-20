@@ -1,6 +1,6 @@
 # Actual Sonnet5.5 review follow-up
 
-The successful review found three low issues. The assertion-preservation claim is narrowed to a documented lexical tripwire: baseline src/ and e2e/ test files retain at least their original line-leading expect-call count after comments are stripped, and cannot add skip/focus controls. This is not an AST or semantic proof. Meaningful fixture deletions, line/block comments and disabled tests now reject; actual app suites and human/model review remain necessary.
+The successful review found three low issues. The original src exact assertion-line presence guard is preserved and rejects same-count expected-value changes. The additional e2e preservation claim is narrowed to a documented lexical tripwire: baseline src/ and e2e/ test files retain at least their original line-leading expect-call count after comments are stripped, and cannot add skip/focus controls. This is not an AST or semantic proof. Meaningful fixture deletions, line/block comments and disabled tests now reject; actual app suites and human/model review remain necessary.
 
 The selected-workflow fixture now reads dynamic ROOT and its actual copied workflow; swapping preflight/token names triggers failure. The previous future-approved-policy claim is withdrawn rather than presented as tested. Separate real inline request resolver tests retain merge_enabled true/false controls.
 

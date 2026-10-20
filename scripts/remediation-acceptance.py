@@ -102,10 +102,14 @@ def record(root, data, source, argv, *, exit_code=0):
     return re.sub(r'(?:\x1b|\^\[)\[[0-9;]*m', '', raw)
 
 
+def uncommented_test_code(text):
+    code = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
+    return re.sub(r'^[ \t]*//.*$', '', code, flags=re.M)
+
+
 def test_lexical_controls(text):
     # Deliberately bounded lexical tripwires, not a TypeScript AST or semantic proof.
-    code = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
-    code = re.sub(r'^[ \t]*//.*$', '', code, flags=re.M)
+    code = uncommented_test_code(text)
     assertions = len(re.findall(r'^[ \t]*(?:await[ \t]+)?expect[ \t]*\(', code, re.M))
     disabled = Counter(re.findall(r'\b(?:test|it|describe)\s*\.\s*(?:skip|only)\b|\b(?:xit|xdescribe|xtest|fit|fdescribe)\s*\(', code))
     return assertions, disabled
@@ -120,6 +124,11 @@ def preserved_tests(root, baseline):
             after = (root / name).read_text()
             prior_count, prior_disabled = test_lexical_controls(before)
             current_count, current_disabled = test_lexical_controls(after)
+            if name.startswith('src/'):
+                current_lines = {line.strip() for line in uncommented_test_code(after).splitlines()}
+                for line in before.splitlines():
+                    if 'expect(' in line:
+                        require(line.strip() in current_lines, 'original src assertion changed/removed: ' + name)
             require(current_count >= prior_count, 'original assertion count reduced: ' + name)
             require(not (current_disabled - prior_disabled), 'new disabled/focused test control: ' + name)
     require(json.loads((root / 'tsconfig.json').read_text())['compilerOptions']['strict'] is True,

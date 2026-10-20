@@ -222,6 +222,11 @@ class AcceptanceContract(unittest.TestCase):
                         MODULE.preserved_tests(self.root, self.commit)
             (self.root / name).write_text(original)
 
+    def test_src_same_count_modified_expected_value_cannot_weaken_existing_guard(self):
+        (self.root / 'src/original.test.ts').write_text('expect(actual).toBe(unrelated);\n')
+        with self.assertRaises(MODULE.Incomplete):
+            MODULE.preserved_tests(self.root, self.commit)
+
     def test_nonobject_observations_emit_eight_failed_results_and_replace_stale_output(self):
         for value in ([], {'unexpected': True}):
             path = self.root / 'observations.json'; path.write_text(json.dumps(value))
