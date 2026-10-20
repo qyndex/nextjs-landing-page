@@ -38,7 +38,7 @@ def git(root, *args):
 
 def selected(name, scope):
     if scope == 'application':
-        return name.startswith(('src/', 'e2e/', 'supabase/')) or name in {
+        return name.startswith(('src/', 'e2e/', 'supabase/', 'public/')) or name in {
             'package.json', 'package-lock.json', 'tsconfig.json', 'vitest.config.mts',
             'playwright.config.ts', 'eslint.config.mjs', 'next.config.js',
             'postcss.config.js', 'tailwind.config.ts'}

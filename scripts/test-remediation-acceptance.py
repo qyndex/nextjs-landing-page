@@ -25,6 +25,9 @@ class AcceptanceContract(unittest.TestCase):
                               'e2e/original.spec.ts': 'await expect(page).toBeVisible();\n',
                               'package.json': '{}\n', 'package-lock.json': '{}\n',
                               'scripts/helper.py': 'print(1)\n',
+                              'public/fonts/inter/SOURCE.json': '{"fixture":true}\n',
+                              'public/fonts/inter/OFL.txt': 'Synthetic license fixture\n',
+                              'public/fonts/inter/font.woff2': 'Synthetic font fixture\n',
                               '.github/workflows/adopter-baseline.yml': 'permissions:\n  contents: read\n',
                               'tsconfig.json': '{"compilerOptions":{"strict":true}}\n',
                               'vitest.config.mts': 'thresholds: { lines: 90, branches: 85 }\n'}.items():
@@ -63,6 +66,36 @@ class AcceptanceContract(unittest.TestCase):
         self.assertEqual(result['AC-3']['status'], 'passed')
         self.assertEqual(result['AC-6']['status'], 'failed')
         self.assertEqual(result['AC-1']['status'], 'failed')
+
+    def commit_fixture_change(self, name, content):
+        path = self.root / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+        subprocess.run(['git', 'add', name], cwd=self.root, check=True, capture_output=True)
+        subprocess.run(['git', '-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.test', 'commit', '-qm', 'fixture change'], cwd=self.root, check=True, capture_output=True)
+        return subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=self.root, text=True).strip()
+
+    def test_public_font_changes_reject_replayed_command_records(self):
+        old_record = self.value['criteria']['AC-3']['records']['unit']
+        for name, content in (
+                ('public/fonts/inter/font.woff2', b'\x00changed font\xff'),
+                ('public/fonts/inter/SOURCE.json', b'{"fixture":"changed"}\n'),
+                ('public/fonts/inter/OFL.txt', b'Changed synthetic license fixture\n')):
+            with self.subTest(path=name):
+                changed = self.commit_fixture_change(name, content)
+                current = MODULE.source_manifest(self.root, changed, 'application')
+                with self.assertRaisesRegex(MODULE.Incomplete, 'missing/stale observation source scope'):
+                    MODULE.record(self.root, old_record, current, ['npm', 'run', 'test:coverage'])
+                relabelled = copy.deepcopy(old_record)
+                relabelled['source_sha256'] = current
+                with self.assertRaisesRegex(MODULE.Incomplete, 'observed command commit differs from current application'):
+                    MODULE.record(self.root, relabelled, current, ['npm', 'run', 'test:coverage'])
+
+    def test_proof_only_commit_keeps_historical_command_equivalence(self):
+        changed = self.commit_fixture_change('verify/fixture/note.md', b'Proof only; no application change.\n')
+        current = MODULE.source_manifest(self.root, changed, 'application')
+        old_record = self.value['criteria']['AC-3']['records']['unit']
+        MODULE.record(self.root, old_record, current, ['npm', 'run', 'test:coverage'])
 
     def test_stale_candidate_manifest_cannot_pass(self):
         value = copy.deepcopy(self.value);value['source_sha256']['package.json'] = '0' * 64
