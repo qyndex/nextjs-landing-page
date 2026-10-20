@@ -1,0 +1,63 @@
+# Existing build regression ledger — red — T-003
+ledger_format: 2
+timestamp: 2026-10-20T10:52:30+00:00
+command: npm run build
+exit_code: 1
+red_reason: assertion-failure
+evidence_kind: reconstructed-existing-build-regression
+original_unit_tdd: false
+timestamp_basis: preserved original local observation file mtime UTC
+source_commit: 3fec77d07536659c290c4a240658a2021ed35ac5
+raw_log: raw/original-build-red.log.base64
+raw_log_sha256: 3e818efa48a0d054290ed2d21303758c7131be67a38b6cfa2a74aba1a02e0ea4
+---
+lrwxrwxrwx 1 65532 65532    23 Oct 20 10:52 node_modules/.bin/eslint -> ../eslint/bin/eslint.js
+lrwxrwxrwx 1 65532 65532    21 Oct 20 10:52 node_modules/.bin/next -> ../next/dist/bin/next
+-rwxr-xr-x 1 65532 65532  5610 Oct 20 10:52 node_modules/eslint/bin/eslint.js
+-rwxr-xr-x 1 65532 65532 28419 Oct 20 10:52 node_modules/next/dist/bin/next
+tmpfs /tmp tmpfs rw,nosuid,nodev,relatime,size=1048576k 0 0
+
+> landing-page@0.1.0 build
+> next build
+
+▲ Next.js 16.4.2 (Turbopack)
+✓ Running next.config.js took 14ms
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+
+  Creating an optimized production build ...
+(node:51) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/work/tailwind.config.ts?id=1792493547049 is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /tmp/work/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Turbopack build encountered 1 warning:
+[next]/internal/font/google/inter_5901b7c6.module.css
+Warning: Error while requesting resource
+There was an issue establishing a connection while requesting https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_5901b7c6.module.css
+    [next]/internal/font/google/inter_5901b7c6.js
+    ./src/app/layout.tsx
+
+
+
+> Build error occurred
+Error: Turbopack build failed with 1 error:
+[next]/internal/font/google/inter_5901b7c6.module.css
+Error: next/font: error:
+Failed to fetch Inter from Google Fonts.
+If you are offline or behind a proxy, self-host the font with next/font/local, or set HTTP_PROXY/HTTPS_PROXY so Next.js can reach fonts.googleapis.com.
+
+Import trace:
+  Server Component:
+    [next]/internal/font/google/inter_5901b7c6.module.css
+    [next]/internal/font/google/inter_5901b7c6.js
+    ./src/app/layout.tsx
+
+
+    at ignore-listed frames
+BUILD_EXIT:1
+831072	/tmp/work
+Filesystem     1K-blocks   Used Available Use% Mounted on
+tmpfs            1048576 833932    214644  80% /tmp

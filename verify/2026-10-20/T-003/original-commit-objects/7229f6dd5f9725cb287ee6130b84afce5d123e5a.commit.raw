@@ -1,0 +1,16 @@
+tree 09fc506c7bae706b721348b657cd1e5d7fd860a7
+parent 38b0acc8303f89f3c5d92ec3dea32d30931baa38
+author Shravan Jha <shravan.jha@gmail.com> 1792494529 +1100
+committer Shravan Jha <shravan.jha@gmail.com> 1792494580 +1100
+
+fix(evidence): bind command observations to public assets
+
+Include public assets in Git-derived application scope; retain font-only replay RED and GREEN controls and proof-only compatibility.
+
+Confidence: high
+Scope-risk: localized observation provenance closure
+Not-tested: full collector and native acceptance on integrated source
+Spec: specs/active/001-dependency-and-ci-remediation.md
+Plan: plans/active/001-dependency-and-ci-remediation.md
+Task: T-002
+Co-Authored-By: Codex <noreply@openai.com>

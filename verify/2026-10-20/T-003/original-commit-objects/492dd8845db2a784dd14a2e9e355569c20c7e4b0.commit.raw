@@ -1,0 +1,12 @@
+tree e4c2ac3f7b27d568e5cd23c8115e4ed9bd75c058
+parent 2adc278a45215134c91eb07089ca2bbebc7798bb
+author Shravan Jha <shravan.jha@gmail.com> 1792493866 +1100
+committer Shravan Jha <shravan.jha@gmail.com> 1792493866 +1100
+
+test(fonts): bind local assets and preserve simple class mapping
+
+Confidence: medium
+
+Scope-risk: static font integrity and direct class only
+
+Not-tested: fresh offline build and browser verification pending

@@ -1,0 +1,12 @@
+tree a80ea5557592b6c9b59c89f4ab8dd104d9bde065
+parent 492dd8845db2a784dd14a2e9e355569c20c7e4b0
+author Shravan Jha <shravan.jha@gmail.com> 1792494176 +1100
+committer Shravan Jha <shravan.jha@gmail.com> 1792494176 +1100
+
+test(fonts): compare against observed baseline system font stack
+
+Confidence: high
+
+Scope-risk: correct test assumption only; application font bytes unchanged
+
+Not-tested: final full browser replay pending; prior fixture assumption failure retained
