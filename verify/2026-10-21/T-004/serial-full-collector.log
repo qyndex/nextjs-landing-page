@@ -1,0 +1,12 @@
+→ Collecting evidence for spec 002 (002-verifier-image-publication)
+  ⚠ No playwright.evidence.config.ts or e2e/002/ — run: bash .claude/scripts/rig-bootstrap.sh (web apps) or rely on the stack-runner AC proof below
+  Running stack AC proof: vitest → verify/2026-10-21-002-verifier-image-publication/attempt-K119jT1S/results.json
+npm error code ENOTCACHED
+npm error request to https://registry.npmjs.org/vitest failed: cache mode is 'only-if-cached' but no cached response is available.
+npm error Log files were not written due to an error writing to the directory: /Users/shravanjha/.npm/_logs
+npm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal
+  ⚠ No results at verify/2026-10-21-002-verifier-image-publication/attempt-K119jT1S/results.json — every AC will read UNPROVEN. Install the rig: bash .claude/scripts/rig-bootstrap.sh, or emit AC-tagged junit/jest output to that path.
+
+✓ Evidence bundle: verify/2026-10-21-002-verifier-image-publication/
+  Verdict: FAIL | ACs: 0/5 proven | smoke exit: 1
+  PR body: verify/2026-10-21-002-verifier-image-publication/pr-body.md

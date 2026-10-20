@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "repository": "qyndex/nextjs-landing-page",
+  "package": "ghcr.io/qyndex/nextjs-landing-page-verifier",
+  "environment": "factory-image-publishing",
+  "platform": "linux/amd64",
+  "context_files": {
+    "Dockerfile": "d8b91170d4607921172de087ef36660c6ceddb96c9a0561ef837b534239fda30",
+    "package-lock.json": "af2077c414a9ddf0df825af418e7bf92b33404eb7a7128291c83e542ec5fda5e",
+    "package.json": "de9469c0af3778fefd0a3ae3eb1c5091d2f23f5697b54b87499f5d111c83c15f"
+  }
+}
