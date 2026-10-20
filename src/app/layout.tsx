@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import "./inter-font.css";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const inter = { variable: "inter-variable" };
 
 // PLACEHOLDER: Replace Acme with your company name
 // PLACEHOLDER: Replace Build something amazing with your main headline
@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preload" href="/fonts/inter/inter-baseline-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body className="font-sans antialiased bg-background text-foreground">
         {children}
       </body>

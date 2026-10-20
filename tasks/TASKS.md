@@ -17,3 +17,5 @@ Append-only product authority. Add tasks only from approved specifications and p
 - [x] T-002 Validate source-bound complete remediation observations without granting native review or residual-risk approval. | spec:001 | phase:implementation | priority:normal | created:2026-10-20 | est:1h
   spec: specs/active/001-dependency-and-ci-remediation.md
   accept: python3 scripts/test-remediation-acceptance.py
+
+- [ ] T-003 Provision the exact existing licensed Inter faces locally and verify fresh offline build/browser behavior under the approved native-build profile. | spec:001 | phase:implementation | priority:normal | created:2026-10-20 | est:1h
