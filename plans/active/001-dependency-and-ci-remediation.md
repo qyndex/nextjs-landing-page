@@ -19,3 +19,11 @@ Operator approved the exact nine-file migration on2026-10-19 (patchSHA256 e9a3bc
 6. Retain complete collector output in the draft PR. No genuine database integration, deployment, missing factory producer proof or source-pilot receipt is substituted for target acceptance (AC5/6/8).
 
 Rollback is a reviewed code/lockfile revert; never reset database or reporting state. Original vulnerabilities mean rollback does not authorize activation.
+
+## Bounded credential hardening continuation
+
+Resolve retained bootstrap F5/F7 in adopter workflow definitions only: require App-only reporting jobs, avoid unused legacy credentials/ordinary token write authority, and select Contents/PR-read for shadow while preserving eligibility Checks-write. Reject forbidden merge before write-token mint. Keep all live flags, secrets, profile registrations and protection unchanged; whole-spec/native acceptance remains pending. scripts/verify-factory-least-privilege.sh provides offline authorization/route regressions, with separate YAML validation and later genuine native permission checks.
+
+## Complete-criterion observation mapping
+
+Under the approved remediation evidence scope, add a repository-only bounded observation runner and negative tests for stale source/artifact hashes, missing/partial proof and fake approval/review booleans. Preserve current source-equivalent browser/database observations and supplied native baseline metadata honestly. Do not modify generic collectors or infer AC6 independent review from local records. Residual-risk decisions remain pending; incomplete original acceptance continues to block readiness.

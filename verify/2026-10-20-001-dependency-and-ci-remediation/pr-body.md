@@ -1,0 +1,40 @@
+## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `3fec77d`
+
+Retained results: [verify/2026-10-20-001-dependency-and-ci-remediation/attempt-YPt33ZKW/results.json](verify/2026-10-20-001-dependency-and-ci-remediation/attempt-YPt33ZKW/results.json)
+
+### Acceptance criteria (0/8 proven)
+| AC | Proven by | Result |
+|----|-----------|--------|
+| AC-1 | — | ✗ UNPROVEN |
+| AC-2 | — | ✗ UNPROVEN |
+| AC-3 | — | ✗ UNPROVEN |
+| AC-4 | — | ✗ UNPROVEN |
+| AC-5 | — | ✗ UNPROVEN |
+| AC-6 | — | ✗ UNPROVEN |
+| AC-7 | — | ✗ UNPROVEN |
+| AC-8 | — | ✗ UNPROVEN |
+
+### Smoke test (exit codes are load-bearing)
+```
+# Smoke test — 2026-10-20T21:24:03+11:00
+$ bash .claude/scripts/verify.sh
+
+→ Integration coverage gate
+  ✓ changed API/DB files have integration tests
+
+verify: PASS
+exit: 0
+---
+```
+
+### Visual proof
+0 screenshot(s) captured under `verify/2026-10-20-001-dependency-and-ci-remediation/screenshots/` (named by AC).
+
+### API traces
+0 API trace file(s) under `verify/2026-10-20-001-dependency-and-ci-remediation/traces/`; full HAR at `verify/2026-10-20-001-dependency-and-ci-remediation/network.har`.
+
+### Coverage
+line 97.94% · branch 94% (gate: line≥90 branch≥85)
+
+### Verdict: **FAIL**

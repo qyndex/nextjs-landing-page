@@ -1,0 +1,68 @@
+{
+  "raw_scan_exit": 1,
+  "raw_finding_count": 6,
+  "raw_inputs_selected_for_publication": false,
+  "public_representation": "Lossless ordered path+sha256 entries; all values retained and exact raw-input hash checked on reconstruction.",
+  "findings": [
+    {
+      "rule": "sentry-access-token",
+      "scanned_input": "first-actual-supplied-observations.json",
+      "raw_input_sha256": "cedd242a4d8da4e4bd3ebaab83a2008946b01455c35db492ce963749d764a1e4",
+      "line": 134,
+      "git_commit": "56fbe3fe521c564e32751f64ebebca5e487ed206",
+      "source_path": ".claude/routines/hotfix-sentry-poll.yml",
+      "source_sha256": "defe0aacedc8e61b7ea0eb7752df3dccc7a2cae6c40777f3c480c53b8a05a5e7",
+      "finding": "Verified public Git source-file SHA256; no account credential, scanner suppression or omitted value."
+    },
+    {
+      "rule": "generic-api-key",
+      "scanned_input": "first-actual-supplied-observations.json",
+      "raw_input_sha256": "cedd242a4d8da4e4bd3ebaab83a2008946b01455c35db492ce963749d764a1e4",
+      "line": 40,
+      "git_commit": "56fbe3fe521c564e32751f64ebebca5e487ed206",
+      "source_path": ".claude/commands/deprecate-api.md",
+      "source_sha256": "f725fa5e2d084bcfa8248bbe98649da8935ceede8c3992823de036d5b1467fc7",
+      "finding": "Verified public Git source-file SHA256; no account credential, scanner suppression or omitted value."
+    },
+    {
+      "rule": "generic-api-key",
+      "scanned_input": "first-actual-supplied-observations.json",
+      "raw_input_sha256": "cedd242a4d8da4e4bd3ebaab83a2008946b01455c35db492ce963749d764a1e4",
+      "line": 99,
+      "git_commit": "56fbe3fe521c564e32751f64ebebca5e487ed206",
+      "source_path": ".claude/hooks/pre-write-secret-scan.sh",
+      "source_sha256": "bca41d278521a5550af2a7d3f45950e3aca0233850ad8aeb58f6d3b9f030a73d",
+      "finding": "Verified public Git source-file SHA256; no account credential, scanner suppression or omitted value."
+    },
+    {
+      "rule": "sentry-access-token",
+      "scanned_input": "actual-supplied-observations.json",
+      "raw_input_sha256": "6d22279ffe9eb6b40d00cfc17fe60da6ee4140fd9bfd0c5b4c831ea63f1e0987",
+      "line": 134,
+      "git_commit": "a0f2bf641f940616d264a95526a4850f3d5f2fa6",
+      "source_path": ".claude/routines/hotfix-sentry-poll.yml",
+      "source_sha256": "defe0aacedc8e61b7ea0eb7752df3dccc7a2cae6c40777f3c480c53b8a05a5e7",
+      "finding": "Verified public Git source-file SHA256; no account credential, scanner suppression or omitted value."
+    },
+    {
+      "rule": "generic-api-key",
+      "scanned_input": "actual-supplied-observations.json",
+      "raw_input_sha256": "6d22279ffe9eb6b40d00cfc17fe60da6ee4140fd9bfd0c5b4c831ea63f1e0987",
+      "line": 40,
+      "git_commit": "a0f2bf641f940616d264a95526a4850f3d5f2fa6",
+      "source_path": ".claude/commands/deprecate-api.md",
+      "source_sha256": "f725fa5e2d084bcfa8248bbe98649da8935ceede8c3992823de036d5b1467fc7",
+      "finding": "Verified public Git source-file SHA256; no account credential, scanner suppression or omitted value."
+    },
+    {
+      "rule": "generic-api-key",
+      "scanned_input": "actual-supplied-observations.json",
+      "raw_input_sha256": "6d22279ffe9eb6b40d00cfc17fe60da6ee4140fd9bfd0c5b4c831ea63f1e0987",
+      "line": 99,
+      "git_commit": "a0f2bf641f940616d264a95526a4850f3d5f2fa6",
+      "source_path": ".claude/hooks/pre-write-secret-scan.sh",
+      "source_sha256": "bca41d278521a5550af2a7d3f45950e3aca0233850ad8aeb58f6d3b9f030a73d",
+      "finding": "Verified public Git source-file SHA256; no account credential, scanner suppression or omitted value."
+    }
+  ]
+}

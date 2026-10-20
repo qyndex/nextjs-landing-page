@@ -151,3 +151,11 @@ cp .env.example .env.local
 ## Factory harness adoption
 
 The shared process constitution is `.claude/CLAUDE.md`. Preserve this application architecture and conventions. See `docs/FACTORY-ADOPTION-READINESS.md` for the pinned source, baseline limitations and disabled activation gates.
+
+## Factory credential boundaries
+
+Adopter reporting is App-only: require the App writer before entering the reporting environment, reject effective environment overrides away from that route, and keep ordinary source metadata credentials read-only. Shadow conservatively retains Checks-write while using Contents/PR-read (its current coordinator does not publish checks in shadow); a forbidden merge must stop before write-token mint. See docs/FACTORY-CREDENTIAL-BOUNDARIES.md for the local/native verification distinction.
+
+## Remediation observation evidence
+
+Use scripts/remediation-acceptance.py and docs/REMEDIATION-ACCEPTANCE.md for complete-criterion local mapping. Supplied hashes and successful native-baseline JSON are untrusted local observations, never authenticated independent review. AC6 remains failed until a separately reviewed authenticated adapter exists; residual lows remain pending without a validated decision. Preserve source-equivalent historical labels and all original FAIL bundles.

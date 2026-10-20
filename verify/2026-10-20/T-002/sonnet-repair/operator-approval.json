@@ -1,0 +1,22 @@
+{
+  "decision": "A \u2014 Approve both bounded decisions",
+  "recorded_at": "2026-10-20T10:09:57.034679+00:00",
+  "authorization": "Direct human reply to combined bounded decisions",
+  "pr131": {
+    "head": "d57919cc222dc65b70ff307eb2469d097749791c",
+    "body_sha256": "f45f430016a326b3c78d215f85ac9cec586443af8832581729641d7abc111a06",
+    "scope": "ready for native review only despite003FAIL0/21; all gates preserved",
+    "proposal_sha256": "884a517e445db69a313b58db27bdd4e87eff5cab6f36291982dc3397215fd0cc"
+  },
+  "brownfield": {
+    "scope": "Two low Supabase findings accepted only for disabled local qualification, raw findings retained, production blocked, reassess onsource/dependencychange",
+    "proposal_sha256": "5571ec222abe286d054f993ff8174465e512b9fedc3196e77fc8ccf3671f364e"
+  },
+  "not_authorized": [
+    "merge",
+    "protection change",
+    "activation",
+    "production",
+    "scanner suppression"
+  ]
+}
