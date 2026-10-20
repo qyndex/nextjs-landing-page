@@ -1,7 +1,8 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { renderToStaticMarkup } from "react-dom/server";
 
-// Real offline build/browser checks verify the licensed local font assets.
+// No font network request in this unit boundary; the real build tests font provisioning.
+vi.mock("next/font/google", () => ({ Inter: () => ({ variable: "fixture-inter-font" }) }));
 beforeEach(() => vi.resetModules());
 
 describe("Document and translation availability", () => {

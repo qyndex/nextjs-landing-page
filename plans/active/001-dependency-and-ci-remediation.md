@@ -27,7 +27,3 @@ Resolve retained bootstrap F5/F7 in adopter workflow definitions only: require A
 ## Complete-criterion observation mapping
 
 Under the approved remediation evidence scope, add a repository-only bounded observation runner and negative tests for stale source/artifact hashes, missing/partial proof and fake approval/review booleans. Preserve current source-equivalent browser/database observations and supplied native baseline metadata honestly. Do not modify generic collectors or infer AC6 independent review from local records. Residual-risk decisions remain pending; incomplete original acceptance continues to block readiness.
-
-## Approved local-font continuation — 2026-10-20
-
-Spec001 AC4 already permits a reviewed local-font approach. Following the actual networknone build failure, prepare exact baseline seven-face selfhosting under unchanged protected native-build limits. Preserve license/provenance, glyph coverage, fallback metrics and current class behavior. No new product scope, network permission, package migration or activation is approved here. Fresh build/browser observations and independent exact-source review remain pending.

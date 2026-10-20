@@ -1,9 +1,0 @@
-{
-  "scope": "separate host full collector; not native sandbox proof",
-  "source": "2fa0aee7fcfe63d81b107f473f6bbc5a3bc490c0",
-  "exit": 1,
-  "seconds": 18.681,
-  "node": "v24.13.1",
-  "skip_flags": false,
-  "native_acceptance": false
-}
