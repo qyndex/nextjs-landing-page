@@ -22,5 +22,5 @@ Append-only product authority. Add tasks only from approved specifications and p
 
 - [x] T-004 Implement/test disabled fixed-context image publication guards; no live publication. | spec:002 | phase:implementation | priority:security | created:2026-10-21 | est:1h
   spec: specs/active/002-verifier-image-publication.md
-  accept: python3 scripts/test-verifier-image-publication.py
+  accept: python3 scripts/test-verifier-image-publication.py && python3 scripts/verifier-image-publication.integration.test.py
   continuation: plans/active/002-verifier-image-publication.md
