@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
-Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `a0f2bf6`
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `3fec77d`
 
-Retained results: [verify/2026-10-20-001-dependency-and-ci-remediation/attempt-6OstxolE/results.json](verify/2026-10-20-001-dependency-and-ci-remediation/attempt-6OstxolE/results.json)
+Retained results: [verify/2026-10-20-001-dependency-and-ci-remediation/attempt-YPt33ZKW/results.json](verify/2026-10-20-001-dependency-and-ci-remediation/attempt-YPt33ZKW/results.json)
 
 ### Acceptance criteria (0/8 proven)
 | AC | Proven by | Result |
@@ -17,7 +17,7 @@ Retained results: [verify/2026-10-20-001-dependency-and-ci-remediation/attempt-6
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-20T00:13:39+11:00
+# Smoke test — 2026-10-20T21:24:03+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
@@ -41,6 +41,7 @@ line 97.94% · branch 94% (gate: line≥90 branch≥85)
 
 ## Artifact index
 - verify/2026-10-20-001-dependency-and-ci-remediation/evidence.json
+- verify/2026-10-20-001-dependency-and-ci-remediation/attempt-YPt33ZKW/results.json
 - verify/2026-10-20-001-dependency-and-ci-remediation/pr-body.md
 - verify/2026-10-20-001-dependency-and-ci-remediation/EVIDENCE.md
 - verify/2026-10-20-001-dependency-and-ci-remediation/results.json
