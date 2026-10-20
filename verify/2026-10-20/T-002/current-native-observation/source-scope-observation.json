@@ -1,0 +1,11 @@
+{
+  "candidate": "3fec77d07536659c290c4a240658a2021ed35ac5",
+  "actual_native_head": "9b53e68bd9c484004afd70e71b92afb7fb7d753c",
+  "run_id": 39408130397,
+  "run_attempt": 1,
+  "complete_source_equal": true,
+  "native_runtime_helper_equal": true,
+  "application_equal": true,
+  "native_authentication_credit": false,
+  "artifact_count": 0
+}

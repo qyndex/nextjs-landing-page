@@ -1,0 +1,76 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@supabase/auth-js": {
+      "name": "@supabase/auth-js",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1117663,
+          "name": "@supabase/auth-js",
+          "dependency": "@supabase/auth-js",
+          "title": "auth-js Vulnerable to Insecure Path Routing from Malformed User Input",
+          "url": "https://github.com/advisories/GHSA-8r88-6cj9-9fh5",
+          "severity": "low",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=2.69.1"
+        }
+      ],
+      "effects": [
+        "@supabase/supabase-js"
+      ],
+      "range": "<=2.69.1",
+      "nodes": [
+        "node_modules/@supabase/auth-js"
+      ],
+      "fixAvailable": {
+        "name": "@supabase/supabase-js",
+        "version": "2.118.0",
+        "isSemVerMajor": false
+      }
+    },
+    "@supabase/supabase-js": {
+      "name": "@supabase/supabase-js",
+      "severity": "low",
+      "isDirect": true,
+      "via": [
+        "@supabase/auth-js"
+      ],
+      "effects": [],
+      "range": "2.41.1 - 2.49.10 || 2.58.1-canary.0",
+      "nodes": [
+        "node_modules/@supabase/supabase-js"
+      ],
+      "fixAvailable": {
+        "name": "@supabase/supabase-js",
+        "version": "2.118.0",
+        "isSemVerMajor": false
+      }
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 2,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 2
+    },
+    "dependencies": {
+      "prod": 43,
+      "dev": 425,
+      "optional": 94,
+      "peer": 39,
+      "peerOptional": 0,
+      "total": 505
+    }
+  }
+}

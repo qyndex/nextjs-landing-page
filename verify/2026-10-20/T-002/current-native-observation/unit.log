@@ -1,0 +1,293 @@
+﻿2026-10-20T10:28:04.1049032Z Current runner version: '2.337.0'
+2026-10-20T10:28:04.1090075Z ##[group]Runner Image Provisioner
+2026-10-20T10:28:04.1090936Z Hosted Compute Agent
+2026-10-20T10:28:04.1091521Z Version: 20261015.610
+2026-10-20T10:28:04.1092077Z Commit: 267fdb4e8bbec4ab5ea31367f3a00d5c480c7656
+2026-10-20T10:28:04.1092694Z Build Date: 2026-10-14T17:06:54Z
+2026-10-20T10:28:04.1093250Z Worker ID: {24ab0045-061c-4dbb-b082-d57138485201}
+2026-10-20T10:28:04.1093873Z Region: westus3
+2026-10-20T10:28:04.1094361Z Cloud: Azure
+2026-10-20T10:28:04.1095097Z ##[endgroup]
+2026-10-20T10:28:04.1096268Z ##[group]Operating System
+2026-10-20T10:28:04.1096796Z Ubuntu
+2026-10-20T10:28:04.1097262Z 24.04.5
+2026-10-20T10:28:04.1097753Z LTS
+2026-10-20T10:28:04.1098200Z ##[endgroup]
+2026-10-20T10:28:04.1098674Z ##[group]Runner Image
+2026-10-20T10:28:04.1099238Z Image: ubuntu-24.04
+2026-10-20T10:28:04.1099799Z Version: 20261018.339.1
+2026-10-20T10:28:04.1101019Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261018.339/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-20T10:28:04.1102475Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261018.339
+2026-10-20T10:28:04.1103379Z ##[endgroup]
+2026-10-20T10:28:04.1104471Z ##[group]GITHUB_TOKEN Permissions
+2026-10-20T10:28:04.1106500Z Contents: read
+2026-10-20T10:28:04.1107096Z Metadata: read
+2026-10-20T10:28:04.1107621Z ##[endgroup]
+2026-10-20T10:28:04.1109412Z Secret source: Actions
+2026-10-20T10:28:04.1110348Z Cache mode: write
+2026-10-20T10:28:04.1110977Z Prepare workflow directory
+2026-10-20T10:28:04.1426448Z Prepare all required actions
+2026-10-20T10:28:04.1470226Z Getting action download info
+2026-10-20T10:28:04.4387295Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-20T10:28:04.5542191Z Download action repository 'actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38' (SHA:249970729cb0ef3589644e2896645e5dc5ba9c38)
+2026-10-20T10:28:04.7985182Z Complete job name: application-baseline (unit)
+2026-10-20T10:28:04.8747509Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-20T10:28:04.8748489Z with:
+2026-10-20T10:28:04.8749108Z   persist-credentials: false
+2026-10-20T10:28:04.8749710Z   repository: qyndex/nextjs-landing-page
+2026-10-20T10:28:04.8753768Z   token: ***
+2026-10-20T10:28:04.8754323Z   ssh-strict: true
+2026-10-20T10:28:04.8754996Z   ssh-user: git
+2026-10-20T10:28:04.8755537Z   clean: true
+2026-10-20T10:28:04.8756047Z   sparse-checkout-cone-mode: true
+2026-10-20T10:28:04.8756604Z   fetch-depth: 1
+2026-10-20T10:28:04.8757129Z   fetch-tags: false
+2026-10-20T10:28:04.8757662Z   show-progress: true
+2026-10-20T10:28:04.8758170Z   lfs: false
+2026-10-20T10:28:04.8758652Z   submodules: false
+2026-10-20T10:28:04.8759156Z   set-safe-directory: true
+2026-10-20T10:28:04.8759722Z   allow-unsafe-pr-checkout: false
+2026-10-20T10:28:04.8760499Z env:
+2026-10-20T10:28:04.8760986Z   CI: true
+2026-10-20T10:28:04.8761479Z   NEXT_TELEMETRY_DISABLED: 1
+2026-10-20T10:28:04.8762075Z ##[endgroup]
+2026-10-20T10:28:04.9723515Z Syncing repository: qyndex/nextjs-landing-page
+2026-10-20T10:28:04.9725409Z ##[group]Getting Git version info
+2026-10-20T10:28:04.9726190Z Working directory is '/home/runner/work/nextjs-landing-page/nextjs-landing-page'
+2026-10-20T10:28:04.9727394Z [command]/usr/bin/git version
+2026-10-20T10:28:04.9779367Z git version 2.55.0
+2026-10-20T10:28:04.9795557Z ##[endgroup]
+2026-10-20T10:28:04.9804511Z Temporarily overriding HOME='/home/runner/work/_temp/2697041f-31db-4541-aa62-2ac85475592f' before making global git config changes
+2026-10-20T10:28:04.9806668Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T10:28:04.9809986Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nextjs-landing-page/nextjs-landing-page
+2026-10-20T10:28:04.9845763Z Deleting the contents of '/home/runner/work/nextjs-landing-page/nextjs-landing-page'
+2026-10-20T10:28:04.9848720Z ##[group]Determining repository object format
+2026-10-20T10:28:04.9850114Z ##[endgroup]
+2026-10-20T10:28:04.9850847Z ##[group]Initializing the repository
+2026-10-20T10:28:04.9853354Z [command]/usr/bin/git init /home/runner/work/nextjs-landing-page/nextjs-landing-page
+2026-10-20T10:28:04.9939080Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-20T10:28:04.9940608Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-20T10:28:04.9942007Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-20T10:28:04.9943128Z hint: call:
+2026-10-20T10:28:04.9943702Z hint:
+2026-10-20T10:28:04.9944433Z hint: 	git config --global init.defaultBranch <name>
+2026-10-20T10:28:04.9945250Z hint:
+2026-10-20T10:28:04.9945886Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-20T10:28:04.9946933Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-20T10:28:04.9947827Z hint:
+2026-10-20T10:28:04.9948433Z hint: 	git branch -m <name>
+2026-10-20T10:28:04.9949172Z hint:
+2026-10-20T10:28:04.9949886Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-20T10:28:04.9951010Z Initialized empty Git repository in /home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/
+2026-10-20T10:28:04.9952939Z [command]/usr/bin/git remote add origin https://github.com/qyndex/nextjs-landing-page
+2026-10-20T10:28:04.9988648Z ##[endgroup]
+2026-10-20T10:28:04.9989439Z ##[group]Disabling automatic garbage collection
+2026-10-20T10:28:04.9991596Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-20T10:28:05.0018111Z ##[endgroup]
+2026-10-20T10:28:05.0019203Z ##[group]Setting up auth
+2026-10-20T10:28:05.0019832Z Removing SSH command configuration
+2026-10-20T10:28:05.0022537Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T10:28:05.0048847Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T10:28:05.0345126Z Removing HTTP extra header
+2026-10-20T10:28:05.0349290Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T10:28:05.0372784Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T10:28:05.0539260Z Removing includeIf entries pointing to credentials config files
+2026-10-20T10:28:05.0542703Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T10:28:05.0566879Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T10:28:05.0726353Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-20T10:28:05.0754181Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path /home/runner/work/_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:05.0783222Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:05.0811157Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:05.0837790Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:05.0865220Z ##[endgroup]
+2026-10-20T10:28:05.0866108Z ##[group]Fetching the repository
+2026-10-20T10:28:05.0870248Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +df90b855ca65855cf86bdcd2734bd1f6d62a7e92:refs/remotes/pull/2/merge
+2026-10-20T10:28:05.9666112Z From https://github.com/qyndex/nextjs-landing-page
+2026-10-20T10:28:05.9667870Z  * [new ref]         df90b855ca65855cf86bdcd2734bd1f6d62a7e92 -> pull/2/merge
+2026-10-20T10:28:05.9673270Z ##[endgroup]
+2026-10-20T10:28:05.9675496Z ##[group]Determining the checkout info
+2026-10-20T10:28:05.9678344Z ##[endgroup]
+2026-10-20T10:28:05.9679354Z [command]/usr/bin/git sparse-checkout disable
+2026-10-20T10:28:05.9724011Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-20T10:28:05.9753085Z ##[group]Checking out the ref
+2026-10-20T10:28:05.9756073Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/2/merge
+2026-10-20T10:28:06.0248777Z Note: switching to 'refs/remotes/pull/2/merge'.
+2026-10-20T10:28:06.0249898Z 
+2026-10-20T10:28:06.0250776Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-10-20T10:28:06.0252792Z changes and commit them, and you can discard any commits you make in this
+2026-10-20T10:28:06.0254793Z state without impacting any branches by switching back to a branch.
+2026-10-20T10:28:06.0256217Z 
+2026-10-20T10:28:06.0257304Z If you want to create a new branch to retain commits you create, you may
+2026-10-20T10:28:06.0259695Z do so (now or later) by using -c with the switch command. Example:
+2026-10-20T10:28:06.0260682Z 
+2026-10-20T10:28:06.0261140Z   git switch -c <new-branch-name>
+2026-10-20T10:28:06.0261863Z 
+2026-10-20T10:28:06.0262432Z Or undo this operation with:
+2026-10-20T10:28:06.0263266Z 
+2026-10-20T10:28:06.0263638Z   git switch -
+2026-10-20T10:28:06.0264140Z 
+2026-10-20T10:28:06.0265504Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-10-20T10:28:06.0266663Z 
+2026-10-20T10:28:06.0268277Z HEAD is now at df90b85 Merge 9b53e68bd9c484004afd70e71b92afb7fb7d753c into 849c9523ac44f347c787bb50db0aac85dc87f6a8
+2026-10-20T10:28:06.0272538Z ##[endgroup]
+2026-10-20T10:28:06.0294534Z [command]/usr/bin/git log -1 --format=%H
+2026-10-20T10:28:06.0313384Z df90b855ca65855cf86bdcd2734bd1f6d62a7e92
+2026-10-20T10:28:06.0328581Z ##[group]Removing auth
+2026-10-20T10:28:06.0330260Z Removing SSH command configuration
+2026-10-20T10:28:06.0332911Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T10:28:06.0356331Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T10:28:06.0528177Z Removing HTTP extra header
+2026-10-20T10:28:06.0530767Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T10:28:06.0561484Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T10:28:06.0730288Z Removing includeIf entries pointing to credentials config files
+2026-10-20T10:28:06.0733367Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T10:28:06.0752253Z includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path
+2026-10-20T10:28:06.0756448Z includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path
+2026-10-20T10:28:06.0759967Z includeif.gitdir:/github/workspace/.git.path
+2026-10-20T10:28:06.0763402Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-20T10:28:06.0770286Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path
+2026-10-20T10:28:06.0782784Z /home/runner/work/_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:06.0793602Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-102a7278\-0ff8\-4373\-9a3f\-d1f8abb98300\.config
+2026-10-20T10:28:06.0821972Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path
+2026-10-20T10:28:06.0839995Z /home/runner/work/_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:06.0849779Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/nextjs-landing-page/nextjs-landing-page/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-102a7278\-0ff8\-4373\-9a3f\-d1f8abb98300\.config
+2026-10-20T10:28:06.0874155Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-20T10:28:06.0893476Z /github/runner_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:06.0901619Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-102a7278\-0ff8\-4373\-9a3f\-d1f8abb98300\.config
+2026-10-20T10:28:06.0927437Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-20T10:28:06.0945716Z /github/runner_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config
+2026-10-20T10:28:06.0956363Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-102a7278\-0ff8\-4373\-9a3f\-d1f8abb98300\.config
+2026-10-20T10:28:06.0986059Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T10:28:06.1154395Z Removing credentials config '/home/runner/work/_temp/git-credentials-102a7278-0ff8-4373-9a3f-d1f8abb98300.config'
+2026-10-20T10:28:06.1184944Z ##[endgroup]
+2026-10-20T10:28:06.1526014Z ##[group]Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+2026-10-20T10:28:06.1527577Z with:
+2026-10-20T10:28:06.1528446Z   node-version: 24.13.1
+2026-10-20T10:28:06.1529443Z   cache: npm
+2026-10-20T10:28:06.1530317Z   check-latest: false
+2026-10-20T10:28:06.1539119Z   token: ***
+2026-10-20T10:28:06.1540116Z   package-manager-cache: true
+2026-10-20T10:28:06.1541143Z env:
+2026-10-20T10:28:06.1541984Z   CI: true
+2026-10-20T10:28:06.1542916Z   NEXT_TELEMETRY_DISABLED: 1
+2026-10-20T10:28:06.1543900Z ##[endgroup]
+2026-10-20T10:28:06.2758798Z Attempting to download 24.13.1...
+2026-10-20T10:28:07.3408844Z Acquiring 24.13.1 - x64 from https://github.com/actions/node-versions/releases/download/24.13.1-21889660756/node-24.13.1-linux-x64.tar.gz
+2026-10-20T10:28:07.8422167Z Extracting ...
+2026-10-20T10:28:07.8522416Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a60bc4f7-dd49-4b91-9582-77b3c279dcbe -f /home/runner/work/_temp/17f69702-235d-42eb-ae00-4038f5ad1bd3
+2026-10-20T10:28:09.0569027Z Adding to the cache ...
+2026-10-20T10:28:11.0366435Z ##[group]Environment details
+2026-10-20T10:28:11.2493041Z node: v24.13.1
+2026-10-20T10:28:11.2493598Z npm: 11.8.0
+2026-10-20T10:28:11.2494104Z yarn: 1.22.22
+2026-10-20T10:28:11.2495171Z ##[endgroup]
+2026-10-20T10:28:11.2510182Z [command]/opt/hostedtoolcache/node/24.13.1/x64/bin/npm config get cache
+2026-10-20T10:28:11.3297637Z /home/runner/.npm
+2026-10-20T10:28:11.5467140Z Cache hit for: node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a
+2026-10-20T10:28:12.7831040Z Received 54525952 of 200740995 (27.2%), 51.9 MBs/sec
+2026-10-20T10:28:13.5768734Z Received 200740995 of 200740995 (100.0%), 106.7 MBs/sec
+2026-10-20T10:28:13.5770317Z Cache Size: ~191 MB (200740995 B)
+2026-10-20T10:28:13.5876907Z [command]/usr/bin/tar -xf /home/runner/work/_temp/e1867bf7-a644-4903-bca5-148504abb380/cache.tzst -P -C /home/runner/work/nextjs-landing-page/nextjs-landing-page --use-compress-program unzstd
+2026-10-20T10:28:13.8035486Z Cache restored successfully
+2026-10-20T10:28:13.8102476Z Cache restored from key: node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a
+2026-10-20T10:28:13.8639139Z ##[group]Run npm ci --ignore-scripts --no-audit --no-fund
+2026-10-20T10:28:13.8639746Z [36;1mnpm ci --ignore-scripts --no-audit --no-fund[0m
+2026-10-20T10:28:13.8792405Z shell: /usr/bin/bash -e {0}
+2026-10-20T10:28:13.8792849Z env:
+2026-10-20T10:28:13.8793176Z   CI: true
+2026-10-20T10:28:13.8793498Z   NEXT_TELEMETRY_DISABLED: 1
+2026-10-20T10:28:13.8793820Z ##[endgroup]
+2026-10-20T10:28:17.7162162Z npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+2026-10-20T10:28:19.3415473Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-10-20T10:28:22.7345695Z 
+2026-10-20T10:28:22.7346800Z added 430 packages in 9s
+2026-10-20T10:28:22.8099194Z ##[group]Run npm run test:coverage
+2026-10-20T10:28:22.8099710Z [36;1mnpm run test:coverage[0m
+2026-10-20T10:28:22.8144311Z shell: /usr/bin/bash -e {0}
+2026-10-20T10:28:22.8145140Z env:
+2026-10-20T10:28:22.8145589Z   CI: true
+2026-10-20T10:28:22.8146101Z   NEXT_TELEMETRY_DISABLED: 1
+2026-10-20T10:28:22.8146661Z ##[endgroup]
+2026-10-20T10:28:22.9080662Z 
+2026-10-20T10:28:22.9081756Z > landing-page@0.1.0 test:coverage
+2026-10-20T10:28:22.9082655Z > vitest run --coverage
+2026-10-20T10:28:22.9083327Z 
+2026-10-20T10:28:23.1524780Z [33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+2026-10-20T10:28:23.1535872Z   - `__dirname` (vitest.config.mts:22:25). Use `import.meta.dirname` instead
+2026-10-20T10:28:23.1536929Z Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
+2026-10-20T10:28:23.2635139Z 
+2026-10-20T10:28:23.2638823Z [1m[30m[46m RUN [49m[39m[22m [36mv5.0.5 [39m[90m/home/runner/work/nextjs-landing-page/nextjs-landing-page[39m
+2026-10-20T10:28:23.2662824Z       [2mCoverage enabled with [22m[33mv8[39m
+2026-10-20T10:28:23.2689567Z 
+2026-10-20T10:28:24.3745279Z [90mstderr[2m | src/__tests__/waitlist-route.test.ts[2m > [22m[2mPOST /api/waitlist[2m > [22m[2mreturns 500 for other database errors
+2026-10-20T10:28:24.3766009Z [22m[39mWaitlist insert error: { code: [32m'42P01'[39m, message: [32m'relation not found'[39m }
+2026-10-20T10:28:24.3766830Z 
+2026-10-20T10:28:24.4066401Z  [32m✓[39m src/__tests__/waitlist-route.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+2026-10-20T10:28:25.2917248Z  [32m✓[39m src/__tests__/ContentAndPage.test.tsx [2m([22m[2m9 tests[22m[2m)[22m[33m 913[2mms[22m[39m
+2026-10-20T10:28:25.2986519Z    [32m✓[39m Content availability without a live database [2m(9)[22m
+2026-10-20T10:28:25.3036607Z      [33m[2m✓[22m[39m renders the complete landing page using usable fallback content with no credentials[33m 783[2mms[22m[39m
+2026-10-20T10:28:25.8117245Z  [32m✓[39m src/__tests__/EmailSignup.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 1094[2mms[22m[39m
+2026-10-20T10:28:26.0069830Z  [32m✓[39m src/__tests__/FAQ.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 270[2mms[22m[39m
+2026-10-20T10:28:26.5589961Z  [32m✓[39m src/__tests__/Testimonials.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[32m 188[2mms[22m[39m
+2026-10-20T10:28:27.2256735Z  [32m✓[39m src/__tests__/Features.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 243[2mms[22m[39m
+2026-10-20T10:28:27.3217999Z  [32m✓[39m src/__tests__/Nav.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 449[2mms[22m[39m
+2026-10-20T10:28:27.4152969Z  [32m✓[39m src/__tests__/DocumentAndLocale.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 56[2mms[22m[39m
+2026-10-20T10:28:27.4811964Z 
+2026-10-20T10:28:27.4815903Z [2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+2026-10-20T10:28:27.4816746Z [2m      Tests [22m [1m[32m58 passed[39m[22m[90m (58)[39m
+2026-10-20T10:28:27.4817558Z [2m   Start at [22m 10:28:23
+2026-10-20T10:28:27.4820080Z [2m   Duration [22m 4.21s[2m (environment 40%, tests 31%, import 16%, setup 8%, transform 3%, worker 2%)[22m
+2026-10-20T10:28:27.4824141Z 
+2026-10-20T10:28:27.4825806Z [2mEnvironment [22m [33mjsdom was created 8 times[39m[2m · 4.10s total, 40% of tracked time[22m
+2026-10-20T10:28:27.4826972Z [2m            [22m [2mcreate it once per worker with [22m[33mpool: 'vmThreads'[39m[2m (keeps per-file isolation) or [22m[33misolate: false[39m[2m (shares it across files)[22m
+2026-10-20T10:28:27.4828034Z [2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#test-environments[22m
+2026-10-20T10:28:27.4828419Z 
+2026-10-20T10:28:27.4844190Z [34m % [39m[2mCoverage report from [22m[33mv8[39m
+2026-10-20T10:28:27.4865960Z -------------------|---------|----------|---------|---------|-------------------
+2026-10-20T10:28:27.4867491Z File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+2026-10-20T10:28:27.4868420Z -------------------|---------|----------|---------|---------|-------------------
+2026-10-20T10:28:27.4871997Z All files          |   98.01 |       94 |   97.67 |   97.94 |                   
+2026-10-20T10:28:27.4872770Z  app               |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4873379Z   layout.tsx       |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4874091Z   page.tsx         |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4874938Z  app/api/waitlist  |   95.45 |       95 |     100 |   95.45 |                   
+2026-10-20T10:28:27.4875892Z   route.ts         |   95.45 |       95 |     100 |   95.45 | 45                
+2026-10-20T10:28:27.4876588Z  components        |   98.71 |    95.65 |   96.87 |   98.68 |                   
+2026-10-20T10:28:27.4877344Z   CTA.tsx          |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4878100Z   EmailSignup.tsx  |     100 |    95.83 |     100 |     100 | 56                
+2026-10-20T10:28:27.4878760Z   FAQ.tsx          |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4879464Z   Features.tsx     |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4880165Z   Footer.tsx       |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4880791Z   Hero.tsx         |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4881259Z   LogoBar.tsx      |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4881720Z   Nav.tsx          |    87.5 |      100 |      80 |    87.5 | 80                
+2026-10-20T10:28:27.4882240Z   Pricing.tsx      |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4883615Z   Testimonials.tsx |     100 |       75 |     100 |     100 | 83                
+2026-10-20T10:28:27.4884448Z  components/ui     |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4885218Z   button.tsx       |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4885883Z  lib               |    97.5 |    90.32 |     100 |   97.29 |                   
+2026-10-20T10:28:27.4886538Z   i18n.ts          |    90.9 |     62.5 |     100 |      90 | 19                
+2026-10-20T10:28:27.4887066Z   queries.ts       |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4887671Z   supabase.ts      |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4888161Z   utils.ts         |     100 |      100 |     100 |     100 |                   
+2026-10-20T10:28:27.4888672Z  types             |       0 |        0 |       0 |       0 |                   
+2026-10-20T10:28:27.4889199Z   database.ts      |       0 |        0 |       0 |       0 |                   
+2026-10-20T10:28:27.4890022Z -------------------|---------|----------|---------|---------|-------------------
+2026-10-20T10:28:27.5597115Z Post job cleanup.
+2026-10-20T10:28:27.6623457Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-8abcaf91bad848d20105c1ecada7f5be0fce755491e6edc89a9482184268246a, not saving cache.
+2026-10-20T10:28:27.6749143Z Post job cleanup.
+2026-10-20T10:28:27.7493880Z [command]/usr/bin/git version
+2026-10-20T10:28:27.7527414Z git version 2.55.0
+2026-10-20T10:28:27.7554014Z Temporarily overriding HOME='/home/runner/work/_temp/831fcd99-8318-40fb-8e52-4b57c141e0d5' before making global git config changes
+2026-10-20T10:28:27.7555642Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-20T10:28:27.7559067Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nextjs-landing-page/nextjs-landing-page
+2026-10-20T10:28:27.8259137Z Removing SSH command configuration
+2026-10-20T10:28:27.8265590Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-20T10:28:27.9009398Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-20T10:28:27.9229388Z Removing HTTP extra header
+2026-10-20T10:28:27.9235483Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-20T10:28:27.9268456Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-20T10:28:27.9461471Z Removing includeIf entries pointing to credentials config files
+2026-10-20T10:28:27.9467701Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-20T10:28:27.9496762Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-20T10:28:27.9826717Z Cleaning up orphan processes

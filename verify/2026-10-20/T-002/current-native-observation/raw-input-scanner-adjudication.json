@@ -1,0 +1,37 @@
+{
+  "raw_input_sha256": "ec37dabc6b3afcbafe058c2cddaee58c491ca1b5c7ef26e4baa8bd5e2427caba",
+  "raw_report_sha256": "e0b08e6460ea95b2b3d8998b089c78abda2c5873b6e8d45fc0b455c46c5da660",
+  "findings": [
+    {
+      "RuleID": "generic-api-key",
+      "File": "verify/2026-10-20/T-002/current-native-observation/current-observations.json",
+      "StartLine": 40,
+      "Fingerprint": "verify/2026-10-20/T-002/current-native-observation/current-observations.json:generic-api-key:40",
+      "path": ".claude/commands/deprecate-api.md",
+      "computed_source_sha256": "f725fa5e2d084bcfa8248bbe98649da8935ceede8c3992823de036d5b1467fc7",
+      "source_commit": "3fec77d07536659c290c4a240658a2021ed35ac5",
+      "status": "Git-derived source digest, not credential"
+    },
+    {
+      "RuleID": "generic-api-key",
+      "File": "verify/2026-10-20/T-002/current-native-observation/current-observations.json",
+      "StartLine": 99,
+      "Fingerprint": "verify/2026-10-20/T-002/current-native-observation/current-observations.json:generic-api-key:99",
+      "path": ".claude/hooks/pre-write-secret-scan.sh",
+      "computed_source_sha256": "bca41d278521a5550af2a7d3f45950e3aca0233850ad8aeb58f6d3b9f030a73d",
+      "source_commit": "3fec77d07536659c290c4a240658a2021ed35ac5",
+      "status": "Git-derived source digest, not credential"
+    },
+    {
+      "RuleID": "sentry-access-token",
+      "File": "verify/2026-10-20/T-002/current-native-observation/current-observations.json",
+      "StartLine": 134,
+      "Fingerprint": "verify/2026-10-20/T-002/current-native-observation/current-observations.json:sentry-access-token:134",
+      "path": ".claude/routines/hotfix-sentry-poll.yml",
+      "computed_source_sha256": "defe0aacedc8e61b7ea0eb7752df3dccc7a2cae6c40777f3c480c53b8a05a5e7",
+      "source_commit": "3fec77d07536659c290c4a240658a2021ed35ac5",
+      "status": "Git-derived source digest, not credential"
+    }
+  ],
+  "presentation": "Lossless ordered top-level path/sha256 entries; exact reconstructed raw bytes verified; no suppression or scanner configuration change"
+}
