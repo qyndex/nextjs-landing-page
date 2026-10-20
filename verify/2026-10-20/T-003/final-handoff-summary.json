@@ -1,0 +1,16 @@
+{
+  "collector_source": "2fa0aee7fcfe63d81b107f473f6bbc5a3bc490c0",
+  "collector": "FAIL0/8smoke0",
+  "collector_exit": 1,
+  "node": "v24.13.1",
+  "explicit_VERIFY_BASE": "849c9523ac44f347c787bb50db0aac85dc87f6a8",
+  "T003": "bounded local implementation complete; original existingbuildRED/GREEN, no initialunitTDDclaim",
+  "new_task_acceptance": "npm run build actually reranPASS in finalhostcollector",
+  "mapper_tests": 27,
+  "authorization_tests": 15,
+  "native_app_evidence": "historical38b0 exactappsourceequivalent; no rerun finalhead claim",
+  "native_acceptance": false,
+  "old_6of8_credit_reused": false,
+  "activation": "disabled; no livechange",
+  "pending": "full001ACs, authenticated exacthead independent reviews/nativeproof, publication review and anyseparate activation"
+}
