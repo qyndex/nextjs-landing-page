@@ -1,0 +1,93 @@
+Verification root: /private/tmp/factory-brownfield-stage2-actual-main-20261021
+
+→ Branch freshness
+  ✓ branch fresh against main
+
+→ Node project detected
+
+> landing-page@0.1.0 typecheck
+> tsc --noEmit
+
+  ✓ typecheck
+
+> landing-page@0.1.0 lint
+> eslint src e2e
+
+  ✓ lint
+
+> landing-page@0.1.0 test
+> vitest run --run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:22:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.5 /private/tmp/factory-brownfield-stage2-actual-main-20261021
+
+
+ Test Files  9 passed (9)
+      Tests  60 passed (60)
+   Start at  01:24:00
+   Duration  826ms (environment 48%, tests 25%, import 14%, setup 9%, transform 3%, worker 1%)
+
+  ✓ unit tests
+
+→ Coverage gate (min line=90%, branch=85%)
+  ✓ line coverage 97.93%
+  ✓ branch coverage 94%
+
+→ Stack accounting
+  ✓ typescript test command executed
+
+→ Assertion-density gate
+assert-density: checked 3 test file(s), 0 issue(s)
+  ✓ all tests contain real assertions
+
+→ TDD red→green ledger gate (check-tdd-ledger.sh)
+⚠ T-001: legacy (pre-T-111) incomplete ledger — warn only
+✓ T-002: red+green ledger present and content-valid
+✓ T-003: red+green ledger present and content-valid
+tdd-ledger: 0 fail(s), 0 warn(s), 1 legacy-incomplete (pre-T-111, not enforced)
+  ✓ TDD ledger gate clean
+
+→ Rerun newly completed task acceptance
+
+> landing-page@0.1.0 build
+> next build
+
+▲ Next.js 16.4.2 (Turbopack)
+✓ Running next.config.js took 7ms
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 error:
+./src/app
+Error: Could not find the Next.js package (next/package.json)
+Resolved from: /private/tmp/factory-brownfield-stage2-actual-main-20261021/src/app
+Filesystem root used for resolution: /private/tmp/factory-brownfield-stage2-actual-main-20261021
+
+Possible causes:
+  - node_modules is being reorganized by a concurrent install (e.g. pnpm adding a package with a `next` peer dependency). This is transient and should clear once the install completes.
+  - node_modules/next was removed, renamed, or has a broken symlink.
+  - The workspace root is incorrect — see turbopack.root in the Next.js config docs for how to configure it.
+  - In a monorepo, the Next.js package may only exist in a directory above the closest directory containing a package manager lockfile. The workspace root is detected by locating the nearest package manager lockfile.
+  - Next.js is installed globally rather than as a project dependency. This is not supported; install it locally.
+
+Note: To ensure a hermetic build and a portable cache, files outside of the workspace root are not compiled.
+
+https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory
+
+
+    at <unknown> (Filesystem root used for resolution: /private/tmp/factory-brownfield-stage2-actual-main-20261021)
+    at <unknown> (https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory)
+acceptance: FAIL: T-003: acceptance failed (1)
+  ✗ task acceptance failed
+
+→ Story → E2E coverage gate
+  ✓ every approved-spec user story has an E2E test
+
+→ Integration coverage gate
+  ✓ changed API/DB files have integration tests
+
+verify: FAIL (1 check(s) failed)

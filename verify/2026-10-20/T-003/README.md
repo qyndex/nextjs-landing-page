@@ -1,0 +1,7 @@
+# T003 bounded font implementation proof
+
+Exact original7fontbytes and generated8face descriptors retained; realChromium baseline/repair comparisons equal. Nativeprofile source d68e8df with existingimage1f9733 ran fresh offlinebuild/browser on38b0:27pass/1existing skip. Earlier492dd freshunit/build60unitspass. Application bytes remain identical through mapperintegration and metadata-onlyrewrites; historical proof is localhashbound, never nativeauthenticated credit. Added mapperpublic/closure prevents replay afterfont/license/SOURCE changes;27+15affectedtests pass. No old6/8claim transfers.
+
+Existing exact npm run build genuinelyfailed3fec beforefontimplementation andpassed492dd afterward in sameimage/caps. Red/green ledger reconstructed from those actualrawobservations, explicit localfilesystemtimestamp basis/source/rawhash. It is not a claim that newunit/browser tests precededimplementation. Separate frozenpostimplementationunitregressionreplay is clearlylabelled. Rawlogs use base64 to preserveeverybyte without terminalcontrol rewriting; decode thenSHA256 againstmanifest. OriginalrawGitcommit payloads plus historicalbundle withpublic72c181 prerequisite preserveunpublishedsource identity. Normalmetadata-onlyrebase mapped everyold/newcommittreeidentically.
+
+FullSpec001 andnativeverification remainpending. No registrypublication, credentials, state/policy/authority/deployment change. Existing2LOWacceptance appliesdisabledlocalonly. No freshnetworkaudit or native independent acceptance inferred. Source/proofpublication remainsdraft forrootreview.

@@ -1,0 +1,14 @@
+tree 3a78532cb2dcbe3310e90e5b8f2c18ca01f4b1c3
+parent 7229f6dd5f9725cb287ee6130b84afce5d123e5a
+author Shravan Jha <shravan.jha@gmail.com> 1792494534 +1100
+committer Shravan Jha <shravan.jha@gmail.com> 1792494580 +1100
+
+test(evidence): retain actual font closure observations
+
+Confidence: high
+Scope-risk: proof only
+Not-tested: full application acceptance remains pending
+Spec: specs/active/001-dependency-and-ci-remediation.md
+Plan: plans/active/001-dependency-and-ci-remediation.md
+Task: T-002
+Co-Authored-By: Codex <noreply@openai.com>
