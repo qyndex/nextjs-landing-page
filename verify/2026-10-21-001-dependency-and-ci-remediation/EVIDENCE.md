@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
-Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `f8ccc9f`
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `2428385`
 
-Retained results: [verify/2026-10-21-001-dependency-and-ci-remediation/attempt-vdUNsi8z/results.json](verify/2026-10-21-001-dependency-and-ci-remediation/attempt-vdUNsi8z/results.json)
+Retained results: [verify/2026-10-21-001-dependency-and-ci-remediation/attempt-Tadz9GTB/results.json](verify/2026-10-21-001-dependency-and-ci-remediation/attempt-Tadz9GTB/results.json)
 
 ### Acceptance criteria (0/8 proven)
 | AC | Proven by | Result |
@@ -17,7 +17,7 @@ Retained results: [verify/2026-10-21-001-dependency-and-ci-remediation/attempt-v
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-21T00:10:34+11:00
+# Smoke test — 2026-10-21T01:25:33+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
@@ -35,15 +35,16 @@ exit: 0
 0 API trace file(s) under `verify/2026-10-21-001-dependency-and-ci-remediation/traces/`; full HAR at `verify/2026-10-21-001-dependency-and-ci-remediation/network.har`.
 
 ### Coverage
-line 97.94% · branch 94% (gate: line≥90 branch≥85)
+line 97.93% · branch 94% (gate: line≥90 branch≥85)
 
 ### Verdict: **FAIL**
 
 ## Artifact index
 - verify/2026-10-21-001-dependency-and-ci-remediation/evidence.json
-- verify/2026-10-21-001-dependency-and-ci-remediation/attempt-LBmpXrNP/results.json
 - verify/2026-10-21-001-dependency-and-ci-remediation/attempt-vdUNsi8z/results.json
 - verify/2026-10-21-001-dependency-and-ci-remediation/pr-body.md
 - verify/2026-10-21-001-dependency-and-ci-remediation/EVIDENCE.md
 - verify/2026-10-21-001-dependency-and-ci-remediation/results.json
 - verify/2026-10-21-001-dependency-and-ci-remediation/smoke.log
+- verify/2026-10-21-001-dependency-and-ci-remediation/attempt-eJFGxN0B/results.json
+- verify/2026-10-21-001-dependency-and-ci-remediation/attempt-Tadz9GTB/results.json

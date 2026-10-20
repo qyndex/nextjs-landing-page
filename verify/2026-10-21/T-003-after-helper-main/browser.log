@@ -1,0 +1,89 @@
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 430 packages in 10s
+COMMAND_BEGIN:build
+
+> landing-page@0.1.0 build
+> next build
+
+▲ Next.js 16.4.2 (Turbopack)
+✓ Running next.config.js took 37ms
+⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+
+  Creating an optimized production build ...
+(node:47) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/work/tailwind.config.ts?id=1792506238799 is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /tmp/work/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✓ Compiled successfully in 6.3s
+  Running TypeScript ...
+  Finished TypeScript in 3.8s ...
+  Collecting page data using 5 workers ...
+  Generating static pages using 5 workers (0/3) ...
+✓ Generating static pages using 5 workers (3/3) in 686ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ƒ /
+├ ○ /_not-found
+└ ƒ /api/waitlist
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+COMMAND_EXIT:build:0
+COMMAND_BEGIN:browser
+
+> landing-page@0.1.0 test:e2e
+> playwright test --workers=1 --retries=0 --reporter=line
+
+[WebServer] (node:199) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/work/tailwind.config.ts?id=1792506254304 is not specified and it doesn't parse as CommonJS.
+[WebServer] Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+[WebServer] To eliminate this warning, add "type": "module" to /tmp/work/package.json.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 28 tests using 1 worker
+
+[1/28] [chromium] › e2e/home.spec.ts:21:7 › Landing page › page loads and has correct title
+[2/28] [chromium] › e2e/home.spec.ts:25:7 › Landing page › hero section is visible with main headline
+[3/28] [chromium] › e2e/home.spec.ts:30:7 › Landing page › hero email signup form is present
+[4/28] [chromium] › e2e/home.spec.ts:36:7 › Landing page › features section is visible
+[5/28] [chromium] › e2e/home.spec.ts:46:7 › Landing page › all 6 feature cards are rendered
+[6/28] [chromium] › e2e/home.spec.ts:60:7 › Landing page › pricing section is visible with three plans
+[7/28] [chromium] › e2e/home.spec.ts:70:7 › Landing page › testimonials section displays testimonial content
+[8/28] [chromium] › e2e/home.spec.ts:80:7 › Landing page › FAQ section is visible and interactive
+[9/28] [chromium] › e2e/home.spec.ts:94:7 › Landing page › navigation links are present and functional
+[10/28] [chromium] › e2e/home.spec.ts:110:7 › Landing page › Get Started CTA button links to signup
+[11/28] [chromium] › e2e/home.spec.ts:122:7 › Landing page › footer is visible and contains brand name
+[12/28] [chromium] › e2e/home.spec.ts:128:7 › Landing page › email signup shows validation error for empty submit
+[13/28] [chromium] › e2e/home.spec.ts:133:7 › Landing page › mobile hamburger menu opens on small screen
+[14/28] [chromium] › e2e/local-font.spec.ts:3:5 › licensed Inter faces load locally with unchanged document font usage
+[chromium] › e2e/local-font.spec.ts:3:5 › licensed Inter faces load locally with unchanged document font usage
+LOCAL_FONT_OBSERVATION {"faces":[{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+1F00-1FFF"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"}],"variable":"\"Inter\", \"Inter Fallback\"","body":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"","heading":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"","preload":"/fonts/inter/inter-baseline-latin.woff2"}
+
+[15/28] [Mobile Chrome] › e2e/home.spec.ts:21:7 › Landing page › page loads and has correct title
+[16/28] [Mobile Chrome] › e2e/home.spec.ts:25:7 › Landing page › hero section is visible with main headline
+[17/28] [Mobile Chrome] › e2e/home.spec.ts:30:7 › Landing page › hero email signup form is present
+[18/28] [Mobile Chrome] › e2e/home.spec.ts:36:7 › Landing page › features section is visible
+[19/28] [Mobile Chrome] › e2e/home.spec.ts:46:7 › Landing page › all 6 feature cards are rendered
+[20/28] [Mobile Chrome] › e2e/home.spec.ts:60:7 › Landing page › pricing section is visible with three plans
+[21/28] [Mobile Chrome] › e2e/home.spec.ts:70:7 › Landing page › testimonials section displays testimonial content
+[22/28] [Mobile Chrome] › e2e/home.spec.ts:80:7 › Landing page › FAQ section is visible and interactive
+[23/28] [Mobile Chrome] › e2e/home.spec.ts:94:7 › Landing page › navigation links are present and functional
+[24/28] [Mobile Chrome] › e2e/home.spec.ts:110:7 › Landing page › Get Started CTA button links to signup
+[25/28] [Mobile Chrome] › e2e/home.spec.ts:122:7 › Landing page › footer is visible and contains brand name
+[26/28] [Mobile Chrome] › e2e/home.spec.ts:128:7 › Landing page › email signup shows validation error for empty submit
+[27/28] [Mobile Chrome] › e2e/home.spec.ts:133:7 › Landing page › mobile hamburger menu opens on small screen
+[28/28] [Mobile Chrome] › e2e/local-font.spec.ts:3:5 › licensed Inter faces load locally with unchanged document font usage
+[Mobile Chrome] › e2e/local-font.spec.ts:3:5 › licensed Inter faces load locally with unchanged document font usage
+LOCAL_FONT_OBSERVATION {"faces":[{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+460-52F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+1F00-1FFF"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+370-377, U+37A-37F, U+384-38A, U+38C, U+38E-3A1, U+3A3-3FF"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+100-2BA, U+2BD-2C5, U+2C7-2CC, U+2CE-2D7, U+2DD-2FF, U+304, U+308, U+329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF"},{"style":"normal","weight":"100 900","display":"swap","status":"loaded","unicodeRange":"U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"}],"variable":"\"Inter\", \"Inter Fallback\"","body":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"","heading":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"","preload":"/fonts/inter/inter-baseline-latin.woff2"}
+
+  1 skipped
+  27 passed (1.2m)
+COMMAND_EXIT:browser:0
+955892	/tmp/work
+Filesystem     1K-blocks   Used Available Use% Mounted on
+tmpfs            1048576 960392     88184  92% /tmp
