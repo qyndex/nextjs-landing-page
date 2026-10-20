@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "enabled": false,
+  "enabled": true,
   "repository": "qyndex/nextjs-landing-page",
   "package": "ghcr.io/qyndex/nextjs-landing-page-verifier",
   "environment": "factory-image-publishing",
