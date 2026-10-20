@@ -24,7 +24,8 @@ test("licensed Inter faces load locally with unchanged document font usage", asy
     expect(face.status).toBe("loaded");
   }
   expect(observed.variable).toMatch(/Inter.*Inter Fallback/);
-  expect(observed.body).toContain("ui-sans-serif");
+  // Exact stack observed by real Chromium loading the retained baseline CSS.
+  expect(observed.body).toBe("-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"");
   expect(observed.heading).toBe(observed.body);
   expect(observed.preload).toBe("/fonts/inter/inter-baseline-latin.woff2");
   expect(externalFontRequests).toEqual([]);
