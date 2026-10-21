@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 002 (002-verifier-image-publication)
-Spec: `specs/active/002-verifier-image-publication.md` · Commit: `86040b2`
+Spec: `specs/active/002-verifier-image-publication.md` · Commit: `f1ffb76`
 
-Retained results: [verify/2026-10-21-002-verifier-image-publication/attempt-pJ0VhdxM/results.json](verify/2026-10-21-002-verifier-image-publication/attempt-pJ0VhdxM/results.json)
+Retained results: [verify/2026-10-21-002-verifier-image-publication/attempt-Tw0AARRs/results.json](verify/2026-10-21-002-verifier-image-publication/attempt-Tw0AARRs/results.json)
 
 ### Acceptance criteria (0/5 proven)
 | AC | Proven by | Result |
@@ -14,13 +14,13 @@ Retained results: [verify/2026-10-21-002-verifier-image-publication/attempt-pJ0V
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-21T09:00:21+11:00
+# Smoke test — 2026-10-21T11:00:22+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
-  ✓ changed API/DB files have integration tests
+  ✗ changed handler/query lacks integration test
 
-verify: FAIL (4 check(s) failed)
+verify: FAIL (6 check(s) failed)
 exit: 1
 ---
 ```
