@@ -1,7 +1,7 @@
 ## Evidence Bundle — Spec 001 (001-dependency-and-ci-remediation)
-Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `f8ccc9f`
+Spec: `specs/active/001-dependency-and-ci-remediation.md` · Commit: `badc8d6`
 
-Retained results: [verify/2026-10-21-001-dependency-and-ci-remediation/attempt-vdUNsi8z/results.json](verify/2026-10-21-001-dependency-and-ci-remediation/attempt-vdUNsi8z/results.json)
+Retained results: [verify/2026-10-21-001-dependency-and-ci-remediation/attempt-1mEchl2K/results.json](verify/2026-10-21-001-dependency-and-ci-remediation/attempt-1mEchl2K/results.json)
 
 ### Acceptance criteria (0/8 proven)
 | AC | Proven by | Result |
@@ -17,14 +17,14 @@ Retained results: [verify/2026-10-21-001-dependency-and-ci-remediation/attempt-v
 
 ### Smoke test (exit codes are load-bearing)
 ```
-# Smoke test — 2026-10-21T00:10:34+11:00
+# Smoke test — 2026-10-21T13:19:23+11:00
 $ bash .claude/scripts/verify.sh
 
 → Integration coverage gate
-  ✓ changed API/DB files have integration tests
+  ✗ changed handler/query lacks integration test
 
-verify: PASS
-exit: 0
+verify: FAIL (6 check(s) failed)
+exit: 1
 ---
 ```
 
@@ -35,15 +35,14 @@ exit: 0
 0 API trace file(s) under `verify/2026-10-21-001-dependency-and-ci-remediation/traces/`; full HAR at `verify/2026-10-21-001-dependency-and-ci-remediation/network.har`.
 
 ### Coverage
-line 97.94% · branch 94% (gate: line≥90 branch≥85)
+line ?% · branch ?% (gate: line≥90 branch≥85)
 
 ### Verdict: **FAIL**
 
 ## Artifact index
 - verify/2026-10-21-001-dependency-and-ci-remediation/evidence.json
-- verify/2026-10-21-001-dependency-and-ci-remediation/attempt-LBmpXrNP/results.json
 - verify/2026-10-21-001-dependency-and-ci-remediation/attempt-vdUNsi8z/results.json
 - verify/2026-10-21-001-dependency-and-ci-remediation/pr-body.md
 - verify/2026-10-21-001-dependency-and-ci-remediation/EVIDENCE.md
-- verify/2026-10-21-001-dependency-and-ci-remediation/results.json
 - verify/2026-10-21-001-dependency-and-ci-remediation/smoke.log
+- verify/2026-10-21-001-dependency-and-ci-remediation/attempt-1mEchl2K/smoke.out
